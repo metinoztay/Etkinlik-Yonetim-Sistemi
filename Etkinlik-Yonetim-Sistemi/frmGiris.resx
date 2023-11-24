@@ -1,0 +1,442 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="picSolGiris.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="picSolGiris.Size" type="System.Drawing.Size, System.Drawing">
+    <value>527, 551</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="picSolGiris.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;picSolGiris.Name" xml:space="preserve">
+    <value>picSolGiris</value>
+  </data>
+  <data name="&gt;&gt;picSolGiris.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;picSolGiris.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;picSolGiris.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="picKullanciAdiGiris.Location" type="System.Drawing.Point, System.Drawing">
+    <value>624, 197</value>
+  </data>
+  <data name="picKullanciAdiGiris.Size" type="System.Drawing.Size, System.Drawing">
+    <value>260, 38</value>
+  </data>
+  <data name="picKullanciAdiGiris.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;picKullanciAdiGiris.Name" xml:space="preserve">
+    <value>picKullanciAdiGiris</value>
+  </data>
+  <data name="&gt;&gt;picKullanciAdiGiris.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;picKullanciAdiGiris.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;picKullanciAdiGiris.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="picKullaniciAdiGirisSol.Location" type="System.Drawing.Point, System.Drawing">
+    <value>624, 197</value>
+  </data>
+  <data name="picKullaniciAdiGirisSol.Size" type="System.Drawing.Size, System.Drawing">
+    <value>5, 38</value>
+  </data>
+  <data name="picKullaniciAdiGirisSol.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;picKullaniciAdiGirisSol.Name" xml:space="preserve">
+    <value>picKullaniciAdiGirisSol</value>
+  </data>
+  <data name="&gt;&gt;picKullaniciAdiGirisSol.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;picKullaniciAdiGirisSol.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;picKullaniciAdiGirisSol.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="txtKullaniciAdi.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Trebuchet MS, 10.2pt</value>
+  </data>
+  <data name="txtKullaniciAdi.Location" type="System.Drawing.Point, System.Drawing">
+    <value>635, 206</value>
+  </data>
+  <data name="txtKullaniciAdi.Size" type="System.Drawing.Size, System.Drawing">
+    <value>245, 20</value>
+  </data>
+  <data name="txtKullaniciAdi.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;txtKullaniciAdi.Name" xml:space="preserve">
+    <value>txtKullaniciAdi</value>
+  </data>
+  <data name="&gt;&gt;txtKullaniciAdi.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtKullaniciAdi.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;txtKullaniciAdi.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="txtSifre.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Trebuchet MS, 10.8pt</value>
+  </data>
+  <data name="txtSifre.Location" type="System.Drawing.Point, System.Drawing">
+    <value>635, 287</value>
+  </data>
+  <data name="txtSifre.PasswordChar" type="System.Char, mscorlib" xml:space="preserve">
+    <value>֍</value>
+  </data>
+  <data name="txtSifre.Size" type="System.Drawing.Size, System.Drawing">
+    <value>245, 21</value>
+  </data>
+  <data name="txtSifre.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;txtSifre.Name" xml:space="preserve">
+    <value>txtSifre</value>
+  </data>
+  <data name="&gt;&gt;txtSifre.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtSifre.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;txtSifre.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="pictureBox1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>624, 278</value>
+  </data>
+  <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>5, 38</value>
+  </data>
+  <data name="pictureBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Name" xml:space="preserve">
+    <value>pictureBox1</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="pictureBox2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="pictureBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>624, 278</value>
+  </data>
+  <data name="pictureBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>260, 38</value>
+  </data>
+  <data name="pictureBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;pictureBox2.Name" xml:space="preserve">
+    <value>pictureBox2</value>
+  </data>
+  <data name="&gt;&gt;pictureBox2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureBox2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pictureBox2.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="lblKullaniciGirisi.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblKullaniciGirisi.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Trebuchet MS, 12pt, style=Bold</value>
+  </data>
+  <data name="lblKullaniciGirisi.Location" type="System.Drawing.Point, System.Drawing">
+    <value>684, 104</value>
+  </data>
+  <data name="lblKullaniciGirisi.Size" type="System.Drawing.Size, System.Drawing">
+    <value>148, 26</value>
+  </data>
+  <data name="lblKullaniciGirisi.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="lblKullaniciGirisi.Text" xml:space="preserve">
+    <value>Kullanıcı Girişi</value>
+  </data>
+  <data name="&gt;&gt;lblKullaniciGirisi.Name" xml:space="preserve">
+    <value>lblKullaniciGirisi</value>
+  </data>
+  <data name="&gt;&gt;lblKullaniciGirisi.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblKullaniciGirisi.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblKullaniciGirisi.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnGiris.Location" type="System.Drawing.Point, System.Drawing">
+    <value>776, 353</value>
+  </data>
+  <data name="btnGiris.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 42</value>
+  </data>
+  <data name="btnGiris.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="btnGiris.Text" xml:space="preserve">
+    <value>GİRİŞ</value>
+  </data>
+  <data name="&gt;&gt;btnGiris.Name" xml:space="preserve">
+    <value>btnGiris</value>
+  </data>
+  <data name="&gt;&gt;btnGiris.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnGiris.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnGiris.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>120, 120</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>965, 551</value>
+  </data>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9pt</value>
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAICAAAAEAIACoEAAAFgAAACgAAAAgAAAAQAAAAAEAIAAAAAAAABAAAMMOAADDDgAAAAAAAAAA
+        AADz6e4A8+bqRfPm6tTz5ur+8+bq//Pm6v/z5ur/8+bq//Pm6v/z5ur/8+bq//Pm6v/z5ur/8+bq//Pm
+        6v/z5ur/8+bq//Pm6v/z5ur/8+bq//Pm6v/z5ur/8+bq//Pm6v/z5ur/8+bq//Pm6v/z5ur/8+bq//Pm
+        6v3z5urB8+frN/Xv9xz07PPK9Ozy//Ts8v/07PL/9Ozy//Ts8v/07PL/9Ozy//Ts8v/07PL/9Ozy//Xs
+        8v/07PL/9Ozy//Ts8v/07PL/9Ozy//Ts8v/07PL/9ezy//Ts8v/07PL/9Ozy//Ts8v/07PL/9Ozy//Ts
+        8v/06vD/8+fr//Pm6v/z5urI9vT/Svb0//T29P//9vT///b0///29P//9vT///b0///29P//9vT///b0
+        ///18///7e7///Ly///49f//+fb///n2///59v//9/X///Hx///t7///9vT///b0///29P//9vT///b0
+        ///29P//9vT///b0/v/17/f/8+fr//Pm6v729P9S9vT/9/b0///29P//9vT///b0///29P//9vT///b0
+        ///29P//8fH//52+//9nnf//eKj//5a6//+0zP//xNb//7DJ//+Rt///dKX//2ie//+tyP//9fP///b0
+        ///29P//9vT///b0///29P//9vT///b0///06vH/8+bq//b0/1L29P/39vT///b0///29P//9vT///b0
+        ///29P//9vT///j1///S3///TJD//z6F//8+hP//PoT//0KG//9Gif//QYf//z6I//8+h///PYP//1qV
+        ///i6P//9/X///b0///29P//9vT///b0///29P//9vT///Ts9P/z5ur/9vT/Uvb0//f29P//9vT///b0
+        ///29P//9vT///b0///29P//+fX//8Pc//9Fnv//QZn//0GW//9Bkv//QZH//0GV//9Bmf//QZz//0Gb
+        //9AjP//To7//9bh///49f//9vT///b0///29P//9vT///b0///29P//9O30//Pm6v/29P9S9vT/9/b0
+        ///29P//9vT///b0///29P//9vT///b0///59f//uNf//0Kg//9Bn///QZ///0Gf//9Bn///QZ///0Gf
+        //9Bn///QZ///0CU//9Ji///zdv///n2///29P//9vT///b0///29P//9vT///b0///07fT/8+bq//b0
+        /1L29P/39vT///b0///29P//9vT///b0///29P//9vT///n2//+r0f//QJ///0Gf//9Bn///QZ///0Gf
+        //9Bn///QZ///0Gf//9Bn///QZb//0WJ///C1P//+fb///b0///29P//9vT///b0///29P//9vT///Tt
+        9P/z5ur/9vT/Uvb0//f29P//9vT///b0///29P//9vT///b0///29P//8vL//3+8//8/nv//QZ///0Gf
+        //9Bn///QZ///0Gf//9Bn///QZ///0Gf//9BmP//P4b//5S5///29P//9vT///b0///29P//9vT///b0
+        ///29P//9O30//Pm6v/29P9S9vT/9/b0///29P//9vT///b0///29P//9vT///n1//++2v//SaP//0Cf
+        //9Bn///QZ///0Gf//9Bn///QZ///0Gf//9Bn///QZ///0Ga//9Ah///UpD//9Dd///49f//9vT///b0
+        ///29P//9vT///b0///07fT/8+bq//b0/1L29P/39vT///b0///29P//9vT///b0///39P//6O3//2yz
+        //8/nv//QZ///0Gf//9Bn///QZ///0Gf//9Bn///QZ///0Gf//9Bn///QZ7//0GN//8/hP//f6z///Dx
+        ///29P//9vT///b0///29P//9vT///Tt9P/z5ur/9vT/Uvb0//f29P//9vT///b0///29P//9vT///j1
+        //+s0f//QqD//0Gf//9Bn///QZ///0Gf//9Bn///QZ///0Gf//9Bn///QZ///0Gf//9Bn///QZj//0CH
+        //9Iiv//wdT///n2///29P//9vT///b0///29P//9O30//Pm6v/29P9S9vT/9/b0///29P//9vT///b0
+        ///29P//+PX//5PG//88nf//QJ///0Gf//9Bn///QZ///0Gf//9Bn///QZ///0Gf//9Bn///QZ///0Gf
+        //9Bn///QJD//z6E//+rx///+fb///b0///29P//9vT///b0///07fT/8+bq//b0/1L29P/39vT///b0
+        ///29P//9vT///b0///49f//1OT//3C1//9Jo///P57//z+e//9Bn///QZ///0Gf//9Bn///QZ///0Gf
+        //9Bn///P57//z+f//9MoP//e6v//+Dn///39f//9vT///b0///29P//9vT///Tt9P/z5ur/9vT/Uvb0
+        //f29P//9vT///b0///29P//9vT///b0///39P//7O///8nf//+Vxv//X63//0Gf//9Bn///QZ///0Gf
+        //9Bn///QZ///0Og//9nsf//ncr//8/i///v8P//9/X///b0///29P//9vT///b0///29P//9O30//Pm
+        6v/29P9S9vT/9/b0///29P//9vT///b0///29P//9vT///b0///39P//+fX///j1///f6f//c7b//z+e
+        //9Bn///QZ///0Gf//9An///hb///+jt///49f//+PX///b0///29P//9vT///b0///29P//9vT///b0
+        ///07fT/8+bq//b0/1L29P/39vT///b0///29P//9vT///b0///29P//9vT///b0///29P//9vT///n1
+        ///X5f//Xq3//z+e//9Bn///P57//260///k6///+PX///b0///29P//9vT///b0///29P//9vT///b0
+        ///29P//9vT///Tt9P/z5ur/9vT/Uvb0//f29P//9vT///b0///29P//9vT///b0///29P//9vT///b0
+        ///29P//9vT///j1///A2///T6b//z2d//9aq///0eP///j1///29P//9vT///b0///29P//9vT///b0
+        ///29P//9vT///b0///29P//9O30//Pm6v/29P9S9vT/9/b0///29P//9vT///b0///29P//9vT///b0
+        ///29P//9vT///b0///29P//9vT///X0///B2///mMj//83h///39P//9vT///b0///29P//9vT///b0
+        ///29P//9vT///b0///29P//9vT///b0///07fT/8+bq//b0/1L29P/39vT///b0///29P//9vT///b0
+        ///29P//9vT///b0///29P//9vT///b0///29P//9vT///j1///49f//+PX///b0///29P//9vT///b0
+        ///29P//9vT///b0///29P//9vT///b0///29P//9vT///Tt9P/z5ur/9vT/Uvb0//f29P//9vT///b0
+        ///29P//9vT///b0///29P//9vT///b0///29P//9vT///b0///29P//9vT///b0///29P//9vT///b0
+        ///29P//9vT///b0///29P//9vT///b0///29P//9vT///b0///29P//9O30//Pm6v/29P9S9vT/9/b0
+        ///39P//9/T///f0///39P//9/T///f0///39P//9/T///f0///39P//9/T///f0///39P//9/T///f0
+        ///39P//9/T///f0///39P//9/T///f0///39P//9/T///f0///39P//9/T///f0///17fT/9Obq/4bm
+        /1KH6P/3iNv//4nC//2Jwf/9icH//YnB//2Jwf/9icH//YnB//2Jwf/9icH//YnB//2Jwf/9icH//YnB
+        //2Jwf/9icH//YnB//2Jwf/9icH//YnB//2Jwf/9icH//YnB//2Jwf/9icH//YnB//2Jwf/9icH//Ym+
+        +/2JvPf9PN3/Uzzg//c9y///Pp///z6e//8+nv//Pp7//z2f//89oP//Pp///z6e//8+nv//Pp7//z6e
+        //8+nv//Pp7//z6e//8+nv//Pp7//z6e//8+nv//Pp7//z6e//89n///PZ///z2f//8+nv//Pp7//z6e
+        //8+nv//Pp7//z6e//8/3f9TP+D/90DL//9BoP//QZ///0Gg//9FlfL/VGy9/1Nls/9Gj+r/QaD//0Gf
+        //9Bn///QZ///0Gf//9Bn///QZ///0Gf//9Bn///QZ///0Gf//9Bn///QZ///0qJ4/9WY7L/T3DB/0OZ
+        9/9Bn///QZ///0Gf//9Bn///QZ///z/d/08/4P/2QMz//0Gg//9Bn///Q57+/3xryP+jQpr/jzN+/2FF
+        iv9DmPb/QZ///0Gf//9Bn///QZ///0Gf//9Bn///QZ///0Gf//9Bn///QZ///0Cg//9Nlvb/kVex/6E/
+        lf+BLXP/VGKv/0Gg//9Bn///QZ///0Gf//9Bn///P93/Kj/f/90/1f//Qab//0Cf//9Kmfn/oV7A/7hQ
+        sv+0T7D/gDiB/0eJ4v9BoP//QZ///0Gf//9Bn///QZ///0Gf//9Bn///QZ///0Gf//9Bn///P6D//2CK
+        6/+yU7X/t1G0/6xHov9oR4//QZz6/0Gf//9Bn///QZ///0Gf/+A/zf8BP93/Yj/e/+JAxf/6QKX/+kuY
+        +PqiXb7+tk+x/7ZQsv+LPo3/R4fg+0Gg//pBn//6QZ//+kGf//pBn//6QZ//+kGf//pBn//6QZ//+kGf
+        //o/oP/6Yonp+7JStP+1ULL/skur/3BJlf5Bmvn6QZ//+kGf//hBn//TQZ//Uz/Z/wA/2P8CP93/Jz/d
+        /0k+v/9KXY7tWq9UtuG1ULL/tlCz/485h/FPZ7VqP6T/SUGf/0tBn/9LQZ//S0Gf/0tBn/9LQZ//S0Gf
+        /0tBn/9LQZ//Szuj/0iDctN9tFGz+rVQsv+xTKz/ejZ9zkKR7FBBoP9LQZ//RUGf/x5Bn/8BAAAAAAAA
+        AAAAAAAAAAAAALVQsgC1ULIVtVCy1bVQsv+2ULP/kTaE6mQWSitrGlIAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAtVCyALVQske1ULL4tVCy/7BNrP+BK2+6SgMoB3AeWAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAtVCyALVQsgy1ULLBtVCy/7VQsv+TOIbaYRRGHWsbUwAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC1ULIAtVCyNLVQsu21ULL/sEys/4MtcqMJAAACcB9ZAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC1ULIAtVCyALVQsle1ULLotFCx8Z4/lHMAAAACcB5ZAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALVQsgC1ULIItVCyjrVQsvixTa3ajzSAPqVE
+        nQCBK3AAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAIAAAAD4H/wP+B/8D/wf/B8=
+</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>frmGiris</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>frmGiris</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>

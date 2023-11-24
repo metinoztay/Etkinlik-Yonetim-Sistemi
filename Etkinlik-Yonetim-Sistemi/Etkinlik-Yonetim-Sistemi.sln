@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Etkinlik-Yonetim-Sistemi", "Etkinlik-Yonetim-Sistemi.csproj", "{84F881F4-A0C4-4FE0-8782-08457EBBA240}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Etkinlik-Yonetim-Sistemi", "Etkinlik-Yonetim-Sistemi.csproj", "{B24B8941-B5BB-463B-92A2-ECE23D3259CC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{84F881F4-A0C4-4FE0-8782-08457EBBA240}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{84F881F4-A0C4-4FE0-8782-08457EBBA240}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{84F881F4-A0C4-4FE0-8782-08457EBBA240}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{84F881F4-A0C4-4FE0-8782-08457EBBA240}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B24B8941-B5BB-463B-92A2-ECE23D3259CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B24B8941-B5BB-463B-92A2-ECE23D3259CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B24B8941-B5BB-463B-92A2-ECE23D3259CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B24B8941-B5BB-463B-92A2-ECE23D3259CC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {431751F0-E72E-412E-B6BF-595C44CA6C7B}
+		SolutionGuid = {27AF9602-8F8B-4EF0-8B0E-4C265CB2F7EF}
 	EndGlobalSection
 EndGlobal
