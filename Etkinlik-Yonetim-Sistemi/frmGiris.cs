@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -21,11 +22,46 @@ namespace Etkinlik_Yonetim_Sistemi
         {
             string kullaniciAdi = txtKullaniciAdi.Text;
             string sifre = txtSifre.Text;
+            string kullaniciID;
 
-            string connectionString = "Data Source=.;Initial Catalog=dbEtkinlikYonetimSistemi;User ID=your_username;Password=your_password;";
+            string baglantiCumlesi = "Data Source=.;Initial Catalog=dbEtkinlikYonetimSistemi;Integrated Security=True";
+            
+            string sorgu = "SELECT *FROM tblKullanicilar WHERE KullaniciAdi = @KullaniciAdi AND SifreHash = @SifreHash";
+            
+            using (SqlConnection baglanti = new SqlConnection(baglantiCumlesi))
+            {
+                baglanti.Open();
 
-            // SQL sorgusunu oluşturun (parametre kullanarak SQL Injection saldırılarından korunmak için)
-            string query = "SELECT COUNT(*) FROM tbl_Kullanicilar WHERE KullaniciAdi = @KullaniciAdi AND SifreHash = @SifreHash";
+                using (SqlCommand komut = new SqlCommand(sorgu, baglanti))
+                {
+                    komut.Parameters.AddWithValue("@KullaniciAdi", kullaniciAdi);
+                    komut.Parameters.AddWithValue("@SifreHash", sifre);
+
+                    SqlDataReader dataOkuyucu = komut.ExecuteReader();
+
+                    if (dataOkuyucu.Read())
+                    {
+                        frmAnaEkran AnaEkran = new frmAnaEkran((int)dataOkuyucu["KullaniciID"]);
+                        this.Hide();
+                        AnaEkran.ShowDialog();
+                        
+                    }
+                    else
+                    {
+                        MessageBox.Show("Kullanıcı adı veya şifre hatalı!");
+                    }
+                }
+            }
         }
+
+        private void txtSifre_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.Handled = true;
+                btnGiris.PerformClick();
+            }
+        }
+
     }
 }

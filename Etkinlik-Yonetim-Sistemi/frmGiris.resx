@@ -118,70 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="picSolGiris.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="picSolGiris.Size" type="System.Drawing.Size, System.Drawing">
-    <value>527, 551</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="picSolGiris.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;picSolGiris.Name" xml:space="preserve">
-    <value>picSolGiris</value>
-  </data>
-  <data name="&gt;&gt;picSolGiris.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;picSolGiris.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;picSolGiris.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="picKullanciAdiGiris.Location" type="System.Drawing.Point, System.Drawing">
-    <value>624, 197</value>
-  </data>
-  <data name="picKullanciAdiGiris.Size" type="System.Drawing.Size, System.Drawing">
-    <value>260, 38</value>
-  </data>
-  <data name="picKullanciAdiGiris.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;picKullanciAdiGiris.Name" xml:space="preserve">
-    <value>picKullanciAdiGiris</value>
-  </data>
-  <data name="&gt;&gt;picKullanciAdiGiris.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;picKullanciAdiGiris.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;picKullanciAdiGiris.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="picKullaniciAdiGirisSol.Location" type="System.Drawing.Point, System.Drawing">
-    <value>624, 197</value>
-  </data>
-  <data name="picKullaniciAdiGirisSol.Size" type="System.Drawing.Size, System.Drawing">
-    <value>5, 38</value>
-  </data>
-  <data name="picKullaniciAdiGirisSol.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;picKullaniciAdiGirisSol.Name" xml:space="preserve">
-    <value>picKullaniciAdiGirisSol</value>
-  </data>
-  <data name="&gt;&gt;picKullaniciAdiGirisSol.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;picKullaniciAdiGirisSol.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;picKullaniciAdiGirisSol.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
   <data name="txtKullaniciAdi.Font" type="System.Drawing.Font, System.Drawing">
     <value>Trebuchet MS, 10.2pt</value>
   </data>
@@ -191,6 +127,7 @@
   <data name="txtKullaniciAdi.Size" type="System.Drawing.Size, System.Drawing">
     <value>245, 20</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="txtKullaniciAdi.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
@@ -233,7 +170,67 @@
   <data name="&gt;&gt;txtSifre.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="lblKullaniciGirisi.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblKullaniciGirisi.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Trebuchet MS, 12pt, style=Bold</value>
+  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lblKullaniciGirisi.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblKullaniciGirisi.Location" type="System.Drawing.Point, System.Drawing">
+    <value>684, 104</value>
+  </data>
+  <data name="lblKullaniciGirisi.Size" type="System.Drawing.Size, System.Drawing">
+    <value>148, 26</value>
+  </data>
+  <data name="lblKullaniciGirisi.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="lblKullaniciGirisi.Text" xml:space="preserve">
+    <value>Kullanıcı Girişi</value>
+  </data>
+  <data name="&gt;&gt;lblKullaniciGirisi.Name" xml:space="preserve">
+    <value>lblKullaniciGirisi</value>
+  </data>
+  <data name="&gt;&gt;lblKullaniciGirisi.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblKullaniciGirisi.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblKullaniciGirisi.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnGiris.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnGiris.Location" type="System.Drawing.Point, System.Drawing">
+    <value>776, 353</value>
+  </data>
+  <data name="btnGiris.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 42</value>
+  </data>
+  <data name="btnGiris.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="btnGiris.Text" xml:space="preserve">
+    <value>GİRİŞ</value>
+  </data>
+  <data name="&gt;&gt;btnGiris.Name" xml:space="preserve">
+    <value>btnGiris</value>
+  </data>
+  <data name="&gt;&gt;btnGiris.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnGiris.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnGiris.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="pictureBox1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -282,59 +279,77 @@
   <data name="&gt;&gt;pictureBox2.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="lblKullaniciGirisi.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="picKullaniciAdiGirisSol.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="lblKullaniciGirisi.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Trebuchet MS, 12pt, style=Bold</value>
+  <data name="picKullaniciAdiGirisSol.Location" type="System.Drawing.Point, System.Drawing">
+    <value>624, 197</value>
   </data>
-  <data name="lblKullaniciGirisi.Location" type="System.Drawing.Point, System.Drawing">
-    <value>684, 104</value>
+  <data name="picKullaniciAdiGirisSol.Size" type="System.Drawing.Size, System.Drawing">
+    <value>5, 38</value>
   </data>
-  <data name="lblKullaniciGirisi.Size" type="System.Drawing.Size, System.Drawing">
-    <value>148, 26</value>
+  <data name="picKullaniciAdiGirisSol.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
   </data>
-  <data name="lblKullaniciGirisi.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+  <data name="&gt;&gt;picKullaniciAdiGirisSol.Name" xml:space="preserve">
+    <value>picKullaniciAdiGirisSol</value>
   </data>
-  <data name="lblKullaniciGirisi.Text" xml:space="preserve">
-    <value>Kullanıcı Girişi</value>
+  <data name="&gt;&gt;picKullaniciAdiGirisSol.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;lblKullaniciGirisi.Name" xml:space="preserve">
-    <value>lblKullaniciGirisi</value>
-  </data>
-  <data name="&gt;&gt;lblKullaniciGirisi.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblKullaniciGirisi.Parent" xml:space="preserve">
+  <data name="&gt;&gt;picKullaniciAdiGirisSol.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;lblKullaniciGirisi.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;picKullaniciAdiGirisSol.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="picKullanciAdiGiris.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="picKullanciAdiGiris.Location" type="System.Drawing.Point, System.Drawing">
+    <value>624, 197</value>
+  </data>
+  <data name="picKullanciAdiGiris.Size" type="System.Drawing.Size, System.Drawing">
+    <value>260, 38</value>
+  </data>
+  <data name="picKullanciAdiGiris.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="btnGiris.Location" type="System.Drawing.Point, System.Drawing">
-    <value>776, 353</value>
+  <data name="&gt;&gt;picKullanciAdiGiris.Name" xml:space="preserve">
+    <value>picKullanciAdiGiris</value>
   </data>
-  <data name="btnGiris.Size" type="System.Drawing.Size, System.Drawing">
-    <value>104, 42</value>
+  <data name="&gt;&gt;picKullanciAdiGiris.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="btnGiris.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="btnGiris.Text" xml:space="preserve">
-    <value>GİRİŞ</value>
-  </data>
-  <data name="&gt;&gt;btnGiris.Name" xml:space="preserve">
-    <value>btnGiris</value>
-  </data>
-  <data name="&gt;&gt;btnGiris.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnGiris.Parent" xml:space="preserve">
+  <data name="&gt;&gt;picKullanciAdiGiris.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;btnGiris.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;picKullanciAdiGiris.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="picSolGiris.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="picSolGiris.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="picSolGiris.Size" type="System.Drawing.Size, System.Drawing">
+    <value>527, 551</value>
+  </data>
+  <data name="picSolGiris.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
+  </data>
+  <data name="&gt;&gt;picSolGiris.Name" xml:space="preserve">
+    <value>picSolGiris</value>
+  </data>
+  <data name="&gt;&gt;picSolGiris.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;picSolGiris.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;picSolGiris.ZOrder" xml:space="preserve">
+    <value>8</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

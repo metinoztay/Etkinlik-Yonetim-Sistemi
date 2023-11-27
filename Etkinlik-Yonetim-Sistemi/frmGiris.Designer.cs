@@ -29,49 +29,28 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGiris));
-            this.picSolGiris = new System.Windows.Forms.PictureBox();
-            this.picKullanciAdiGiris = new System.Windows.Forms.PictureBox();
-            this.picKullaniciAdiGirisSol = new System.Windows.Forms.PictureBox();
             this.txtKullaniciAdi = new System.Windows.Forms.TextBox();
             this.txtSifre = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lblKullaniciGirisi = new System.Windows.Forms.Label();
             this.btnGiris = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.picSolGiris)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picKullanciAdiGiris)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picKullaniciAdiGirisSol)).BeginInit();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.picKullaniciAdiGirisSol = new System.Windows.Forms.PictureBox();
+            this.picKullanciAdiGiris = new System.Windows.Forms.PictureBox();
+            this.picSolGiris = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picKullaniciAdiGirisSol)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picKullanciAdiGiris)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picSolGiris)).BeginInit();
             this.SuspendLayout();
-            // 
-            // picSolGiris
-            // 
-            this.picSolGiris.Image = global::Etkinlik_Yonetim_Sistemi.Properties.Resources.orange_side;
-            resources.ApplyResources(this.picSolGiris, "picSolGiris");
-            this.picSolGiris.Name = "picSolGiris";
-            this.picSolGiris.TabStop = false;
-            // 
-            // picKullanciAdiGiris
-            // 
-            this.picKullanciAdiGiris.BackColor = System.Drawing.Color.WhiteSmoke;
-            resources.ApplyResources(this.picKullanciAdiGiris, "picKullanciAdiGiris");
-            this.picKullanciAdiGiris.Name = "picKullanciAdiGiris";
-            this.picKullanciAdiGiris.TabStop = false;
-            // 
-            // picKullaniciAdiGirisSol
-            // 
-            this.picKullaniciAdiGirisSol.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            resources.ApplyResources(this.picKullaniciAdiGirisSol, "picKullaniciAdiGirisSol");
-            this.picKullaniciAdiGirisSol.Name = "picKullaniciAdiGirisSol";
-            this.picKullaniciAdiGirisSol.TabStop = false;
             // 
             // txtKullaniciAdi
             // 
             this.txtKullaniciAdi.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txtKullaniciAdi.BorderStyle = System.Windows.Forms.BorderStyle.None;
             resources.ApplyResources(this.txtKullaniciAdi, "txtKullaniciAdi");
-            this.txtKullaniciAdi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.txtKullaniciAdi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(93)))), ((int)(((byte)(38)))));
             this.txtKullaniciAdi.Name = "txtKullaniciAdi";
             // 
             // txtSifre
@@ -79,12 +58,26 @@
             this.txtSifre.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txtSifre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             resources.ApplyResources(this.txtSifre, "txtSifre");
-            this.txtSifre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.txtSifre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(93)))), ((int)(((byte)(38)))));
             this.txtSifre.Name = "txtSifre";
+            this.txtSifre.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSifre_KeyDown);
+            // 
+            // lblKullaniciGirisi
+            // 
+            resources.ApplyResources(this.lblKullaniciGirisi, "lblKullaniciGirisi");
+            this.lblKullaniciGirisi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(93)))), ((int)(((byte)(38)))));
+            this.lblKullaniciGirisi.Name = "lblKullaniciGirisi";
+            // 
+            // btnGiris
+            // 
+            resources.ApplyResources(this.btnGiris, "btnGiris");
+            this.btnGiris.Name = "btnGiris";
+            this.btnGiris.UseVisualStyleBackColor = true;
+            this.btnGiris.Click += new System.EventHandler(this.btnGiris_Click);
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(93)))), ((int)(((byte)(38)))));
             resources.ApplyResources(this.pictureBox1, "pictureBox1");
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.TabStop = false;
@@ -96,18 +89,26 @@
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.TabStop = false;
             // 
-            // lblKullaniciGirisi
+            // picKullaniciAdiGirisSol
             // 
-            resources.ApplyResources(this.lblKullaniciGirisi, "lblKullaniciGirisi");
-            this.lblKullaniciGirisi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lblKullaniciGirisi.Name = "lblKullaniciGirisi";
+            this.picKullaniciAdiGirisSol.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(93)))), ((int)(((byte)(38)))));
+            resources.ApplyResources(this.picKullaniciAdiGirisSol, "picKullaniciAdiGirisSol");
+            this.picKullaniciAdiGirisSol.Name = "picKullaniciAdiGirisSol";
+            this.picKullaniciAdiGirisSol.TabStop = false;
             // 
-            // btnGiris
+            // picKullanciAdiGiris
             // 
-            resources.ApplyResources(this.btnGiris, "btnGiris");
-            this.btnGiris.Name = "btnGiris";
-            this.btnGiris.UseVisualStyleBackColor = true;
-            this.btnGiris.Click += new System.EventHandler(this.btnGiris_Click);
+            this.picKullanciAdiGiris.BackColor = System.Drawing.Color.WhiteSmoke;
+            resources.ApplyResources(this.picKullanciAdiGiris, "picKullanciAdiGiris");
+            this.picKullanciAdiGiris.Name = "picKullanciAdiGiris";
+            this.picKullanciAdiGiris.TabStop = false;
+            // 
+            // picSolGiris
+            // 
+            this.picSolGiris.Image = global::Etkinlik_Yonetim_Sistemi.Properties.Resources.orange_side;
+            resources.ApplyResources(this.picSolGiris, "picSolGiris");
+            this.picSolGiris.Name = "picSolGiris";
+            this.picSolGiris.TabStop = false;
             // 
             // frmGiris
             // 
@@ -125,11 +126,11 @@
             this.Controls.Add(this.picSolGiris);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmGiris";
-            ((System.ComponentModel.ISupportInitialize)(this.picSolGiris)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picKullanciAdiGiris)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picKullaniciAdiGirisSol)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picKullaniciAdiGirisSol)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picKullanciAdiGiris)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picSolGiris)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

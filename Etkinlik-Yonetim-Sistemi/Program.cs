@@ -17,7 +17,7 @@ namespace Etkinlik_Yonetim_Sistemi
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmGiris());
+            Application.Run(new frmAnaEkran());
         }
         
 
