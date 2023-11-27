@@ -75,39 +75,6 @@ namespace Etkinlik_Yonetim_Sistemi
 
         private void listKullanicilar_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int kullaniciID = Convert.ToInt32(listKullanicilar.SelectedItems[0].Text);
-            using (SqlConnection baglanti = new SqlConnection(baglantiCumlesi))
-            {
-                string sorgu;
-                sorgu = $"SELECT * FROM tblKullanicilar WHERE KullaniciID = {kullaniciID}";
-                baglanti.Open();
-
-                using (SqlCommand command = new SqlCommand(sorgu, baglanti))
-                {
-                    using (SqlDataReader dataOkuyucu = command.ExecuteReader())
-                    {
-                        if (dataOkuyucu.Read())
-                        {
-                            Kullanici kullanici = new Kullanici();
-                            kullanici.kullaniciID = (int)dataOkuyucu["KullaniciID"];
-                            kullanici.kullaniciAdi = (string)dataOkuyucu["KullaniciAdi"];
-                            kullanici.adiSoyadi = (string)dataOkuyucu["AdiSoyadi"];
-                            kullanici.email = (string)dataOkuyucu["Email"];
-                            kullanici.telefonNumarasi = (string)dataOkuyucu["TelefonNumarasi"];
-                            kullanici.yetki = (string)dataOkuyucu["Yetki"];
-                            kullanici.sifre = (string)dataOkuyucu["SifreHash"];
-
-                            tbxKullaniciID.Text = kullanici.kullaniciID.ToString();
-                            tbxAdSoyad.Text = kullanici.adiSoyadi;
-                            tbxTelNo.Text = kullanici.telefonNumarasi;
-                            tbxKullaniciAdi.Text = kullanici.kullaniciAdi;
-                            tbxEmail.Text = kullanici.email;
-                            tbxŞifre.Text = kullanici.sifre;
-                            cbxYetki.SelectedItem = kullanici.yetki;
-                        }
-                    }
-                }
-            }
         }
 
         private void btnGuncelle_Click(object sender, EventArgs e)
@@ -220,8 +187,6 @@ namespace Etkinlik_Yonetim_Sistemi
             string[] bilgiler = new string[] { guncelKullaniciBilgileri.adiSoyadi, guncelKullaniciBilgileri.kullaniciAdi,
             guncelKullaniciBilgileri.sifre,guncelKullaniciBilgileri.email,guncelKullaniciBilgileri.telefonNumarasi,guncelKullaniciBilgileri.yetki};
             
-            
-
             foreach (string bilgi in bilgiler)
             {
                 if (bilgi == String.Empty)
@@ -234,6 +199,43 @@ namespace Etkinlik_Yonetim_Sistemi
 
             frmKullanıcıIslemleriOnay onay = new frmKullanıcıIslemleriOnay(guncelKullaniciBilgileri, "SIL");
             onay.ShowDialog();
+        }
+
+        private void btnDuzenle_Click(object sender, EventArgs e)
+        {
+            int kullaniciID = Convert.ToInt32(listKullanicilar.SelectedItems[0].Text);
+            using (SqlConnection baglanti = new SqlConnection(baglantiCumlesi))
+            {
+                string sorgu;
+                sorgu = $"SELECT * FROM tblKullanicilar WHERE KullaniciID = {kullaniciID}";
+                baglanti.Open();
+
+                using (SqlCommand command = new SqlCommand(sorgu, baglanti))
+                {
+                    using (SqlDataReader dataOkuyucu = command.ExecuteReader())
+                    {
+                        if (dataOkuyucu.Read())
+                        {
+                            Kullanici kullanici = new Kullanici();
+                            kullanici.kullaniciID = (int)dataOkuyucu["KullaniciID"];
+                            kullanici.kullaniciAdi = (string)dataOkuyucu["KullaniciAdi"];
+                            kullanici.adiSoyadi = (string)dataOkuyucu["AdiSoyadi"];
+                            kullanici.email = (string)dataOkuyucu["Email"];
+                            kullanici.telefonNumarasi = (string)dataOkuyucu["TelefonNumarasi"];
+                            kullanici.yetki = (string)dataOkuyucu["Yetki"];
+                            kullanici.sifre = (string)dataOkuyucu["SifreHash"];
+
+                            tbxKullaniciID.Text = kullanici.kullaniciID.ToString();
+                            tbxAdSoyad.Text = kullanici.adiSoyadi;
+                            tbxTelNo.Text = kullanici.telefonNumarasi;
+                            tbxKullaniciAdi.Text = kullanici.kullaniciAdi;
+                            tbxEmail.Text = kullanici.email;
+                            tbxŞifre.Text = kullanici.sifre;
+                            cbxYetki.SelectedItem = kullanici.yetki;
+                        }
+                    }
+                }
+            }
         }
     }
 }

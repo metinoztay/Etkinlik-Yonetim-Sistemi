@@ -43,8 +43,8 @@
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(863, 245);
+            this.panel1.BackColor = System.Drawing.Color.LightYellow;
+            this.panel1.Location = new System.Drawing.Point(850, 233);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(262, 436);
             this.panel1.TabIndex = 1;
@@ -69,15 +69,15 @@
             this.panelTakvimArkaplan.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelTakvimArkaplan.BackColor = System.Drawing.Color.White;
+            this.panelTakvimArkaplan.BackColor = System.Drawing.Color.LightYellow;
             this.panelTakvimArkaplan.Controls.Add(this.panelTakvim);
             this.panelTakvimArkaplan.Controls.Add(this.btnEtkinlikEkle);
             this.panelTakvimArkaplan.Controls.Add(this.btnAylik);
             this.panelTakvimArkaplan.Controls.Add(this.btnHaftalik);
             this.panelTakvimArkaplan.Controls.Add(this.btnGunluk);
-            this.panelTakvimArkaplan.Location = new System.Drawing.Point(2, 2);
+            this.panelTakvimArkaplan.Location = new System.Drawing.Point(12, 12);
             this.panelTakvimArkaplan.Name = "panelTakvimArkaplan";
-            this.panelTakvimArkaplan.Size = new System.Drawing.Size(827, 678);
+            this.panelTakvimArkaplan.Size = new System.Drawing.Size(827, 657);
             this.panelTakvimArkaplan.TabIndex = 2;
             // 
             // panelTakvim
@@ -88,7 +88,7 @@
             this.panelTakvim.BackColor = System.Drawing.Color.Gainsboro;
             this.panelTakvim.Location = new System.Drawing.Point(3, 38);
             this.panelTakvim.Name = "panelTakvim";
-            this.panelTakvim.Size = new System.Drawing.Size(821, 637);
+            this.panelTakvim.Size = new System.Drawing.Size(821, 616);
             this.panelTakvim.TabIndex = 4;
             // 
             // btnAylik
@@ -133,7 +133,8 @@
             // mcalGunSecici
             // 
             this.mcalGunSecici.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.mcalGunSecici.Location = new System.Drawing.Point(863, 2);
+            this.mcalGunSecici.BackColor = System.Drawing.Color.LightYellow;
+            this.mcalGunSecici.Location = new System.Drawing.Point(851, 12);
             this.mcalGunSecici.Name = "mcalGunSecici";
             this.mcalGunSecici.TabIndex = 3;
             this.mcalGunSecici.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.mcalGunSecici_DateChanged);
@@ -142,6 +143,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.BlanchedAlmond;
             this.ClientSize = new System.Drawing.Size(1124, 681);
             this.Controls.Add(this.mcalGunSecici);
             this.Controls.Add(this.panelTakvimArkaplan);

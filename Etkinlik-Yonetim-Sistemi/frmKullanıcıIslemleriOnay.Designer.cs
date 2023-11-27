@@ -34,9 +34,9 @@
             this.lblKullaniciAdi = new System.Windows.Forms.Label();
             this.lblTelefonNo = new System.Windows.Forms.Label();
             this.lblAdSoyad = new System.Windows.Forms.Label();
-            this.btnOnay = new FontAwesome.Sharp.IconButton();
-            this.btnIptal = new FontAwesome.Sharp.IconButton();
             this.lblOnaySorusu = new System.Windows.Forms.Label();
+            this.btnIptal = new FontAwesome.Sharp.IconButton();
+            this.btnOnay = new FontAwesome.Sharp.IconButton();
             this.SuspendLayout();
             // 
             // lblYetki
@@ -99,21 +99,15 @@
             this.lblAdSoyad.TabIndex = 15;
             this.lblAdSoyad.Text = "Ad Soyad:    ";
             // 
-            // btnOnay
+            // lblOnaySorusu
             // 
-            this.btnOnay.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnOnay.IconChar = FontAwesome.Sharp.IconChar.Check;
-            this.btnOnay.IconColor = System.Drawing.Color.Green;
-            this.btnOnay.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnOnay.IconSize = 32;
-            this.btnOnay.Location = new System.Drawing.Point(282, 411);
-            this.btnOnay.Name = "btnOnay";
-            this.btnOnay.Size = new System.Drawing.Size(115, 55);
-            this.btnOnay.TabIndex = 25;
-            this.btnOnay.Text = "ONAY";
-            this.btnOnay.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnOnay.UseVisualStyleBackColor = true;
-            this.btnOnay.Click += new System.EventHandler(this.btnOnay_Click);
+            this.lblOnaySorusu.AutoSize = true;
+            this.lblOnaySorusu.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblOnaySorusu.Location = new System.Drawing.Point(76, 354);
+            this.lblOnaySorusu.Name = "lblOnaySorusu";
+            this.lblOnaySorusu.Size = new System.Drawing.Size(389, 20);
+            this.lblOnaySorusu.TabIndex = 27;
+            this.lblOnaySorusu.Text = "Yukarıda verilen kullanıcı bilgileri .... onaylıyor musunuz?";
             // 
             // btnIptal
             // 
@@ -131,15 +125,21 @@
             this.btnIptal.UseVisualStyleBackColor = true;
             this.btnIptal.Click += new System.EventHandler(this.btnIptal_Click);
             // 
-            // lblOnaySorusu
+            // btnOnay
             // 
-            this.lblOnaySorusu.AutoSize = true;
-            this.lblOnaySorusu.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblOnaySorusu.Location = new System.Drawing.Point(76, 354);
-            this.lblOnaySorusu.Name = "lblOnaySorusu";
-            this.lblOnaySorusu.Size = new System.Drawing.Size(389, 20);
-            this.lblOnaySorusu.TabIndex = 27;
-            this.lblOnaySorusu.Text = "Yukarıda verilen kullanıcı bilgileri .... onaylıyor musunuz?";
+            this.btnOnay.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnOnay.IconChar = FontAwesome.Sharp.IconChar.Check;
+            this.btnOnay.IconColor = System.Drawing.Color.Green;
+            this.btnOnay.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnOnay.IconSize = 32;
+            this.btnOnay.Location = new System.Drawing.Point(282, 411);
+            this.btnOnay.Name = "btnOnay";
+            this.btnOnay.Size = new System.Drawing.Size(115, 55);
+            this.btnOnay.TabIndex = 25;
+            this.btnOnay.Text = "ONAY";
+            this.btnOnay.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnOnay.UseVisualStyleBackColor = true;
+            this.btnOnay.Click += new System.EventHandler(this.btnOnay_Click);
             // 
             // frmKullanıcıIslemleriOnay
             // 

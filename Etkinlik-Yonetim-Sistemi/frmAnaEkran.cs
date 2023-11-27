@@ -84,27 +84,27 @@ namespace Etkinlik_Yonetim_Sistemi
             public static Color renk6 = Color.FromArgb(24, 161, 251);
         }
 
-        private void ButonuAktifYap(object senderBtn, Color yeniRenk)
+        private void ButonuAktifYap(object senderBtn)
         {
             if (senderBtn != null)
             {
                 ButonuPasifYap();
 
                 aktifButon = (IconButton)senderBtn;
-                aktifButon.BackColor = Color.FromArgb(37, 36, 81);
-                aktifButon.ForeColor = yeniRenk;
+                aktifButon.BackColor = Color.FromArgb(119,107,93);
+                aktifButon.ForeColor = Color.LightYellow;
                 aktifButon.TextAlign = ContentAlignment.MiddleCenter;
-                aktifButon.IconColor = yeniRenk;
+                aktifButon.IconColor = Color.LightYellow;
                 aktifButon.TextImageRelation = TextImageRelation.TextBeforeImage;
                 aktifButon.ImageAlign = ContentAlignment.MiddleRight;
 
-                butonSolPanel.BackColor = yeniRenk;
+                butonSolPanel.BackColor = Color.LightYellow;
                 butonSolPanel.Location = new Point(0, aktifButon.Location.Y);
                 butonSolPanel.Visible = true;
                 butonSolPanel.BringToFront();
 
                 icoAcikFormIcon.IconChar = aktifButon.IconChar;
-                icoAcikFormIcon.IconColor = yeniRenk;
+                icoAcikFormIcon.IconColor = Color.LightYellow; ;
             }
         }
 
@@ -112,10 +112,10 @@ namespace Etkinlik_Yonetim_Sistemi
         {
             if (aktifButon != null)
             {
-                aktifButon.BackColor = Color.FromArgb(31, 30, 68);
-                aktifButon.ForeColor = Color.Gainsboro;
+                aktifButon.BackColor = Color.FromArgb(243, 182, 100);
+                aktifButon.ForeColor = Color.FromArgb(34, 9, 44);
                 aktifButon.TextAlign = ContentAlignment.MiddleLeft;
-                aktifButon.IconColor = Color.Gainsboro;
+                aktifButon.IconColor = Color.FromArgb(34, 9, 44);
                 aktifButon.TextImageRelation = TextImageRelation.ImageBeforeText;
                 aktifButon.ImageAlign = ContentAlignment.MiddleLeft;
             }
@@ -123,7 +123,12 @@ namespace Etkinlik_Yonetim_Sistemi
 
         private void FormuYukle(Form yeniForm)
         {
+            if (panelKullanici.Visible)
+            {
+                panelKullanici.Visible = false;
+            }
 
+            
             if (aktifForm != null)
             {
                 aktifForm.Close();
@@ -145,37 +150,37 @@ namespace Etkinlik_Yonetim_Sistemi
             ButonuPasifYap();
             butonSolPanel.Visible = false;
             icoAcikFormIcon.IconChar = IconChar.Home;
-            icoAcikFormIcon.IconColor = Color.MediumPurple;
+            icoAcikFormIcon.IconColor = Color.FromArgb(34, 9, 44);
             lblAcikFormAdi.Text = "Ana Menu";
         }
 
         private void btnRezervasyon_Click(object sender, EventArgs e)
         {
-            ButonuAktifYap(sender, RGBRenkler.renk1);
+            ButonuAktifYap(sender);
             FormuYukle(new frmRezervasyon());
         }
 
         private void btnMusteri_Click(object sender, EventArgs e)
         {
-            ButonuAktifYap(sender, RGBRenkler.renk2);
-            FormuYukle(new frmRezervasyon());
+            ButonuAktifYap(sender);
+            FormuYukle(new frmMusteri());
         }
 
         private void btnOdeme_Click(object sender, EventArgs e)
         {
-            ButonuAktifYap(sender, RGBRenkler.renk3);
-            FormuYukle(new frmRezervasyon());
+            ButonuAktifYap(sender);
+            FormuYukle(new frmKasa());
         }
 
         private void btnRapor_Click(object sender, EventArgs e)
         {
-            ButonuAktifYap(sender, RGBRenkler.renk4);
-            FormuYukle(new frmRezervasyon());
+            ButonuAktifYap(sender);
+            FormuYukle(new frmRapor());
         }
 
         private void btnGuvenlik_Click(object sender, EventArgs e)
         {
-            ButonuAktifYap(sender, RGBRenkler.renk5);
+            ButonuAktifYap(sender);
             FormuYukle(new frmPersonel());
         }
 
@@ -233,5 +238,31 @@ namespace Etkinlik_Yonetim_Sistemi
         {
             WindowState = FormWindowState.Minimized;
         }
+
+        private void btnKullaniciAdiSoyadi_Click(object sender, EventArgs e)
+        {
+            if (!panelKullanici.Visible)
+            {
+                panelKullanici.Visible = true;
+                panelKullanici.BringToFront();
+            }
+            else
+            {
+                panelKullanici.Visible = false;
+            }
+        }
+
+        private void btnKullaniciCikis_Click(object sender, EventArgs e)
+        {
+            frmGiris giris = new frmGiris();
+            this.Hide();
+            giris.ShowDialog();
+        }
+
+        private void btnKullaniciBilgilerim_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

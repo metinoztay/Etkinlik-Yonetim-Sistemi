@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnDuzenle = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
             this.tbxKullaniciID = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.cboxYetkiListesi = new System.Windows.Forms.ComboBox();
@@ -60,7 +62,12 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.LightYellow;
+            this.panel1.Controls.Add(this.btnDuzenle);
+            this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.tbxKullaniciID);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.cboxYetkiListesi);
@@ -82,17 +89,37 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.tbxAdSoyad);
             this.panel1.Controls.Add(this.cbxYetki);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1124, 681);
+            this.panel1.Size = new System.Drawing.Size(1100, 657);
             this.panel1.TabIndex = 0;
+            // 
+            // btnDuzenle
+            // 
+            this.btnDuzenle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDuzenle.Location = new System.Drawing.Point(951, 129);
+            this.btnDuzenle.Name = "btnDuzenle";
+            this.btnDuzenle.Size = new System.Drawing.Size(126, 35);
+            this.btnDuzenle.TabIndex = 23;
+            this.btnDuzenle.Text = "DÜZENLE";
+            this.btnDuzenle.UseVisualStyleBackColor = true;
+            this.btnDuzenle.Click += new System.EventHandler(this.btnDuzenle_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label9.Location = new System.Drawing.Point(149, 81);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(139, 23);
+            this.label9.TabIndex = 22;
+            this.label9.Text = "Kullanıcı Bilgileri";
             // 
             // tbxKullaniciID
             // 
             this.tbxKullaniciID.Enabled = false;
-            this.tbxKullaniciID.Location = new System.Drawing.Point(150, 64);
+            this.tbxKullaniciID.Location = new System.Drawing.Point(148, 129);
             this.tbxKullaniciID.Name = "tbxKullaniciID";
             this.tbxKullaniciID.Size = new System.Drawing.Size(285, 25);
             this.tbxKullaniciID.TabIndex = 21;
@@ -102,7 +129,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label8.Location = new System.Drawing.Point(452, 70);
+            this.label8.Location = new System.Drawing.Point(450, 135);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(48, 23);
             this.label8.TabIndex = 20;
@@ -110,6 +137,8 @@
             // 
             // cboxYetkiListesi
             // 
+            this.cboxYetkiListesi.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cboxYetkiListesi.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cboxYetkiListesi.FormattingEnabled = true;
             this.cboxYetkiListesi.Items.AddRange(new object[] {
@@ -117,17 +146,18 @@
             "Yönetici",
             "Kullanıcı",
             "Personel"});
-            this.cboxYetkiListesi.Location = new System.Drawing.Point(506, 66);
+            this.cboxYetkiListesi.Location = new System.Drawing.Point(504, 131);
             this.cboxYetkiListesi.Name = "cboxYetkiListesi";
-            this.cboxYetkiListesi.Size = new System.Drawing.Size(407, 31);
+            this.cboxYetkiListesi.Size = new System.Drawing.Size(275, 31);
             this.cboxYetkiListesi.TabIndex = 19;
             this.cboxYetkiListesi.Text = "Seçim Yapınız.";
             // 
             // label7
             // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label7.Location = new System.Drawing.Point(532, 16);
+            this.label7.Location = new System.Drawing.Point(450, 81);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(130, 23);
             this.label7.TabIndex = 18;
@@ -135,7 +165,7 @@
             // 
             // btnSil
             // 
-            this.btnSil.Location = new System.Drawing.Point(150, 446);
+            this.btnSil.Location = new System.Drawing.Point(148, 511);
             this.btnSil.Name = "btnSil";
             this.btnSil.Size = new System.Drawing.Size(285, 35);
             this.btnSil.TabIndex = 17;
@@ -145,7 +175,7 @@
             // 
             // btnGuncelle
             // 
-            this.btnGuncelle.Location = new System.Drawing.Point(150, 405);
+            this.btnGuncelle.Location = new System.Drawing.Point(148, 470);
             this.btnGuncelle.Name = "btnGuncelle";
             this.btnGuncelle.Size = new System.Drawing.Size(131, 35);
             this.btnGuncelle.TabIndex = 16;
@@ -155,7 +185,8 @@
             // 
             // btnGetir
             // 
-            this.btnGetir.Location = new System.Drawing.Point(919, 64);
+            this.btnGetir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGetir.Location = new System.Drawing.Point(785, 129);
             this.btnGetir.Name = "btnGetir";
             this.btnGetir.Size = new System.Drawing.Size(160, 35);
             this.btnGetir.TabIndex = 15;
@@ -165,6 +196,8 @@
             // 
             // listKullanicilar
             // 
+            this.listKullanicilar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.listKullanicilar.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.KullaniciID,
             this.AdiSoyadi,
@@ -174,7 +207,7 @@
             this.listKullanicilar.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.listKullanicilar.FullRowSelect = true;
             this.listKullanicilar.HideSelection = false;
-            this.listKullanicilar.Location = new System.Drawing.Point(451, 105);
+            this.listKullanicilar.Location = new System.Drawing.Point(449, 170);
             this.listKullanicilar.Name = "listKullanicilar";
             this.listKullanicilar.Scrollable = false;
             this.listKullanicilar.Size = new System.Drawing.Size(628, 376);
@@ -215,7 +248,7 @@
             // 
             // btnEkle
             // 
-            this.btnEkle.Location = new System.Drawing.Point(286, 405);
+            this.btnEkle.Location = new System.Drawing.Point(284, 470);
             this.btnEkle.Name = "btnEkle";
             this.btnEkle.Size = new System.Drawing.Size(149, 35);
             this.btnEkle.TabIndex = 13;
@@ -227,7 +260,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.Location = new System.Drawing.Point(71, 105);
+            this.label6.Location = new System.Drawing.Point(69, 170);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(48, 23);
             this.label6.TabIndex = 12;
@@ -236,7 +269,7 @@
             // tbxŞifre
             // 
             this.tbxŞifre.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tbxŞifre.Location = new System.Drawing.Point(150, 346);
+            this.tbxŞifre.Location = new System.Drawing.Point(148, 411);
             this.tbxŞifre.Multiline = true;
             this.tbxŞifre.Name = "tbxŞifre";
             this.tbxŞifre.Size = new System.Drawing.Size(285, 35);
@@ -245,7 +278,7 @@
             // tbxEmail
             // 
             this.tbxEmail.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tbxEmail.Location = new System.Drawing.Point(150, 297);
+            this.tbxEmail.Location = new System.Drawing.Point(148, 362);
             this.tbxEmail.Multiline = true;
             this.tbxEmail.Name = "tbxEmail";
             this.tbxEmail.Size = new System.Drawing.Size(285, 35);
@@ -254,7 +287,7 @@
             // tbxKullaniciAdi
             // 
             this.tbxKullaniciAdi.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tbxKullaniciAdi.Location = new System.Drawing.Point(150, 248);
+            this.tbxKullaniciAdi.Location = new System.Drawing.Point(148, 313);
             this.tbxKullaniciAdi.Multiline = true;
             this.tbxKullaniciAdi.Name = "tbxKullaniciAdi";
             this.tbxKullaniciAdi.Size = new System.Drawing.Size(285, 35);
@@ -263,7 +296,7 @@
             // tbxTelNo
             // 
             this.tbxTelNo.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tbxTelNo.Location = new System.Drawing.Point(150, 199);
+            this.tbxTelNo.Location = new System.Drawing.Point(148, 264);
             this.tbxTelNo.Multiline = true;
             this.tbxTelNo.Name = "tbxTelNo";
             this.tbxTelNo.Size = new System.Drawing.Size(285, 35);
@@ -273,7 +306,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(63, 301);
+            this.label5.Location = new System.Drawing.Point(61, 366);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(56, 23);
             this.label5.TabIndex = 7;
@@ -283,7 +316,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(74, 350);
+            this.label4.Location = new System.Drawing.Point(72, 415);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(45, 23);
             this.label4.TabIndex = 6;
@@ -293,7 +326,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(16, 252);
+            this.label3.Location = new System.Drawing.Point(14, 317);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(103, 23);
             this.label3.TabIndex = 5;
@@ -303,7 +336,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(27, 203);
+            this.label2.Location = new System.Drawing.Point(25, 268);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(92, 23);
             this.label2.TabIndex = 3;
@@ -313,7 +346,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(41, 154);
+            this.label1.Location = new System.Drawing.Point(39, 219);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(78, 23);
             this.label1.TabIndex = 2;
@@ -322,7 +355,7 @@
             // tbxAdSoyad
             // 
             this.tbxAdSoyad.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tbxAdSoyad.Location = new System.Drawing.Point(150, 150);
+            this.tbxAdSoyad.Location = new System.Drawing.Point(148, 215);
             this.tbxAdSoyad.Multiline = true;
             this.tbxAdSoyad.Name = "tbxAdSoyad";
             this.tbxAdSoyad.Size = new System.Drawing.Size(285, 35);
@@ -336,7 +369,7 @@
             "Yönetici",
             "Kullanıcı",
             "Personel"});
-            this.cbxYetki.Location = new System.Drawing.Point(150, 105);
+            this.cbxYetki.Location = new System.Drawing.Point(148, 170);
             this.cbxYetki.Name = "cbxYetki";
             this.cbxYetki.Size = new System.Drawing.Size(285, 31);
             this.cbxYetki.TabIndex = 0;
@@ -346,6 +379,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.BlanchedAlmond;
             this.ClientSize = new System.Drawing.Size(1124, 681);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -386,5 +420,7 @@
         private System.Windows.Forms.ComboBox cboxYetkiListesi;
         private System.Windows.Forms.ColumnHeader KullaniciID;
         private System.Windows.Forms.TextBox tbxKullaniciID;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button btnDuzenle;
     }
 }
