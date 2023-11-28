@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.tbxTelNo = new System.Windows.Forms.MaskedTextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnDuzenle = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.tbxKullaniciID = new System.Windows.Forms.TextBox();
@@ -49,7 +51,6 @@
             this.tbxŞifre = new System.Windows.Forms.TextBox();
             this.tbxEmail = new System.Windows.Forms.TextBox();
             this.tbxKullaniciAdi = new System.Windows.Forms.TextBox();
-            this.tbxTelNo = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -58,6 +59,7 @@
             this.tbxAdSoyad = new System.Windows.Forms.TextBox();
             this.cbxYetki = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -66,6 +68,8 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.LightYellow;
+            this.panel1.Controls.Add(this.tbxTelNo);
+            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.btnDuzenle);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.tbxKullaniciID);
@@ -81,7 +85,6 @@
             this.panel1.Controls.Add(this.tbxŞifre);
             this.panel1.Controls.Add(this.tbxEmail);
             this.panel1.Controls.Add(this.tbxKullaniciAdi);
-            this.panel1.Controls.Add(this.tbxTelNo);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
@@ -95,10 +98,30 @@
             this.panel1.Size = new System.Drawing.Size(1100, 657);
             this.panel1.TabIndex = 0;
             // 
+            // tbxTelNo
+            // 
+            this.tbxTelNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbxTelNo.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tbxTelNo.Location = new System.Drawing.Point(153, 271);
+            this.tbxTelNo.Mask = "(999) 000-0000";
+            this.tbxTelNo.Name = "tbxTelNo";
+            this.tbxTelNo.Size = new System.Drawing.Size(250, 20);
+            this.tbxTelNo.TabIndex = 47;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Location = new System.Drawing.Point(148, 264);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(285, 35);
+            this.pictureBox1.TabIndex = 48;
+            this.pictureBox1.TabStop = false;
+            // 
             // btnDuzenle
             // 
             this.btnDuzenle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDuzenle.Location = new System.Drawing.Point(951, 129);
+            this.btnDuzenle.Location = new System.Drawing.Point(951, 81);
             this.btnDuzenle.Name = "btnDuzenle";
             this.btnDuzenle.Size = new System.Drawing.Size(126, 35);
             this.btnDuzenle.TabIndex = 23;
@@ -129,7 +152,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label8.Location = new System.Drawing.Point(450, 135);
+            this.label8.Location = new System.Drawing.Point(450, 87);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(48, 23);
             this.label8.TabIndex = 20;
@@ -146,7 +169,7 @@
             "Yönetici",
             "Kullanıcı",
             "Personel"});
-            this.cboxYetkiListesi.Location = new System.Drawing.Point(504, 131);
+            this.cboxYetkiListesi.Location = new System.Drawing.Point(504, 83);
             this.cboxYetkiListesi.Name = "cboxYetkiListesi";
             this.cboxYetkiListesi.Size = new System.Drawing.Size(275, 31);
             this.cboxYetkiListesi.TabIndex = 19;
@@ -157,7 +180,7 @@
             this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label7.Location = new System.Drawing.Point(450, 81);
+            this.label7.Location = new System.Drawing.Point(450, 36);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(130, 23);
             this.label7.TabIndex = 18;
@@ -186,7 +209,7 @@
             // btnGetir
             // 
             this.btnGetir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGetir.Location = new System.Drawing.Point(785, 129);
+            this.btnGetir.Location = new System.Drawing.Point(785, 81);
             this.btnGetir.Name = "btnGetir";
             this.btnGetir.Size = new System.Drawing.Size(160, 35);
             this.btnGetir.TabIndex = 15;
@@ -207,14 +230,13 @@
             this.listKullanicilar.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.listKullanicilar.FullRowSelect = true;
             this.listKullanicilar.HideSelection = false;
-            this.listKullanicilar.Location = new System.Drawing.Point(449, 170);
+            this.listKullanicilar.Location = new System.Drawing.Point(449, 129);
             this.listKullanicilar.Name = "listKullanicilar";
             this.listKullanicilar.Scrollable = false;
-            this.listKullanicilar.Size = new System.Drawing.Size(628, 376);
+            this.listKullanicilar.Size = new System.Drawing.Size(628, 417);
             this.listKullanicilar.TabIndex = 14;
             this.listKullanicilar.UseCompatibleStateImageBehavior = false;
             this.listKullanicilar.View = System.Windows.Forms.View.Details;
-            this.listKullanicilar.SelectedIndexChanged += new System.EventHandler(this.listKullanicilar_SelectedIndexChanged);
             // 
             // KullaniciID
             // 
@@ -292,15 +314,6 @@
             this.tbxKullaniciAdi.Name = "tbxKullaniciAdi";
             this.tbxKullaniciAdi.Size = new System.Drawing.Size(285, 35);
             this.tbxKullaniciAdi.TabIndex = 9;
-            // 
-            // tbxTelNo
-            // 
-            this.tbxTelNo.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tbxTelNo.Location = new System.Drawing.Point(148, 264);
-            this.tbxTelNo.Multiline = true;
-            this.tbxTelNo.Name = "tbxTelNo";
-            this.tbxTelNo.Size = new System.Drawing.Size(285, 35);
-            this.tbxTelNo.TabIndex = 8;
             // 
             // label5
             // 
@@ -387,6 +400,7 @@
             this.Text = "Güvenlik ve Erişim";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -404,7 +418,6 @@
         private System.Windows.Forms.TextBox tbxŞifre;
         private System.Windows.Forms.TextBox tbxEmail;
         private System.Windows.Forms.TextBox tbxKullaniciAdi;
-        private System.Windows.Forms.TextBox tbxTelNo;
         private System.Windows.Forms.Button btnEkle;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
@@ -422,5 +435,7 @@
         private System.Windows.Forms.TextBox tbxKullaniciID;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnDuzenle;
+        private System.Windows.Forms.MaskedTextBox tbxTelNo;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

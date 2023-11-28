@@ -12,7 +12,7 @@ namespace Etkinlik_Yonetim_Sistemi
         private IconButton aktifButon;
         private Panel butonSolPanel;
         private Form aktifForm;
-
+        int kullaniciID;
         public frmAnaEkran()
         {
             InitializeComponent();
@@ -21,6 +21,7 @@ namespace Etkinlik_Yonetim_Sistemi
 
         public frmAnaEkran(int ID)
         {
+            kullaniciID = ID;
             InitializeComponent();
             FormYuklemeIslemleri();
 
@@ -261,8 +262,7 @@ namespace Etkinlik_Yonetim_Sistemi
 
         private void btnKullaniciBilgilerim_Click(object sender, EventArgs e)
         {
-
+            FormuYukle(new frmKullaniciBilgilerim(kullaniciID));
         }
-
     }
 }

@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.tbxTelNo = new System.Windows.Forms.MaskedTextBox();
+            this.btnDuzenle = new System.Windows.Forms.Button();
             this.tbxMusteriBul = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.btnMusteriListele = new System.Windows.Forms.Button();
@@ -43,13 +45,14 @@
             this.btnEkle = new System.Windows.Forms.Button();
             this.tbxAdres = new System.Windows.Forms.TextBox();
             this.tbxEmail = new System.Windows.Forms.TextBox();
-            this.tbxTelNo = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tbxAdSoyad = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -58,6 +61,8 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.LightYellow;
+            this.panel1.Controls.Add(this.tbxTelNo);
+            this.panel1.Controls.Add(this.btnDuzenle);
             this.panel1.Controls.Add(this.tbxMusteriBul);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.btnMusteriListele);
@@ -69,16 +74,38 @@
             this.panel1.Controls.Add(this.btnEkle);
             this.panel1.Controls.Add(this.tbxAdres);
             this.panel1.Controls.Add(this.tbxEmail);
-            this.panel1.Controls.Add(this.tbxTelNo);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.tbxAdSoyad);
+            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1100, 657);
             this.panel1.TabIndex = 0;
+            // 
+            // tbxTelNo
+            // 
+            this.tbxTelNo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbxTelNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbxTelNo.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tbxTelNo.Location = new System.Drawing.Point(788, 222);
+            this.tbxTelNo.Mask = "(999) 000-0000";
+            this.tbxTelNo.Name = "tbxTelNo";
+            this.tbxTelNo.Size = new System.Drawing.Size(250, 20);
+            this.tbxTelNo.TabIndex = 45;
+            // 
+            // btnDuzenle
+            // 
+            this.btnDuzenle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDuzenle.Location = new System.Drawing.Point(522, 581);
+            this.btnDuzenle.Name = "btnDuzenle";
+            this.btnDuzenle.Size = new System.Drawing.Size(131, 35);
+            this.btnDuzenle.TabIndex = 44;
+            this.btnDuzenle.Text = "DÜZENLE";
+            this.btnDuzenle.UseVisualStyleBackColor = true;
+            this.btnDuzenle.Click += new System.EventHandler(this.btnDuzenle_Click);
             // 
             // tbxMusteriBul
             // 
@@ -127,7 +154,7 @@
             this.listMusteriler.Location = new System.Drawing.Point(25, 146);
             this.listMusteriler.Name = "listMusteriler";
             this.listMusteriler.Scrollable = false;
-            this.listMusteriler.Size = new System.Drawing.Size(628, 440);
+            this.listMusteriler.Size = new System.Drawing.Size(628, 429);
             this.listMusteriler.TabIndex = 39;
             this.listMusteriler.UseCompatibleStateImageBehavior = false;
             this.listMusteriler.View = System.Windows.Forms.View.Details;
@@ -180,6 +207,7 @@
             this.btnSil.TabIndex = 36;
             this.btnSil.Text = "SİL";
             this.btnSil.UseVisualStyleBackColor = true;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
             // btnGuncelle
             // 
@@ -190,6 +218,7 @@
             this.btnGuncelle.TabIndex = 35;
             this.btnGuncelle.Text = "GÜNCELLE";
             this.btnGuncelle.UseVisualStyleBackColor = true;
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
             // btnEkle
             // 
@@ -222,16 +251,6 @@
             this.tbxEmail.Name = "tbxEmail";
             this.tbxEmail.Size = new System.Drawing.Size(285, 35);
             this.tbxEmail.TabIndex = 31;
-            // 
-            // tbxTelNo
-            // 
-            this.tbxTelNo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbxTelNo.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tbxTelNo.Location = new System.Drawing.Point(782, 215);
-            this.tbxTelNo.Multiline = true;
-            this.tbxTelNo.Name = "tbxTelNo";
-            this.tbxTelNo.Size = new System.Drawing.Size(285, 35);
-            this.tbxTelNo.TabIndex = 29;
             // 
             // label5
             // 
@@ -287,6 +306,17 @@
             this.tbxAdSoyad.Size = new System.Drawing.Size(285, 35);
             this.tbxAdSoyad.TabIndex = 23;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Location = new System.Drawing.Point(782, 215);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(285, 35);
+            this.pictureBox1.TabIndex = 46;
+            this.pictureBox1.TabStop = false;
+            // 
             // frmMusteri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -299,6 +329,7 @@
             this.Text = "Müşteri Yönetimi";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -312,7 +343,6 @@
         private System.Windows.Forms.Button btnEkle;
         private System.Windows.Forms.TextBox tbxAdres;
         private System.Windows.Forms.TextBox tbxEmail;
-        private System.Windows.Forms.TextBox tbxTelNo;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
@@ -326,5 +356,8 @@
         private System.Windows.Forms.ColumnHeader MusteriID;
         private System.Windows.Forms.ColumnHeader AdiSoyadi;
         private System.Windows.Forms.ColumnHeader TelefonNO;
+        private System.Windows.Forms.Button btnDuzenle;
+        private System.Windows.Forms.MaskedTextBox tbxTelNo;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

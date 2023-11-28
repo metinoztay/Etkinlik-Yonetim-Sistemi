@@ -244,6 +244,12 @@
     <Compile Include="frmKasa.Designer.cs">
       <DependentUpon>frmKasa.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmKullaniciBilgilerim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKullaniciBilgilerim.Designer.cs">
+      <DependentUpon>frmKullaniciBilgilerim.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmKullanıcıIslemleriOnay.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -255,6 +261,12 @@
     </Compile>
     <Compile Include="frmMusteri.Designer.cs">
       <DependentUpon>frmMusteri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMusteriIslemleriOnay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMusteriIslemleriOnay.Designer.cs">
+      <DependentUpon>frmMusteriIslemleriOnay.cs</DependentUpon>
     </Compile>
     <Compile Include="frmPersonel.cs">
       <SubType>Form</SubType>
@@ -293,11 +305,17 @@
     <EmbeddedResource Include="frmKasa.resx">
       <DependentUpon>frmKasa.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmKullaniciBilgilerim.resx">
+      <DependentUpon>frmKullaniciBilgilerim.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmKullanıcıIslemleriOnay.resx">
       <DependentUpon>frmKullanıcıIslemleriOnay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMusteri.resx">
       <DependentUpon>frmMusteri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMusteriIslemleriOnay.resx">
+      <DependentUpon>frmMusteriIslemleriOnay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPersonel.resx">
       <DependentUpon>frmPersonel.cs</DependentUpon>

@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Controls.Primitives;
 using System.Windows.Forms;
@@ -71,10 +72,7 @@ namespace Etkinlik_Yonetim_Sistemi
                     }
                 }
             }
-        }
-
-        private void listKullanicilar_SelectedIndexChanged(object sender, EventArgs e)
-        {
+            TextBoxSifirla();
         }
 
         private void btnGuncelle_Click(object sender, EventArgs e)
@@ -84,7 +82,7 @@ namespace Etkinlik_Yonetim_Sistemi
             guncelKullaniciBilgileri.kullaniciAdi = tbxKullaniciAdi.Text.Trim();
             guncelKullaniciBilgileri.sifre = tbxŞifre.Text.Trim();
             guncelKullaniciBilgileri.email = tbxEmail.Text.Trim();
-            guncelKullaniciBilgileri.telefonNumarasi = tbxTelNo.Text.Trim();
+            guncelKullaniciBilgileri.telefonNumarasi = SadeceRakamlar(tbxTelNo.Text.Trim());
             guncelKullaniciBilgileri.kullaniciID = (tbxKullaniciID.Text == string.Empty) ? 0 : Convert.ToInt32(tbxKullaniciID.Text);
             if (guncelKullaniciBilgileri.kullaniciID == 0)
             {
@@ -123,7 +121,8 @@ namespace Etkinlik_Yonetim_Sistemi
             }
 
             frmKullanıcıIslemleriOnay onay = new frmKullanıcıIslemleriOnay(guncelKullaniciBilgileri,"GUNCELLE");
-            onay.ShowDialog();            
+            onay.ShowDialog();
+            TextBoxSifirla();
         }
 
         private void btnEkle_Click(object sender, EventArgs e)
@@ -133,7 +132,7 @@ namespace Etkinlik_Yonetim_Sistemi
             guncelKullaniciBilgileri.kullaniciAdi = tbxKullaniciAdi.Text.Trim();
             guncelKullaniciBilgileri.sifre = tbxŞifre.Text.Trim();
             guncelKullaniciBilgileri.email = tbxEmail.Text.Trim();
-            guncelKullaniciBilgileri.telefonNumarasi = tbxTelNo.Text.Trim();
+            guncelKullaniciBilgileri.telefonNumarasi = SadeceRakamlar(tbxTelNo.Text.Trim());
 
             if (cbxYetki.SelectedItem != null)
             {
@@ -161,6 +160,7 @@ namespace Etkinlik_Yonetim_Sistemi
 
             frmKullanıcıIslemleriOnay onay = new frmKullanıcıIslemleriOnay(guncelKullaniciBilgileri, "EKLE");
             onay.ShowDialog();
+            TextBoxSifirla();
         }
 
         private void btnSil_Click(object sender, EventArgs e)
@@ -170,7 +170,7 @@ namespace Etkinlik_Yonetim_Sistemi
             guncelKullaniciBilgileri.kullaniciAdi = tbxKullaniciAdi.Text.Trim();
             guncelKullaniciBilgileri.sifre = tbxŞifre.Text.Trim();
             guncelKullaniciBilgileri.email = tbxEmail.Text.Trim();
-            guncelKullaniciBilgileri.telefonNumarasi = tbxTelNo.Text.Trim();
+            guncelKullaniciBilgileri.telefonNumarasi = SadeceRakamlar(tbxTelNo.Text.Trim());
             guncelKullaniciBilgileri.kullaniciID = (tbxKullaniciID.Text == string.Empty) ? 0 : Convert.ToInt32(tbxKullaniciID.Text);
 
             if (guncelKullaniciBilgileri.kullaniciID == 0)
@@ -184,25 +184,14 @@ namespace Etkinlik_Yonetim_Sistemi
             }
             
 
-            string[] bilgiler = new string[] { guncelKullaniciBilgileri.adiSoyadi, guncelKullaniciBilgileri.kullaniciAdi,
-            guncelKullaniciBilgileri.sifre,guncelKullaniciBilgileri.email,guncelKullaniciBilgileri.telefonNumarasi,guncelKullaniciBilgileri.yetki};
-            
-            foreach (string bilgi in bilgiler)
-            {
-                if (bilgi == String.Empty)
-                {
-                    MessageBox.Show("Lütfen tüm bilgileri doldurunuz!");
-                    return;
-                }
-            }
-
-
             frmKullanıcıIslemleriOnay onay = new frmKullanıcıIslemleriOnay(guncelKullaniciBilgileri, "SIL");
             onay.ShowDialog();
+            TextBoxSifirla();
         }
 
         private void btnDuzenle_Click(object sender, EventArgs e)
         {
+            TextBoxSifirla();
             int kullaniciID = Convert.ToInt32(listKullanicilar.SelectedItems[0].Text);
             using (SqlConnection baglanti = new SqlConnection(baglantiCumlesi))
             {
@@ -210,9 +199,9 @@ namespace Etkinlik_Yonetim_Sistemi
                 sorgu = $"SELECT * FROM tblKullanicilar WHERE KullaniciID = {kullaniciID}";
                 baglanti.Open();
 
-                using (SqlCommand command = new SqlCommand(sorgu, baglanti))
+                using (SqlCommand komut = new SqlCommand(sorgu, baglanti))
                 {
-                    using (SqlDataReader dataOkuyucu = command.ExecuteReader())
+                    using (SqlDataReader dataOkuyucu = komut.ExecuteReader())
                     {
                         if (dataOkuyucu.Read())
                         {
@@ -236,6 +225,21 @@ namespace Etkinlik_Yonetim_Sistemi
                     }
                 }
             }
+        }
+        private void TextBoxSifirla()
+        {
+            TextBox[] bilgiler = new TextBox[] { tbxAdSoyad, tbxKullaniciAdi, tbxEmail, tbxKullaniciID, tbxŞifre};
+
+            foreach (TextBox bilgi in bilgiler)
+            {
+                bilgi.Text = string.Empty;
+            }
+            tbxTelNo.Text = string.Empty;
+        }
+
+        private string SadeceRakamlar(string text)
+        {
+            return Regex.Replace(text, "[^0-9]", "");
         }
     }
 }
