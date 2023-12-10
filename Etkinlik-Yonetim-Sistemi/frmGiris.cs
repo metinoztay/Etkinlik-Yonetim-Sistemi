@@ -42,9 +42,12 @@ namespace Etkinlik_Yonetim_Sistemi
                     if (dataOkuyucu.Read())
                     {
                         frmAnaEkran AnaEkran = new frmAnaEkran((int)dataOkuyucu["KullaniciID"]);
-                        this.Hide();
-                        AnaEkran.ShowDialog();
-                        
+                        string yetki = (string)dataOkuyucu["Yetki"];
+                        if (yetki != "Personel")
+                        {
+                            this.Hide();
+                            AnaEkran.ShowDialog();
+                        }         
                     }
                     else
                     {

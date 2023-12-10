@@ -144,18 +144,35 @@ namespace Etkinlik_Yonetim_Sistemi
                 return;
             }
 
-            
+            string[] personel = new string[] { guncelKullaniciBilgileri.adiSoyadi,guncelKullaniciBilgileri.telefonNumarasi,guncelKullaniciBilgileri.yetki};
+
             string[] bilgiler = new string[] { guncelKullaniciBilgileri.adiSoyadi, guncelKullaniciBilgileri.kullaniciAdi,
             guncelKullaniciBilgileri.sifre,guncelKullaniciBilgileri.email,guncelKullaniciBilgileri.telefonNumarasi,guncelKullaniciBilgileri.yetki};
-
-            foreach(string bilgi in bilgiler)
+            
+            if (guncelKullaniciBilgileri.yetki == "Personel")
             {
-                if (bilgi == String.Empty)
+                foreach (string bilgi in personel)
                 {
-                    MessageBox.Show("Lütfen tüm bilgileri doldurunuz!");
-                    return;
+                    if (bilgi == String.Empty)
+                    {
+                        MessageBox.Show("Lütfen personel için gerekli bilgileri doldurunuz!");
+                        return;
+                    }
                 }
             }
+            else
+            {
+                foreach (string bilgi in bilgiler)
+                {
+                    if (bilgi == String.Empty)
+                    {
+                        MessageBox.Show("Lütfen tüm bilgileri doldurunuz!");
+                        return;
+                    }
+                }
+            }
+
+            
 
 
             frmKullanıcıIslemleriOnay onay = new frmKullanıcıIslemleriOnay(guncelKullaniciBilgileri, "EKLE");
@@ -241,5 +258,6 @@ namespace Etkinlik_Yonetim_Sistemi
         {
             return Regex.Replace(text, "[^0-9]", "");
         }
+
     }
 }

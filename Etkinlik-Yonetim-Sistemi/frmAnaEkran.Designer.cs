@@ -30,33 +30,33 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAnaEkran));
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.panelLogo = new System.Windows.Forms.Panel();
+            this.panelKullaniciBari = new System.Windows.Forms.Panel();
+            this.lblAcikFormAdi = new System.Windows.Forms.Label();
+            this.panelAcikForm = new System.Windows.Forms.Panel();
+            this.panelKullanici = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnKullaniciCikis = new FontAwesome.Sharp.IconButton();
+            this.btnKullaniciBilgilerim = new FontAwesome.Sharp.IconButton();
+            this.btnKullaniciAdiSoyadi = new FontAwesome.Sharp.IconButton();
+            this.btnGizle = new FontAwesome.Sharp.IconButton();
+            this.btnMaximizeMinimize = new FontAwesome.Sharp.IconButton();
+            this.btnExit = new FontAwesome.Sharp.IconButton();
+            this.icoAcikFormIcon = new FontAwesome.Sharp.IconPictureBox();
             this.btnGuvenlik = new FontAwesome.Sharp.IconButton();
             this.btnRapor = new FontAwesome.Sharp.IconButton();
             this.btnOdeme = new FontAwesome.Sharp.IconButton();
             this.btnMusteri = new FontAwesome.Sharp.IconButton();
             this.btnRezervasyon = new FontAwesome.Sharp.IconButton();
-            this.panelLogo = new System.Windows.Forms.Panel();
             this.picLogo = new System.Windows.Forms.PictureBox();
-            this.panelKullaniciBari = new System.Windows.Forms.Panel();
-            this.btnKullaniciAdiSoyadi = new FontAwesome.Sharp.IconButton();
-            this.btnGizle = new FontAwesome.Sharp.IconButton();
-            this.btnMaximizeMinimize = new FontAwesome.Sharp.IconButton();
-            this.btnExit = new FontAwesome.Sharp.IconButton();
-            this.lblAcikFormAdi = new System.Windows.Forms.Label();
-            this.icoAcikFormIcon = new FontAwesome.Sharp.IconPictureBox();
-            this.panelAcikForm = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panelKullanici = new System.Windows.Forms.Panel();
-            this.btnKullaniciCikis = new FontAwesome.Sharp.IconButton();
-            this.btnKullaniciBilgilerim = new FontAwesome.Sharp.IconButton();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.panelKullaniciBari.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.icoAcikFormIcon)).BeginInit();
             this.panelAcikForm.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelKullanici.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.icoAcikFormIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -73,6 +73,206 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(220, 756);
             this.panelMenu.TabIndex = 0;
+            // 
+            // panelLogo
+            // 
+            this.panelLogo.Controls.Add(this.picLogo);
+            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelLogo.Location = new System.Drawing.Point(0, 0);
+            this.panelLogo.Name = "panelLogo";
+            this.panelLogo.Size = new System.Drawing.Size(220, 171);
+            this.panelLogo.TabIndex = 1;
+            // 
+            // panelKullaniciBari
+            // 
+            this.panelKullaniciBari.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(143)))), ((int)(((byte)(94)))));
+            this.panelKullaniciBari.Controls.Add(this.btnKullaniciAdiSoyadi);
+            this.panelKullaniciBari.Controls.Add(this.btnGizle);
+            this.panelKullaniciBari.Controls.Add(this.btnMaximizeMinimize);
+            this.panelKullaniciBari.Controls.Add(this.btnExit);
+            this.panelKullaniciBari.Controls.Add(this.lblAcikFormAdi);
+            this.panelKullaniciBari.Controls.Add(this.icoAcikFormIcon);
+            this.panelKullaniciBari.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelKullaniciBari.Location = new System.Drawing.Point(220, 0);
+            this.panelKullaniciBari.Name = "panelKullaniciBari";
+            this.panelKullaniciBari.Size = new System.Drawing.Size(1124, 75);
+            this.panelKullaniciBari.TabIndex = 1;
+            this.panelKullaniciBari.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelKullaniciBari_MouseDown);
+            // 
+            // lblAcikFormAdi
+            // 
+            this.lblAcikFormAdi.AutoSize = true;
+            this.lblAcikFormAdi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(143)))), ((int)(((byte)(94)))));
+            this.lblAcikFormAdi.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblAcikFormAdi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(9)))), ((int)(((byte)(44)))));
+            this.lblAcikFormAdi.Location = new System.Drawing.Point(56, 31);
+            this.lblAcikFormAdi.Name = "lblAcikFormAdi";
+            this.lblAcikFormAdi.Size = new System.Drawing.Size(83, 23);
+            this.lblAcikFormAdi.TabIndex = 1;
+            this.lblAcikFormAdi.Text = "Ana Menü";
+            // 
+            // panelAcikForm
+            // 
+            this.panelAcikForm.BackColor = System.Drawing.Color.LightYellow;
+            this.panelAcikForm.Controls.Add(this.pictureBox1);
+            this.panelAcikForm.Controls.Add(this.panelKullanici);
+            this.panelAcikForm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelAcikForm.Location = new System.Drawing.Point(220, 75);
+            this.panelAcikForm.Name = "panelAcikForm";
+            this.panelAcikForm.Size = new System.Drawing.Size(1124, 681);
+            this.panelAcikForm.TabIndex = 2;
+            // 
+            // panelKullanici
+            // 
+            this.panelKullanici.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelKullanici.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(143)))), ((int)(((byte)(94)))));
+            this.panelKullanici.Controls.Add(this.btnKullaniciCikis);
+            this.panelKullanici.Controls.Add(this.btnKullaniciBilgilerim);
+            this.panelKullanici.Location = new System.Drawing.Point(924, 0);
+            this.panelKullanici.Name = "panelKullanici";
+            this.panelKullanici.Size = new System.Drawing.Size(200, 80);
+            this.panelKullanici.TabIndex = 0;
+            this.panelKullanici.Visible = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(335, 129);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(433, 399);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnKullaniciCikis
+            // 
+            this.btnKullaniciCikis.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnKullaniciCikis.FlatAppearance.BorderSize = 0;
+            this.btnKullaniciCikis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKullaniciCikis.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnKullaniciCikis.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(9)))), ((int)(((byte)(44)))));
+            this.btnKullaniciCikis.IconChar = FontAwesome.Sharp.IconChar.DoorOpen;
+            this.btnKullaniciCikis.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(9)))), ((int)(((byte)(44)))));
+            this.btnKullaniciCikis.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnKullaniciCikis.IconSize = 32;
+            this.btnKullaniciCikis.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnKullaniciCikis.Location = new System.Drawing.Point(0, 40);
+            this.btnKullaniciCikis.Name = "btnKullaniciCikis";
+            this.btnKullaniciCikis.Size = new System.Drawing.Size(200, 40);
+            this.btnKullaniciCikis.TabIndex = 1;
+            this.btnKullaniciCikis.Text = "Çıkış";
+            this.btnKullaniciCikis.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnKullaniciCikis.UseVisualStyleBackColor = true;
+            this.btnKullaniciCikis.Click += new System.EventHandler(this.btnKullaniciCikis_Click);
+            // 
+            // btnKullaniciBilgilerim
+            // 
+            this.btnKullaniciBilgilerim.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnKullaniciBilgilerim.FlatAppearance.BorderSize = 0;
+            this.btnKullaniciBilgilerim.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKullaniciBilgilerim.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnKullaniciBilgilerim.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(9)))), ((int)(((byte)(44)))));
+            this.btnKullaniciBilgilerim.IconChar = FontAwesome.Sharp.IconChar.IdCard;
+            this.btnKullaniciBilgilerim.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(9)))), ((int)(((byte)(44)))));
+            this.btnKullaniciBilgilerim.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnKullaniciBilgilerim.IconSize = 36;
+            this.btnKullaniciBilgilerim.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnKullaniciBilgilerim.Location = new System.Drawing.Point(0, 0);
+            this.btnKullaniciBilgilerim.Name = "btnKullaniciBilgilerim";
+            this.btnKullaniciBilgilerim.Size = new System.Drawing.Size(200, 40);
+            this.btnKullaniciBilgilerim.TabIndex = 0;
+            this.btnKullaniciBilgilerim.Text = "Bilgilerim";
+            this.btnKullaniciBilgilerim.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnKullaniciBilgilerim.UseVisualStyleBackColor = true;
+            this.btnKullaniciBilgilerim.Click += new System.EventHandler(this.btnKullaniciBilgilerim_Click);
+            // 
+            // btnKullaniciAdiSoyadi
+            // 
+            this.btnKullaniciAdiSoyadi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnKullaniciAdiSoyadi.FlatAppearance.BorderSize = 0;
+            this.btnKullaniciAdiSoyadi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKullaniciAdiSoyadi.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnKullaniciAdiSoyadi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(9)))), ((int)(((byte)(44)))));
+            this.btnKullaniciAdiSoyadi.IconChar = FontAwesome.Sharp.IconChar.ChevronDown;
+            this.btnKullaniciAdiSoyadi.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(9)))), ((int)(((byte)(44)))));
+            this.btnKullaniciAdiSoyadi.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnKullaniciAdiSoyadi.IconSize = 25;
+            this.btnKullaniciAdiSoyadi.Location = new System.Drawing.Point(924, 41);
+            this.btnKullaniciAdiSoyadi.Name = "btnKullaniciAdiSoyadi";
+            this.btnKullaniciAdiSoyadi.Size = new System.Drawing.Size(200, 34);
+            this.btnKullaniciAdiSoyadi.TabIndex = 5;
+            this.btnKullaniciAdiSoyadi.Text = "Kullanici AdiSoyadi";
+            this.btnKullaniciAdiSoyadi.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnKullaniciAdiSoyadi.UseVisualStyleBackColor = true;
+            this.btnKullaniciAdiSoyadi.Click += new System.EventHandler(this.btnKullaniciAdiSoyadi_Click);
+            // 
+            // btnGizle
+            // 
+            this.btnGizle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGizle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(143)))), ((int)(((byte)(94)))));
+            this.btnGizle.FlatAppearance.BorderSize = 0;
+            this.btnGizle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGizle.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnGizle.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
+            this.btnGizle.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(9)))), ((int)(((byte)(44)))));
+            this.btnGizle.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnGizle.IconSize = 22;
+            this.btnGizle.Location = new System.Drawing.Point(1031, 0);
+            this.btnGizle.Name = "btnGizle";
+            this.btnGizle.Size = new System.Drawing.Size(27, 28);
+            this.btnGizle.TabIndex = 4;
+            this.btnGizle.UseVisualStyleBackColor = false;
+            this.btnGizle.Click += new System.EventHandler(this.btnGizle_Click);
+            // 
+            // btnMaximizeMinimize
+            // 
+            this.btnMaximizeMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMaximizeMinimize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(143)))), ((int)(((byte)(94)))));
+            this.btnMaximizeMinimize.FlatAppearance.BorderSize = 0;
+            this.btnMaximizeMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMaximizeMinimize.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnMaximizeMinimize.IconChar = FontAwesome.Sharp.IconChar.Square;
+            this.btnMaximizeMinimize.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(9)))), ((int)(((byte)(44)))));
+            this.btnMaximizeMinimize.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnMaximizeMinimize.IconSize = 22;
+            this.btnMaximizeMinimize.Location = new System.Drawing.Point(1064, 0);
+            this.btnMaximizeMinimize.Name = "btnMaximizeMinimize";
+            this.btnMaximizeMinimize.Size = new System.Drawing.Size(27, 28);
+            this.btnMaximizeMinimize.TabIndex = 3;
+            this.btnMaximizeMinimize.UseVisualStyleBackColor = false;
+            this.btnMaximizeMinimize.Click += new System.EventHandler(this.btnMaximizeMinimize_Click);
+            // 
+            // btnExit
+            // 
+            this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(143)))), ((int)(((byte)(94)))));
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnExit.IconChar = FontAwesome.Sharp.IconChar.Xmark;
+            this.btnExit.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(9)))), ((int)(((byte)(44)))));
+            this.btnExit.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnExit.IconSize = 22;
+            this.btnExit.Location = new System.Drawing.Point(1097, 0);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(27, 28);
+            this.btnExit.TabIndex = 2;
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // icoAcikFormIcon
+            // 
+            this.icoAcikFormIcon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(143)))), ((int)(((byte)(94)))));
+            this.icoAcikFormIcon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(9)))), ((int)(((byte)(44)))));
+            this.icoAcikFormIcon.IconChar = FontAwesome.Sharp.IconChar.HomeLg;
+            this.icoAcikFormIcon.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(9)))), ((int)(((byte)(44)))));
+            this.icoAcikFormIcon.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.icoAcikFormIcon.Location = new System.Drawing.Point(18, 26);
+            this.icoAcikFormIcon.Name = "icoAcikFormIcon";
+            this.icoAcikFormIcon.Size = new System.Drawing.Size(32, 32);
+            this.icoAcikFormIcon.TabIndex = 0;
+            this.icoAcikFormIcon.TabStop = false;
             // 
             // btnGuvenlik
             // 
@@ -91,7 +291,7 @@
             this.btnGuvenlik.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnGuvenlik.Size = new System.Drawing.Size(220, 60);
             this.btnGuvenlik.TabIndex = 6;
-            this.btnGuvenlik.Text = "Guvenlik ve Personel Yönetimi";
+            this.btnGuvenlik.Text = "Güvenlik ve Personel Yönetimi";
             this.btnGuvenlik.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGuvenlik.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnGuvenlik.UseVisualStyleBackColor = true;
@@ -189,15 +389,6 @@
             this.btnRezervasyon.UseVisualStyleBackColor = true;
             this.btnRezervasyon.Click += new System.EventHandler(this.btnRezervasyon_Click);
             // 
-            // panelLogo
-            // 
-            this.panelLogo.Controls.Add(this.picLogo);
-            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelLogo.Location = new System.Drawing.Point(0, 0);
-            this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(220, 171);
-            this.panelLogo.TabIndex = 1;
-            // 
             // picLogo
             // 
             this.picLogo.Image = ((System.Drawing.Image)(resources.GetObject("picLogo.Image")));
@@ -208,197 +399,6 @@
             this.picLogo.TabIndex = 0;
             this.picLogo.TabStop = false;
             this.picLogo.Click += new System.EventHandler(this.picLogo_Click);
-            // 
-            // panelKullaniciBari
-            // 
-            this.panelKullaniciBari.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(143)))), ((int)(((byte)(94)))));
-            this.panelKullaniciBari.Controls.Add(this.btnKullaniciAdiSoyadi);
-            this.panelKullaniciBari.Controls.Add(this.btnGizle);
-            this.panelKullaniciBari.Controls.Add(this.btnMaximizeMinimize);
-            this.panelKullaniciBari.Controls.Add(this.btnExit);
-            this.panelKullaniciBari.Controls.Add(this.lblAcikFormAdi);
-            this.panelKullaniciBari.Controls.Add(this.icoAcikFormIcon);
-            this.panelKullaniciBari.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelKullaniciBari.Location = new System.Drawing.Point(220, 0);
-            this.panelKullaniciBari.Name = "panelKullaniciBari";
-            this.panelKullaniciBari.Size = new System.Drawing.Size(1124, 75);
-            this.panelKullaniciBari.TabIndex = 1;
-            this.panelKullaniciBari.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelKullaniciBari_MouseDown);
-            // 
-            // btnKullaniciAdiSoyadi
-            // 
-            this.btnKullaniciAdiSoyadi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnKullaniciAdiSoyadi.FlatAppearance.BorderSize = 0;
-            this.btnKullaniciAdiSoyadi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnKullaniciAdiSoyadi.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnKullaniciAdiSoyadi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(9)))), ((int)(((byte)(44)))));
-            this.btnKullaniciAdiSoyadi.IconChar = FontAwesome.Sharp.IconChar.ChevronDown;
-            this.btnKullaniciAdiSoyadi.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(9)))), ((int)(((byte)(44)))));
-            this.btnKullaniciAdiSoyadi.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnKullaniciAdiSoyadi.IconSize = 25;
-            this.btnKullaniciAdiSoyadi.Location = new System.Drawing.Point(924, 41);
-            this.btnKullaniciAdiSoyadi.Name = "btnKullaniciAdiSoyadi";
-            this.btnKullaniciAdiSoyadi.Size = new System.Drawing.Size(200, 34);
-            this.btnKullaniciAdiSoyadi.TabIndex = 5;
-            this.btnKullaniciAdiSoyadi.Text = "Kullanici AdiSoyadi";
-            this.btnKullaniciAdiSoyadi.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnKullaniciAdiSoyadi.UseVisualStyleBackColor = true;
-            this.btnKullaniciAdiSoyadi.Click += new System.EventHandler(this.btnKullaniciAdiSoyadi_Click);
-            // 
-            // btnGizle
-            // 
-            this.btnGizle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGizle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(143)))), ((int)(((byte)(94)))));
-            this.btnGizle.FlatAppearance.BorderSize = 0;
-            this.btnGizle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGizle.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnGizle.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
-            this.btnGizle.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(9)))), ((int)(((byte)(44)))));
-            this.btnGizle.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnGizle.IconSize = 22;
-            this.btnGizle.Location = new System.Drawing.Point(1031, 0);
-            this.btnGizle.Name = "btnGizle";
-            this.btnGizle.Size = new System.Drawing.Size(27, 28);
-            this.btnGizle.TabIndex = 4;
-            this.btnGizle.UseVisualStyleBackColor = false;
-            this.btnGizle.Click += new System.EventHandler(this.btnGizle_Click);
-            // 
-            // btnMaximizeMinimize
-            // 
-            this.btnMaximizeMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMaximizeMinimize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(143)))), ((int)(((byte)(94)))));
-            this.btnMaximizeMinimize.FlatAppearance.BorderSize = 0;
-            this.btnMaximizeMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMaximizeMinimize.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnMaximizeMinimize.IconChar = FontAwesome.Sharp.IconChar.Square;
-            this.btnMaximizeMinimize.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(9)))), ((int)(((byte)(44)))));
-            this.btnMaximizeMinimize.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnMaximizeMinimize.IconSize = 22;
-            this.btnMaximizeMinimize.Location = new System.Drawing.Point(1064, 0);
-            this.btnMaximizeMinimize.Name = "btnMaximizeMinimize";
-            this.btnMaximizeMinimize.Size = new System.Drawing.Size(27, 28);
-            this.btnMaximizeMinimize.TabIndex = 3;
-            this.btnMaximizeMinimize.UseVisualStyleBackColor = false;
-            this.btnMaximizeMinimize.Click += new System.EventHandler(this.btnMaximizeMinimize_Click);
-            // 
-            // btnExit
-            // 
-            this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(143)))), ((int)(((byte)(94)))));
-            this.btnExit.FlatAppearance.BorderSize = 0;
-            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnExit.IconChar = FontAwesome.Sharp.IconChar.Xmark;
-            this.btnExit.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(9)))), ((int)(((byte)(44)))));
-            this.btnExit.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnExit.IconSize = 22;
-            this.btnExit.Location = new System.Drawing.Point(1097, 0);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(27, 28);
-            this.btnExit.TabIndex = 2;
-            this.btnExit.UseVisualStyleBackColor = false;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
-            // lblAcikFormAdi
-            // 
-            this.lblAcikFormAdi.AutoSize = true;
-            this.lblAcikFormAdi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(143)))), ((int)(((byte)(94)))));
-            this.lblAcikFormAdi.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblAcikFormAdi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(9)))), ((int)(((byte)(44)))));
-            this.lblAcikFormAdi.Location = new System.Drawing.Point(56, 31);
-            this.lblAcikFormAdi.Name = "lblAcikFormAdi";
-            this.lblAcikFormAdi.Size = new System.Drawing.Size(83, 23);
-            this.lblAcikFormAdi.TabIndex = 1;
-            this.lblAcikFormAdi.Text = "Ana Menü";
-            // 
-            // icoAcikFormIcon
-            // 
-            this.icoAcikFormIcon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(143)))), ((int)(((byte)(94)))));
-            this.icoAcikFormIcon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(9)))), ((int)(((byte)(44)))));
-            this.icoAcikFormIcon.IconChar = FontAwesome.Sharp.IconChar.HomeLg;
-            this.icoAcikFormIcon.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(9)))), ((int)(((byte)(44)))));
-            this.icoAcikFormIcon.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.icoAcikFormIcon.Location = new System.Drawing.Point(18, 26);
-            this.icoAcikFormIcon.Name = "icoAcikFormIcon";
-            this.icoAcikFormIcon.Size = new System.Drawing.Size(32, 32);
-            this.icoAcikFormIcon.TabIndex = 0;
-            this.icoAcikFormIcon.TabStop = false;
-            // 
-            // panelAcikForm
-            // 
-            this.panelAcikForm.BackColor = System.Drawing.Color.LightYellow;
-            this.panelAcikForm.Controls.Add(this.pictureBox1);
-            this.panelAcikForm.Controls.Add(this.panelKullanici);
-            this.panelAcikForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelAcikForm.Location = new System.Drawing.Point(220, 75);
-            this.panelAcikForm.Name = "panelAcikForm";
-            this.panelAcikForm.Size = new System.Drawing.Size(1124, 681);
-            this.panelAcikForm.TabIndex = 2;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(335, 129);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(433, 399);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
-            // panelKullanici
-            // 
-            this.panelKullanici.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelKullanici.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(143)))), ((int)(((byte)(94)))));
-            this.panelKullanici.Controls.Add(this.btnKullaniciCikis);
-            this.panelKullanici.Controls.Add(this.btnKullaniciBilgilerim);
-            this.panelKullanici.Location = new System.Drawing.Point(924, 0);
-            this.panelKullanici.Name = "panelKullanici";
-            this.panelKullanici.Size = new System.Drawing.Size(200, 80);
-            this.panelKullanici.TabIndex = 0;
-            this.panelKullanici.Visible = false;
-            // 
-            // btnKullaniciCikis
-            // 
-            this.btnKullaniciCikis.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnKullaniciCikis.FlatAppearance.BorderSize = 0;
-            this.btnKullaniciCikis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnKullaniciCikis.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnKullaniciCikis.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(9)))), ((int)(((byte)(44)))));
-            this.btnKullaniciCikis.IconChar = FontAwesome.Sharp.IconChar.DoorOpen;
-            this.btnKullaniciCikis.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(9)))), ((int)(((byte)(44)))));
-            this.btnKullaniciCikis.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnKullaniciCikis.IconSize = 32;
-            this.btnKullaniciCikis.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnKullaniciCikis.Location = new System.Drawing.Point(0, 40);
-            this.btnKullaniciCikis.Name = "btnKullaniciCikis";
-            this.btnKullaniciCikis.Size = new System.Drawing.Size(200, 40);
-            this.btnKullaniciCikis.TabIndex = 1;
-            this.btnKullaniciCikis.Text = "Çıkış";
-            this.btnKullaniciCikis.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnKullaniciCikis.UseVisualStyleBackColor = true;
-            this.btnKullaniciCikis.Click += new System.EventHandler(this.btnKullaniciCikis_Click);
-            // 
-            // btnKullaniciBilgilerim
-            // 
-            this.btnKullaniciBilgilerim.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnKullaniciBilgilerim.FlatAppearance.BorderSize = 0;
-            this.btnKullaniciBilgilerim.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnKullaniciBilgilerim.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnKullaniciBilgilerim.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(9)))), ((int)(((byte)(44)))));
-            this.btnKullaniciBilgilerim.IconChar = FontAwesome.Sharp.IconChar.IdCard;
-            this.btnKullaniciBilgilerim.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(9)))), ((int)(((byte)(44)))));
-            this.btnKullaniciBilgilerim.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnKullaniciBilgilerim.IconSize = 36;
-            this.btnKullaniciBilgilerim.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnKullaniciBilgilerim.Location = new System.Drawing.Point(0, 0);
-            this.btnKullaniciBilgilerim.Name = "btnKullaniciBilgilerim";
-            this.btnKullaniciBilgilerim.Size = new System.Drawing.Size(200, 40);
-            this.btnKullaniciBilgilerim.TabIndex = 0;
-            this.btnKullaniciBilgilerim.Text = "Bilgilerim";
-            this.btnKullaniciBilgilerim.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnKullaniciBilgilerim.UseVisualStyleBackColor = true;
-            this.btnKullaniciBilgilerim.Click += new System.EventHandler(this.btnKullaniciBilgilerim_Click);
             // 
             // frmAnaEkran
             // 
@@ -418,13 +418,13 @@
             this.Resize += new System.EventHandler(this.frmAnaEkran_Resize);
             this.panelMenu.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.panelKullaniciBari.ResumeLayout(false);
             this.panelKullaniciBari.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.icoAcikFormIcon)).EndInit();
             this.panelAcikForm.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelKullanici.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.icoAcikFormIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.ResumeLayout(false);
 
         }

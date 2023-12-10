@@ -21,6 +21,7 @@ namespace Etkinlik_Yonetim_Sistemi
         private void mcalGunSecici_DateChanged(object sender, DateRangeEventArgs e)
         {
             frmAylikTakvim aylikForm = new frmAylikTakvim();
+            aylikForm.tarih = mcalGunSecici.SelectionRange.Start;
             FormuYukle(aylikForm);
         }
 
@@ -44,6 +45,13 @@ namespace Etkinlik_Yonetim_Sistemi
 
         private void btnEtkinlikEkle_Click(object sender, EventArgs e)
         {
+            frmEtkinlikDetay etkinlik = new frmEtkinlikDetay();
+            etkinlik.ShowDialog();
+        }
+        private void btn_EtkinlikEkle_Click(object sender, EventArgs e)
+        {
+            frmEtkinlikDetay etkinlik = new frmEtkinlikDetay();
+            etkinlik.ShowDialog();
         }
     }
 }

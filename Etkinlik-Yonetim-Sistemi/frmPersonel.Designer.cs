@@ -162,6 +162,12 @@
             // 
             this.cboxYetkiListesi.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.cboxYetkiListesi.AutoCompleteCustomSource.AddRange(new string[] {
+            "Yönetici",
+            "Personel",
+            "Kullanıcı"});
+            this.cboxYetkiListesi.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cboxYetkiListesi.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.cboxYetkiListesi.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cboxYetkiListesi.FormattingEnabled = true;
             this.cboxYetkiListesi.Items.AddRange(new object[] {
@@ -376,8 +382,13 @@
             // 
             // cbxYetki
             // 
+            this.cbxYetki.AutoCompleteCustomSource.AddRange(new string[] {
+            "Yönetici",
+            "Personel",
+            "Kullanıcı"});
+            this.cbxYetki.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbxYetki.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.cbxYetki.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.cbxYetki.FormattingEnabled = true;
             this.cbxYetki.Items.AddRange(new object[] {
             "Yönetici",
             "Kullanıcı",
