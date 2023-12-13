@@ -10,11 +10,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Globalization;
 using System.Windows.Controls;
+using System.Data.SqlClient;
 
 namespace Etkinlik_Yonetim_Sistemi
 {
     public partial class frmHaftalikTakvim : Form
     {
+        string baglantiCumlesi = "Data Source=.;Initial Catalog=dbEtkinlikYonetimSistemi;Integrated Security=True";
+        string sorgu;
         public DateTime tarih;
         string[] gunler = new string[] { "Pazar","Pazartesi", "Salı", "Çarşamba", "Perşembe", "Cuma", "Cumartesi"};
         public frmHaftalikTakvim()
@@ -47,7 +50,7 @@ namespace Etkinlik_Yonetim_Sistemi
                         dgvHaftalik.Rows.Add(i.ToString() + ":00");
                     }                    
             }
-
+            /*
             dgvHaftalik[4, 0].Style.BackColor = Color.Blue;
             dgvHaftalik[4, 1].Style.BackColor = Color.Blue;
             dgvHaftalik[4, 2].Style.BackColor = Color.Blue;
@@ -56,6 +59,8 @@ namespace Etkinlik_Yonetim_Sistemi
             dgvHaftalik[4, 12].Style.BackColor = Color.Blue;
             dgvHaftalik[4, 13].Style.BackColor = Color.Blue;
             dgvHaftalik[4, 14].Style.BackColor = Color.Blue;
+            */
+            EtkinlikGuncelle();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -72,8 +77,9 @@ namespace Etkinlik_Yonetim_Sistemi
             var hucre = dgvHaftalik.SelectedCells[0];
             int satir = hucre.RowIndex;
             int sutun = hucre.ColumnIndex;
-            string maxSaat=" ";
-            string minSaat=" ";
+            string maxSaat="24:00";
+            string minSaat="08:00";
+            string seciliSaat = "00:00";
             DateTime secilenGun = tarih.AddDays(sutun-4);
 
             if (hucre.Style.BackColor.Name.ToString() == "0") // Arkaplan beyaz ise
@@ -90,23 +96,65 @@ namespace Etkinlik_Yonetim_Sistemi
 
                 for (int i = satir; i > 0 ; i--)
                 {
-                    if (dgvHaftalik[sutun, i].Style.BackColor.Name == "0")
+                    if (dgvHaftalik[sutun, i].Style.BackColor == Color.Blue)
                     {
-                        minSaat = dgvHaftalik[0, i].Value.ToString();                        
+                        minSaat = dgvHaftalik[0, i].Value.ToString();
+                        break;
                     }
                 }
 
+                seciliSaat = dgvHaftalik[0, satir].Value.ToString();
 
 
                 frmEtkinlikDetay etkinlikDetay = new frmEtkinlikDetay();
-                etkinlikDetay.SozlesmeFormuOlustur(secilenGun,minSaat,maxSaat);
+                etkinlikDetay.SozlesmeFormuOlustur(secilenGun,minSaat,maxSaat,seciliSaat);
                 etkinlikDetay.ShowDialog();
+                EtkinlikGuncelle();
             }
             else
             {
 
             }
             
+        }
+
+
+        public void EtkinlikGuncelle()
+        {
+            DateTime tabloBaslangicGunu = tarih.AddDays(-3);
+            DateTime tabloBitisGunu = tarih.AddDays(+3);
+            DateTime sutunGun;
+
+            for (int i = 0; i <= 6; i++)
+            {
+                sutunGun = tabloBaslangicGunu.AddDays(i);
+                using (SqlConnection baglanti = new SqlConnection(baglantiCumlesi))
+                {
+                    baglanti.Open();
+                    sorgu = $"SELECT * FROM tblEtkinlikler WHERE EtkinlikTarihi = @etkinlikTarihi";
+
+                    using (SqlCommand komut = new SqlCommand(sorgu, baglanti))
+                    {
+
+                        komut.Parameters.AddWithValue("@etkinlikTarihi", sutunGun.ToShortDateString());
+                        using (SqlDataReader dataOkuyucu = komut.ExecuteReader())
+                        {
+                            while (dataOkuyucu.Read())
+                            {
+                                string EtkinlikTarihi = (string)dataOkuyucu["EtkinlikTarihi"];
+                                string nitelik = (string)dataOkuyucu["Niteligi"];
+                                int baslangicIndex = int.Parse(dataOkuyucu["BaslamaSaati"].ToString().Substring(0, 2)) - 9;
+                                int bitisIndex = int.Parse(dataOkuyucu["BitisSaati"].ToString().Substring(0, 2)) - 10;
+
+                                for (int j = baslangicIndex; j <= bitisIndex; j++)
+                                {
+                                    dgvHaftalik[i+1, j].Style.BackColor = Color.Red;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }

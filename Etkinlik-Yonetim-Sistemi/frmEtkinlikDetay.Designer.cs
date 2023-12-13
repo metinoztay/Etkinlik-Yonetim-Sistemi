@@ -49,23 +49,26 @@
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbxSozlesmeNo = new System.Windows.Forms.TextBox();
             this.tbxSozlesmeTarihi = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.tbxAdiSoyadi = new System.Windows.Forms.TextBox();
+            this.mtbxTelNo = new System.Windows.Forms.MaskedTextBox();
+            this.tbxAdres = new System.Windows.Forms.TextBox();
+            this.cbxNitelik = new System.Windows.Forms.ComboBox();
+            this.tbxDetay = new System.Windows.Forms.TextBox();
+            this.mtbxDavetliSayisi = new System.Windows.Forms.MaskedTextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.mtbxToplamUcret = new System.Windows.Forms.MaskedTextBox();
+            this.tbxAciklama = new System.Windows.Forms.TextBox();
             this.tbxEtkinlikTarihi = new System.Windows.Forms.TextBox();
-            this.maskedTextBox4 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox5 = new System.Windows.Forms.MaskedTextBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.maskedTextBox6 = new System.Windows.Forms.MaskedTextBox();
+            this.mtbxAlinanUcret = new System.Windows.Forms.MaskedTextBox();
+            this.mtbxKalanUcret = new System.Windows.Forms.MaskedTextBox();
+            this.btnKaydet = new System.Windows.Forms.Button();
+            this.mtbxTCNo = new System.Windows.Forms.MaskedTextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -272,21 +275,21 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(320, 558);
+            this.button2.Location = new System.Drawing.Point(329, 558);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(107, 34);
+            this.button2.Size = new System.Drawing.Size(98, 34);
             this.button2.TabIndex = 22;
             this.button2.Text = "Tahislat Ekle";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // tbxSozlesmeNo
             // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox1.Location = new System.Drawing.Point(179, 175);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(165, 27);
-            this.textBox1.TabIndex = 23;
+            this.tbxSozlesmeNo.Enabled = false;
+            this.tbxSozlesmeNo.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tbxSozlesmeNo.Location = new System.Drawing.Point(179, 175);
+            this.tbxSozlesmeNo.Name = "tbxSozlesmeNo";
+            this.tbxSozlesmeNo.Size = new System.Drawing.Size(165, 27);
+            this.tbxSozlesmeNo.TabIndex = 23;
             // 
             // tbxSozlesmeTarihi
             // 
@@ -297,38 +300,38 @@
             this.tbxSozlesmeTarihi.Size = new System.Drawing.Size(165, 27);
             this.tbxSozlesmeTarihi.TabIndex = 24;
             // 
-            // textBox3
+            // tbxAdiSoyadi
             // 
-            this.textBox3.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox3.Location = new System.Drawing.Point(179, 245);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(165, 27);
-            this.textBox3.TabIndex = 26;
+            this.tbxAdiSoyadi.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tbxAdiSoyadi.Location = new System.Drawing.Point(179, 245);
+            this.tbxAdiSoyadi.Name = "tbxAdiSoyadi";
+            this.tbxAdiSoyadi.Size = new System.Drawing.Size(165, 27);
+            this.tbxAdiSoyadi.TabIndex = 26;
             // 
-            // maskedTextBox1
+            // mtbxTelNo
             // 
-            this.maskedTextBox1.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.maskedTextBox1.Location = new System.Drawing.Point(179, 281);
-            this.maskedTextBox1.Mask = "(999) 000-0000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(165, 27);
-            this.maskedTextBox1.TabIndex = 27;
+            this.mtbxTelNo.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.mtbxTelNo.Location = new System.Drawing.Point(179, 281);
+            this.mtbxTelNo.Mask = "(999) 000-0000";
+            this.mtbxTelNo.Name = "mtbxTelNo";
+            this.mtbxTelNo.Size = new System.Drawing.Size(165, 27);
+            this.mtbxTelNo.TabIndex = 27;
             // 
-            // textBox4
+            // tbxAdres
             // 
-            this.textBox4.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox4.Location = new System.Drawing.Point(179, 317);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox4.Size = new System.Drawing.Size(248, 131);
-            this.textBox4.TabIndex = 28;
+            this.tbxAdres.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tbxAdres.Location = new System.Drawing.Point(179, 317);
+            this.tbxAdres.Multiline = true;
+            this.tbxAdres.Name = "tbxAdres";
+            this.tbxAdres.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.tbxAdres.Size = new System.Drawing.Size(248, 131);
+            this.tbxAdres.TabIndex = 28;
             // 
-            // comboBox3
+            // cbxNitelik
             // 
-            this.comboBox3.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
+            this.cbxNitelik.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cbxNitelik.FormattingEnabled = true;
+            this.cbxNitelik.Items.AddRange(new object[] {
             "Düğün",
             "Sünnet Düğünü",
             "Toplantı",
@@ -340,27 +343,27 @@
             "Mezuniyet",
             "Konferans",
             "Diğer"});
-            this.comboBox3.Location = new System.Drawing.Point(179, 456);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(248, 31);
-            this.comboBox3.TabIndex = 29;
+            this.cbxNitelik.Location = new System.Drawing.Point(179, 456);
+            this.cbxNitelik.Name = "cbxNitelik";
+            this.cbxNitelik.Size = new System.Drawing.Size(248, 31);
+            this.cbxNitelik.TabIndex = 29;
             // 
-            // textBox5
+            // tbxDetay
             // 
-            this.textBox5.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox5.Location = new System.Drawing.Point(179, 493);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(248, 27);
-            this.textBox5.TabIndex = 30;
+            this.tbxDetay.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tbxDetay.Location = new System.Drawing.Point(179, 493);
+            this.tbxDetay.Name = "tbxDetay";
+            this.tbxDetay.Size = new System.Drawing.Size(248, 27);
+            this.tbxDetay.TabIndex = 30;
             // 
-            // maskedTextBox2
+            // mtbxDavetliSayisi
             // 
-            this.maskedTextBox2.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.maskedTextBox2.Location = new System.Drawing.Point(179, 527);
-            this.maskedTextBox2.Mask = "00000";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(100, 27);
-            this.maskedTextBox2.TabIndex = 31;
+            this.mtbxDavetliSayisi.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.mtbxDavetliSayisi.Location = new System.Drawing.Point(179, 527);
+            this.mtbxDavetliSayisi.Mask = "00000";
+            this.mtbxDavetliSayisi.Name = "mtbxDavetliSayisi";
+            this.mtbxDavetliSayisi.Size = new System.Drawing.Size(100, 27);
+            this.mtbxDavetliSayisi.TabIndex = 31;
             // 
             // label18
             // 
@@ -382,24 +385,24 @@
             this.label19.TabIndex = 33;
             this.label19.Text = "Gün/Ay/Yıl";
             // 
-            // maskedTextBox3
+            // mtbxToplamUcret
             // 
-            this.maskedTextBox3.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.maskedTextBox3.Location = new System.Drawing.Point(179, 560);
-            this.maskedTextBox3.Mask = "0000000 ₺";
-            this.maskedTextBox3.Name = "maskedTextBox3";
-            this.maskedTextBox3.Size = new System.Drawing.Size(135, 27);
-            this.maskedTextBox3.TabIndex = 34;
-            this.maskedTextBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.mtbxToplamUcret.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.mtbxToplamUcret.Location = new System.Drawing.Point(179, 560);
+            this.mtbxToplamUcret.Mask = "0000000";
+            this.mtbxToplamUcret.Name = "mtbxToplamUcret";
+            this.mtbxToplamUcret.Size = new System.Drawing.Size(115, 27);
+            this.mtbxToplamUcret.TabIndex = 34;
+            this.mtbxToplamUcret.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // textBox6
+            // tbxAciklama
             // 
-            this.textBox6.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox6.Location = new System.Drawing.Point(179, 670);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(248, 131);
-            this.textBox6.TabIndex = 38;
+            this.tbxAciklama.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tbxAciklama.Location = new System.Drawing.Point(179, 670);
+            this.tbxAciklama.Multiline = true;
+            this.tbxAciklama.Name = "tbxAciklama";
+            this.tbxAciklama.Size = new System.Drawing.Size(248, 131);
+            this.tbxAciklama.TabIndex = 38;
             // 
             // tbxEtkinlikTarihi
             // 
@@ -410,43 +413,76 @@
             this.tbxEtkinlikTarihi.Size = new System.Drawing.Size(165, 27);
             this.tbxEtkinlikTarihi.TabIndex = 39;
             // 
-            // maskedTextBox4
+            // mtbxAlinanUcret
             // 
-            this.maskedTextBox4.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.maskedTextBox4.Location = new System.Drawing.Point(179, 596);
-            this.maskedTextBox4.Mask = "0000000 ₺";
-            this.maskedTextBox4.Name = "maskedTextBox4";
-            this.maskedTextBox4.Size = new System.Drawing.Size(135, 27);
-            this.maskedTextBox4.TabIndex = 40;
-            this.maskedTextBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.mtbxAlinanUcret.Enabled = false;
+            this.mtbxAlinanUcret.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.mtbxAlinanUcret.Location = new System.Drawing.Point(179, 596);
+            this.mtbxAlinanUcret.Mask = "0000000";
+            this.mtbxAlinanUcret.Name = "mtbxAlinanUcret";
+            this.mtbxAlinanUcret.Size = new System.Drawing.Size(115, 27);
+            this.mtbxAlinanUcret.TabIndex = 40;
+            this.mtbxAlinanUcret.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // maskedTextBox5
+            // mtbxKalanUcret
             // 
-            this.maskedTextBox5.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.maskedTextBox5.Location = new System.Drawing.Point(179, 631);
-            this.maskedTextBox5.Mask = "0000000 ₺";
-            this.maskedTextBox5.Name = "maskedTextBox5";
-            this.maskedTextBox5.Size = new System.Drawing.Size(135, 27);
-            this.maskedTextBox5.TabIndex = 41;
-            this.maskedTextBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.mtbxKalanUcret.Enabled = false;
+            this.mtbxKalanUcret.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.mtbxKalanUcret.Location = new System.Drawing.Point(179, 631);
+            this.mtbxKalanUcret.Mask = "0000000";
+            this.mtbxKalanUcret.Name = "mtbxKalanUcret";
+            this.mtbxKalanUcret.Size = new System.Drawing.Size(115, 27);
+            this.mtbxKalanUcret.TabIndex = 41;
+            this.mtbxKalanUcret.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // button3
+            // btnKaydet
             // 
-            this.button3.Location = new System.Drawing.Point(456, 812);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(107, 48);
-            this.button3.TabIndex = 42;
-            this.button3.Text = "TAMAM";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnKaydet.Location = new System.Drawing.Point(456, 812);
+            this.btnKaydet.Name = "btnKaydet";
+            this.btnKaydet.Size = new System.Drawing.Size(107, 48);
+            this.btnKaydet.TabIndex = 42;
+            this.btnKaydet.Text = "KAYDET";
+            this.btnKaydet.UseVisualStyleBackColor = true;
+            this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
-            // maskedTextBox6
+            // mtbxTCNo
             // 
-            this.maskedTextBox6.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.maskedTextBox6.Location = new System.Drawing.Point(179, 211);
-            this.maskedTextBox6.Mask = "00000000000";
-            this.maskedTextBox6.Name = "maskedTextBox6";
-            this.maskedTextBox6.Size = new System.Drawing.Size(165, 27);
-            this.maskedTextBox6.TabIndex = 43;
+            this.mtbxTCNo.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.mtbxTCNo.Location = new System.Drawing.Point(179, 211);
+            this.mtbxTCNo.Mask = "00000000000";
+            this.mtbxTCNo.Name = "mtbxTCNo";
+            this.mtbxTCNo.Size = new System.Drawing.Size(165, 27);
+            this.mtbxTCNo.TabIndex = 43;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label20.Location = new System.Drawing.Point(294, 564);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(29, 20);
+            this.label20.TabIndex = 44;
+            this.label20.Text = "TL";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label21.Location = new System.Drawing.Point(294, 600);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(29, 20);
+            this.label21.TabIndex = 45;
+            this.label21.Text = "TL";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label22.Location = new System.Drawing.Point(294, 635);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(29, 20);
+            this.label22.TabIndex = 46;
+            this.label22.Text = "TL";
             // 
             // frmEtkinlikDetay
             // 
@@ -454,23 +490,26 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(196)))), ((int)(((byte)(170)))));
             this.ClientSize = new System.Drawing.Size(575, 872);
-            this.Controls.Add(this.maskedTextBox6);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.maskedTextBox5);
-            this.Controls.Add(this.maskedTextBox4);
+            this.Controls.Add(this.label22);
+            this.Controls.Add(this.label21);
+            this.Controls.Add(this.label20);
+            this.Controls.Add(this.mtbxTCNo);
+            this.Controls.Add(this.btnKaydet);
+            this.Controls.Add(this.mtbxKalanUcret);
+            this.Controls.Add(this.mtbxAlinanUcret);
             this.Controls.Add(this.tbxEtkinlikTarihi);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.maskedTextBox3);
+            this.Controls.Add(this.tbxAciklama);
+            this.Controls.Add(this.mtbxToplamUcret);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.label18);
-            this.Controls.Add(this.maskedTextBox2);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.maskedTextBox1);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.mtbxDavetliSayisi);
+            this.Controls.Add(this.tbxDetay);
+            this.Controls.Add(this.cbxNitelik);
+            this.Controls.Add(this.tbxAdres);
+            this.Controls.Add(this.mtbxTelNo);
+            this.Controls.Add(this.tbxAdiSoyadi);
             this.Controls.Add(this.tbxSozlesmeTarihi);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbxSozlesmeNo);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label16);
@@ -525,22 +564,25 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbxSozlesmeNo;
         private System.Windows.Forms.TextBox tbxSozlesmeTarihi;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
+        private System.Windows.Forms.TextBox tbxAdiSoyadi;
+        private System.Windows.Forms.MaskedTextBox mtbxTelNo;
+        private System.Windows.Forms.TextBox tbxAdres;
+        private System.Windows.Forms.ComboBox cbxNitelik;
+        private System.Windows.Forms.TextBox tbxDetay;
+        private System.Windows.Forms.MaskedTextBox mtbxDavetliSayisi;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox3;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.MaskedTextBox mtbxToplamUcret;
+        private System.Windows.Forms.TextBox tbxAciklama;
         private System.Windows.Forms.TextBox tbxEtkinlikTarihi;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox4;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox5;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox6;
+        private System.Windows.Forms.MaskedTextBox mtbxAlinanUcret;
+        private System.Windows.Forms.MaskedTextBox mtbxKalanUcret;
+        private System.Windows.Forms.Button btnKaydet;
+        private System.Windows.Forms.MaskedTextBox mtbxTCNo;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label22;
     }
 }
