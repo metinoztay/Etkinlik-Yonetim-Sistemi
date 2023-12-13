@@ -226,17 +226,22 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CellMerge\DataGridViewCellExHelper.cs" />
+    <Compile Include="CellMerge\DataGridViewHelper.cs" />
+    <Compile Include="CellMerge\DataGridViewImageCellEx.cs" />
+    <Compile Include="CellMerge\DataGridViewTextBoxCellEx.cs" />
+    <Compile Include="CellMerge\ISpannedCell.cs" />
     <Compile Include="frmAnaEkran.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmAnaEkran.Designer.cs">
       <DependentUpon>frmAnaEkran.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAylikTakvim.cs">
+    <Compile Include="frmHaftalikTakvim.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAylikTakvim.Designer.cs">
-      <DependentUpon>frmAylikTakvim.cs</DependentUpon>
+    <Compile Include="frmHaftalikTakvim.Designer.cs">
+      <DependentUpon>frmHaftalikTakvim.cs</DependentUpon>
     </Compile>
     <Compile Include="frmEtkinlikDetay.cs">
       <SubType>Form</SubType>
@@ -305,8 +310,8 @@
     <EmbeddedResource Include="frmAnaEkran.resx">
       <DependentUpon>frmAnaEkran.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAylikTakvim.resx">
-      <DependentUpon>frmAylikTakvim.cs</DependentUpon>
+    <EmbeddedResource Include="frmHaftalikTakvim.resx">
+      <DependentUpon>frmHaftalikTakvim.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmEtkinlikDetay.resx">
       <DependentUpon>frmEtkinlikDetay.cs</DependentUpon>

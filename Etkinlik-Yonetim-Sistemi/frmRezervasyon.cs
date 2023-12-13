@@ -20,9 +20,9 @@ namespace Etkinlik_Yonetim_Sistemi
 
         private void mcalGunSecici_DateChanged(object sender, DateRangeEventArgs e)
         {
-            frmAylikTakvim aylikForm = new frmAylikTakvim();
-            aylikForm.tarih = mcalGunSecici.SelectionRange.Start;
-            FormuYukle(aylikForm);
+            frmHaftalikTakvim haftalikForm = new frmHaftalikTakvim();
+            haftalikForm.tarih = mcalGunSecici.SelectionRange.Start;
+            FormuYukle(haftalikForm);
         }
 
         private void FormuYukle(Form yeniForm)

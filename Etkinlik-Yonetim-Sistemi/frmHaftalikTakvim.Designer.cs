@@ -1,6 +1,6 @@
 ﻿namespace Etkinlik_Yonetim_Sistemi
 {
-    partial class frmAylikTakvim
+    partial class frmHaftalikTakvim
     {
         /// <summary>
         /// Required designer variable.
@@ -32,6 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvHaftalik = new System.Windows.Forms.DataGridView();
             this.Saat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHaftalik)).BeginInit();
             this.SuspendLayout();
             // 
@@ -39,7 +40,13 @@
             // 
             this.dgvHaftalik.AllowUserToAddRows = false;
             this.dgvHaftalik.AllowUserToDeleteRows = false;
+            this.dgvHaftalik.AllowUserToResizeColumns = false;
+            this.dgvHaftalik.AllowUserToResizeRows = false;
+            this.dgvHaftalik.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvHaftalik.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvHaftalik.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -51,8 +58,6 @@
             this.dgvHaftalik.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvHaftalik.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Saat});
-            this.dgvHaftalik.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvHaftalik.Enabled = false;
             this.dgvHaftalik.Location = new System.Drawing.Point(0, 0);
             this.dgvHaftalik.Name = "dgvHaftalik";
             this.dgvHaftalik.ReadOnly = true;
@@ -63,9 +68,9 @@
             this.dgvHaftalik.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
             this.dgvHaftalik.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.White;
             this.dgvHaftalik.RowTemplate.Height = 35;
-            this.dgvHaftalik.Size = new System.Drawing.Size(1124, 681);
+            this.dgvHaftalik.Size = new System.Drawing.Size(1124, 640);
             this.dgvHaftalik.TabIndex = 0;
-            this.dgvHaftalik.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHaftalik_CellContentClick);
+            this.dgvHaftalik.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHaftalik_CellClick);
             // 
             // Saat
             // 
@@ -76,14 +81,25 @@
             this.Saat.ReadOnly = true;
             this.Saat.Width = 64;
             // 
-            // frmAylikTakvim
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(990, 646);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(122, 33);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // frmHaftalikTakvim
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1124, 681);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dgvHaftalik);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmAylikTakvim";
+            this.Name = "frmHaftalikTakvim";
             this.Text = "frmAylikTakvim";
             this.Load += new System.EventHandler(this.frmAylikTakvim_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvHaftalik)).EndInit();
@@ -94,5 +110,6 @@
         #endregion
         public System.Windows.Forms.DataGridView dgvHaftalik;
         private System.Windows.Forms.DataGridViewTextBoxColumn Saat;
+        private System.Windows.Forms.Button button1;
     }
 }
