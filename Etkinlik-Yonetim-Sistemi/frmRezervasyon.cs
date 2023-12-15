@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +14,7 @@ namespace Etkinlik_Yonetim_Sistemi
     public partial class frmRezervasyon : Form
     {
         private Form aktifForm;
+        List<CheckBox> kategoriler = new List<CheckBox>();
         public frmRezervasyon()
         {
             InitializeComponent();
@@ -20,14 +22,11 @@ namespace Etkinlik_Yonetim_Sistemi
 
         private void mcalGunSecici_DateChanged(object sender, DateRangeEventArgs e)
         {
-            frmHaftalikTakvim haftalikForm = new frmHaftalikTakvim();
-            haftalikForm.tarih = mcalGunSecici.SelectionRange.Start;
-            FormuYukle(haftalikForm);
+            takvimGuncelle();
         }
 
         private void FormuYukle(Form yeniForm)
         {
-
             if (aktifForm != null)
             {
                 aktifForm.Close();
@@ -43,15 +42,72 @@ namespace Etkinlik_Yonetim_Sistemi
             yeniForm.Show();
         }
 
+        private void KategorileriEkle()
+        {
+            kategoriler.Clear();
+            kategoriler.Add(cbxDugun);
+            kategoriler.Add(cbxSunnetDugunu);
+            kategoriler.Add(cbxToplanti);
+            kategoriler.Add(cbxKina);
+            kategoriler.Add(cbxNisan);
+            kategoriler.Add(cbxNikah);
+            kategoriler.Add(cbxIftar);
+            kategoriler.Add(cbxKokteyl);
+            kategoriler.Add(cbxMezuniyet);
+            kategoriler.Add(cbxKonferans);
+            kategoriler.Add(cbxDiger);
+        }
         private void btnEtkinlikEkle_Click(object sender, EventArgs e)
         {
-            frmEtkinlikDetay etkinlik = new frmEtkinlikDetay();
+            frmEtkinlikEkle etkinlik = new frmEtkinlikEkle();
             etkinlik.ShowDialog();
         }
         private void btn_EtkinlikEkle_Click(object sender, EventArgs e)
         {
-            frmEtkinlikDetay etkinlik = new frmEtkinlikDetay();
+            frmEtkinlikEkle etkinlik = new frmEtkinlikEkle();
             etkinlik.ShowDialog();
+        }
+
+        private void frmRezervasyon_Load(object sender, EventArgs e)
+        {
+            KategorileriEkle();
+        }
+
+        private void btnListele_Click(object sender, EventArgs e)
+        {
+            takvimGuncelle();
+        }
+
+        private void takvimGuncelle()
+        {
+            frmHaftalikTakvim takvim = new frmHaftalikTakvim();
+            takvim.tarih = mcalGunSecici.SelectionRange.Start;
+            foreach (var kategori in kategoriler)
+            {
+                if (kategori.Checked)
+                {
+                    takvim.kategoriListesi.Add(kategori.Text);
+                }
+            }
+            FormuYukle(takvim);
+        }
+
+        private void btnTumunuSec_Click(object sender, EventArgs e)
+        {
+            foreach (var kategori in kategoriler)
+            {
+                kategori.Checked = true;
+            }
+            takvimGuncelle();
+        }
+
+        private void btnHepsiniBirak_Click(object sender, EventArgs e)
+        {
+            foreach (var kategori in kategoriler)
+            {
+                kategori.Checked = false;
+            }
+            takvimGuncelle();
         }
     }
 }

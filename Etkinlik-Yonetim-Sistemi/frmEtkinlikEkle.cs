@@ -13,10 +13,10 @@ using System.Windows.Forms;
 
 namespace Etkinlik_Yonetim_Sistemi
 {
-    public partial class frmEtkinlikDetay : Form
+    public partial class frmEtkinlikEkle : Form
     {
         string baglantiCumlesi = "Data Source=.;Initial Catalog=dbEtkinlikYonetimSistemi;Integrated Security=True";
-        public frmEtkinlikDetay()
+        public frmEtkinlikEkle()
         {
             InitializeComponent();
         }

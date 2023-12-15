@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using System.Globalization;
 using System.Windows.Controls;
 using System.Data.SqlClient;
+using System.Collections;
 
 namespace Etkinlik_Yonetim_Sistemi
 {
@@ -18,6 +19,8 @@ namespace Etkinlik_Yonetim_Sistemi
     {
         string baglantiCumlesi = "Data Source=.;Initial Catalog=dbEtkinlikYonetimSistemi;Integrated Security=True";
         string sorgu;
+        public List<string> kategoriListesi = new List<string>();
+        Hashtable renkAnahtari = new Hashtable(); 
         public DateTime tarih;
         string[] gunler = new string[] { "Pazar","Pazartesi", "Salı", "Çarşamba", "Perşembe", "Cuma", "Cumartesi"};
         public frmHaftalikTakvim()
@@ -50,20 +53,26 @@ namespace Etkinlik_Yonetim_Sistemi
                         dgvHaftalik.Rows.Add(i.ToString() + ":00");
                     }                    
             }
-            /*
-            dgvHaftalik[4, 0].Style.BackColor = Color.Blue;
-            dgvHaftalik[4, 1].Style.BackColor = Color.Blue;
-            dgvHaftalik[4, 2].Style.BackColor = Color.Blue;
-
-            dgvHaftalik[4, 11].Style.BackColor = Color.Blue;
-            dgvHaftalik[4, 12].Style.BackColor = Color.Blue;
-            dgvHaftalik[4, 13].Style.BackColor = Color.Blue;
-            dgvHaftalik[4, 14].Style.BackColor = Color.Blue;
-            */
-            EtkinlikGuncelle();
+            RenkleriEkle();
+            EtkinlikGuncelle();            
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void RenkleriEkle()
+        {
+            renkAnahtari.Add("Düğün", Color.Orange);
+            renkAnahtari.Add("Sünnet Düğünü", Color.Blue);
+            renkAnahtari.Add("Toplantı", Color.Green);
+            renkAnahtari.Add("Kına", Color.Red);
+            renkAnahtari.Add("Nişan", Color.Yellow);
+            renkAnahtari.Add("Nikah", Color.Purple);
+            renkAnahtari.Add("İftar", Color.Brown);
+            renkAnahtari.Add("Kokteyl", Color.Pink);
+            renkAnahtari.Add("Mezuniyet", Color.Cyan);
+            renkAnahtari.Add("Konferans", Color.Magenta);
+            renkAnahtari.Add("Diğer", Color.Gray);
+        }
+
+        private void button1_Click(object sender, EventArgs e) // birleştirme
         {
             /*dgvHaftalik[2, 2].Value = "Deneme"; 
             var cell = (DataGridViewTextBoxCellEx)dgvHaftalik[0, 0];
@@ -82,12 +91,12 @@ namespace Etkinlik_Yonetim_Sistemi
             string seciliSaat = "00:00";
             DateTime secilenGun = tarih.AddDays(sutun-4);
 
-            if (hucre.Style.BackColor.Name.ToString() == "0") // Arkaplan beyaz ise
+            if (hucre.Style.BackColor.Name == "0") // Arkaplan beyaz ise
             {
 
                 for (int i = satir; i < 14; i++)
                 {
-                    if (dgvHaftalik[sutun, i].Style.BackColor == Color.Blue)
+                    if (dgvHaftalik[sutun, i].Style.BackColor.Name != "0")
                     {
                         maxSaat = dgvHaftalik[0, i].Value.ToString();
                         break;
@@ -96,7 +105,7 @@ namespace Etkinlik_Yonetim_Sistemi
 
                 for (int i = satir; i > 0 ; i--)
                 {
-                    if (dgvHaftalik[sutun, i].Style.BackColor == Color.Blue)
+                    if (dgvHaftalik[sutun, i].Style.BackColor.Name != "0")
                     {
                         minSaat = dgvHaftalik[0, i].Value.ToString();
                         break;
@@ -106,14 +115,15 @@ namespace Etkinlik_Yonetim_Sistemi
                 seciliSaat = dgvHaftalik[0, satir].Value.ToString();
 
 
-                frmEtkinlikDetay etkinlikDetay = new frmEtkinlikDetay();
+                frmEtkinlikEkle etkinlikDetay = new frmEtkinlikEkle();
                 etkinlikDetay.SozlesmeFormuOlustur(secilenGun,minSaat,maxSaat,seciliSaat);
                 etkinlikDetay.ShowDialog();
                 EtkinlikGuncelle();
             }
             else
             {
-
+                frmEtkinlikGoruntule etkinlikGoruntule = new frmEtkinlikGoruntule((int)dgvHaftalik[sutun, satir].Value);
+                etkinlikGoruntule.Show();
             }
             
         }
@@ -142,13 +152,19 @@ namespace Etkinlik_Yonetim_Sistemi
                             while (dataOkuyucu.Read())
                             {
                                 string EtkinlikTarihi = (string)dataOkuyucu["EtkinlikTarihi"];
-                                string nitelik = (string)dataOkuyucu["Niteligi"];
+                                string nitelik = (string)dataOkuyucu["Niteligi"];                                
                                 int baslangicIndex = int.Parse(dataOkuyucu["BaslamaSaati"].ToString().Substring(0, 2)) - 9;
                                 int bitisIndex = int.Parse(dataOkuyucu["BitisSaati"].ToString().Substring(0, 2)) - 10;
+                                int sozlesmeID = (int)dataOkuyucu["SozlesmeID"];
 
+                                if (!kategoriListesi.Contains(nitelik))
+                                {
+                                    continue;
+                                }
                                 for (int j = baslangicIndex; j <= bitisIndex; j++)
                                 {
-                                    dgvHaftalik[i+1, j].Style.BackColor = Color.Red;
+                                    dgvHaftalik[i+1, j].Style.BackColor = (Color)renkAnahtari[nitelik];
+                                    dgvHaftalik[i + 1, j].Value = sozlesmeID;
                                 }
                             }
                         }

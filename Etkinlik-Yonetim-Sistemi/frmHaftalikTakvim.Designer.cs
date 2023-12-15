@@ -45,6 +45,7 @@
             this.dgvHaftalik.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvHaftalik.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dgvHaftalik.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvHaftalik.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;

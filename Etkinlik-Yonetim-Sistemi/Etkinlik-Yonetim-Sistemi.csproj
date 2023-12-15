@@ -237,17 +237,23 @@
     <Compile Include="frmAnaEkran.Designer.cs">
       <DependentUpon>frmAnaEkran.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmEtkinlikGoruntule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEtkinlikGoruntule.Designer.cs">
+      <DependentUpon>frmEtkinlikGoruntule.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmHaftalikTakvim.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmHaftalikTakvim.Designer.cs">
       <DependentUpon>frmHaftalikTakvim.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmEtkinlikDetay.cs">
+    <Compile Include="frmEtkinlikEkle.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmEtkinlikDetay.Designer.cs">
-      <DependentUpon>frmEtkinlikDetay.cs</DependentUpon>
+    <Compile Include="frmEtkinlikEkle.Designer.cs">
+      <DependentUpon>frmEtkinlikEkle.cs</DependentUpon>
     </Compile>
     <Compile Include="frmKasa.cs">
       <SubType>Form</SubType>
@@ -310,11 +316,14 @@
     <EmbeddedResource Include="frmAnaEkran.resx">
       <DependentUpon>frmAnaEkran.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmEtkinlikGoruntule.resx">
+      <DependentUpon>frmEtkinlikGoruntule.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmHaftalikTakvim.resx">
       <DependentUpon>frmHaftalikTakvim.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmEtkinlikDetay.resx">
-      <DependentUpon>frmEtkinlikDetay.cs</DependentUpon>
+    <EmbeddedResource Include="frmEtkinlikEkle.resx">
+      <DependentUpon>frmEtkinlikEkle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmKasa.resx">
       <DependentUpon>frmKasa.cs</DependentUpon>

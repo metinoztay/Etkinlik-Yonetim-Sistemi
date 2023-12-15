@@ -29,26 +29,25 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.checkBox11 = new System.Windows.Forms.CheckBox();
-            this.checkBox10 = new System.Windows.Forms.CheckBox();
-            this.checkBox9 = new System.Windows.Forms.CheckBox();
-            this.checkBox8 = new System.Windows.Forms.CheckBox();
+            this.btnListele = new System.Windows.Forms.Button();
+            this.cbxKonferans = new System.Windows.Forms.CheckBox();
+            this.cbxNikah = new System.Windows.Forms.CheckBox();
+            this.cbxToplanti = new System.Windows.Forms.CheckBox();
+            this.cbxKokteyl = new System.Windows.Forms.CheckBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.btnHepsiniBirak = new System.Windows.Forms.Button();
+            this.btnTumunuSec = new System.Windows.Forms.Button();
+            this.cbxDiger = new System.Windows.Forms.CheckBox();
+            this.cbxSunnetDugunu = new System.Windows.Forms.CheckBox();
+            this.cbxNisan = new System.Windows.Forms.CheckBox();
+            this.cbxKina = new System.Windows.Forms.CheckBox();
+            this.cbxIftar = new System.Windows.Forms.CheckBox();
+            this.cbxMezuniyet = new System.Windows.Forms.CheckBox();
+            this.cbxDugun = new System.Windows.Forms.CheckBox();
             this.panelTakvimArkaplan = new System.Windows.Forms.Panel();
-            this.btn_EtkinlikEkle = new System.Windows.Forms.Button();
             this.panelTakvim = new System.Windows.Forms.Panel();
             this.btnAylik = new System.Windows.Forms.Button();
             this.btnHaftalik = new System.Windows.Forms.Button();
-            this.btnGunluk = new System.Windows.Forms.Button();
             this.mcalGunSecici = new System.Windows.Forms.MonthCalendar();
             this.panel1.SuspendLayout();
             this.panelTakvimArkaplan.SuspendLayout();
@@ -59,72 +58,96 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.LightYellow;
-            this.panel1.Controls.Add(this.checkBox11);
-            this.panel1.Controls.Add(this.checkBox10);
-            this.panel1.Controls.Add(this.checkBox9);
-            this.panel1.Controls.Add(this.checkBox8);
+            this.panel1.Controls.Add(this.btnListele);
+            this.panel1.Controls.Add(this.cbxKonferans);
+            this.panel1.Controls.Add(this.cbxNikah);
+            this.panel1.Controls.Add(this.cbxToplanti);
+            this.panel1.Controls.Add(this.cbxKokteyl);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.checkBox7);
-            this.panel1.Controls.Add(this.checkBox6);
-            this.panel1.Controls.Add(this.checkBox5);
-            this.panel1.Controls.Add(this.checkBox4);
-            this.panel1.Controls.Add(this.checkBox3);
-            this.panel1.Controls.Add(this.checkBox2);
-            this.panel1.Controls.Add(this.checkBox1);
+            this.panel1.Controls.Add(this.btnHepsiniBirak);
+            this.panel1.Controls.Add(this.btnTumunuSec);
+            this.panel1.Controls.Add(this.cbxDiger);
+            this.panel1.Controls.Add(this.cbxSunnetDugunu);
+            this.panel1.Controls.Add(this.cbxNisan);
+            this.panel1.Controls.Add(this.cbxKina);
+            this.panel1.Controls.Add(this.cbxIftar);
+            this.panel1.Controls.Add(this.cbxMezuniyet);
+            this.panel1.Controls.Add(this.cbxDugun);
             this.panel1.Location = new System.Drawing.Point(850, 233);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(262, 436);
             this.panel1.TabIndex = 1;
             // 
-            // checkBox11
+            // btnListele
             // 
-            this.checkBox11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkBox11.AutoSize = true;
-            this.checkBox11.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.checkBox11.Location = new System.Drawing.Point(21, 343);
-            this.checkBox11.Name = "checkBox11";
-            this.checkBox11.Size = new System.Drawing.Size(107, 27);
-            this.checkBox11.TabIndex = 23;
-            this.checkBox11.Text = "Konferans";
-            this.checkBox11.UseVisualStyleBackColor = true;
+            this.btnListele.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnListele.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnListele.FlatAppearance.BorderSize = 0;
+            this.btnListele.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnListele.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnListele.Location = new System.Drawing.Point(148, 390);
+            this.btnListele.Name = "btnListele";
+            this.btnListele.Size = new System.Drawing.Size(100, 33);
+            this.btnListele.TabIndex = 24;
+            this.btnListele.Text = "Listele";
+            this.btnListele.UseVisualStyleBackColor = false;
+            this.btnListele.Click += new System.EventHandler(this.btnListele_Click);
             // 
-            // checkBox10
+            // cbxKonferans
             // 
-            this.checkBox10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkBox10.AutoSize = true;
-            this.checkBox10.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.checkBox10.Location = new System.Drawing.Point(21, 235);
-            this.checkBox10.Name = "checkBox10";
-            this.checkBox10.Size = new System.Drawing.Size(75, 27);
-            this.checkBox10.TabIndex = 22;
-            this.checkBox10.Text = "Nikâh";
-            this.checkBox10.UseVisualStyleBackColor = true;
+            this.cbxKonferans.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbxKonferans.AutoSize = true;
+            this.cbxKonferans.Checked = true;
+            this.cbxKonferans.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbxKonferans.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cbxKonferans.Location = new System.Drawing.Point(21, 343);
+            this.cbxKonferans.Name = "cbxKonferans";
+            this.cbxKonferans.Size = new System.Drawing.Size(107, 27);
+            this.cbxKonferans.TabIndex = 23;
+            this.cbxKonferans.Text = "Konferans";
+            this.cbxKonferans.UseVisualStyleBackColor = true;
             // 
-            // checkBox9
+            // cbxNikah
             // 
-            this.checkBox9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkBox9.AutoSize = true;
-            this.checkBox9.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.checkBox9.Location = new System.Drawing.Point(21, 154);
-            this.checkBox9.Name = "checkBox9";
-            this.checkBox9.Size = new System.Drawing.Size(93, 27);
-            this.checkBox9.TabIndex = 21;
-            this.checkBox9.Text = "Toplantı";
-            this.checkBox9.UseVisualStyleBackColor = true;
+            this.cbxNikah.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbxNikah.AutoSize = true;
+            this.cbxNikah.Checked = true;
+            this.cbxNikah.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbxNikah.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cbxNikah.Location = new System.Drawing.Point(21, 235);
+            this.cbxNikah.Name = "cbxNikah";
+            this.cbxNikah.Size = new System.Drawing.Size(75, 27);
+            this.cbxNikah.TabIndex = 22;
+            this.cbxNikah.Text = "Nikâh";
+            this.cbxNikah.UseVisualStyleBackColor = true;
             // 
-            // checkBox8
+            // cbxToplanti
             // 
-            this.checkBox8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkBox8.AutoSize = true;
-            this.checkBox8.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.checkBox8.Location = new System.Drawing.Point(21, 289);
-            this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(88, 27);
-            this.checkBox8.TabIndex = 20;
-            this.checkBox8.Text = "Kokteyl";
-            this.checkBox8.UseVisualStyleBackColor = true;
+            this.cbxToplanti.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbxToplanti.AutoSize = true;
+            this.cbxToplanti.Checked = true;
+            this.cbxToplanti.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbxToplanti.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cbxToplanti.Location = new System.Drawing.Point(21, 154);
+            this.cbxToplanti.Name = "cbxToplanti";
+            this.cbxToplanti.Size = new System.Drawing.Size(93, 27);
+            this.cbxToplanti.TabIndex = 21;
+            this.cbxToplanti.Text = "Toplantı";
+            this.cbxToplanti.UseVisualStyleBackColor = true;
+            // 
+            // cbxKokteyl
+            // 
+            this.cbxKokteyl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbxKokteyl.AutoSize = true;
+            this.cbxKokteyl.Checked = true;
+            this.cbxKokteyl.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbxKokteyl.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cbxKokteyl.Location = new System.Drawing.Point(21, 289);
+            this.cbxKokteyl.Name = "cbxKokteyl";
+            this.cbxKokteyl.Size = new System.Drawing.Size(88, 27);
+            this.cbxKokteyl.TabIndex = 20;
+            this.cbxKokteyl.Text = "Kokteyl";
+            this.cbxKokteyl.UseVisualStyleBackColor = true;
             // 
             // label7
             // 
@@ -137,117 +160,133 @@
             this.label7.TabIndex = 19;
             this.label7.Text = "Kategoriler";
             // 
-            // button2
+            // btnHepsiniBirak
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.BackColor = System.Drawing.Color.Gainsboro;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button2.Location = new System.Drawing.Point(127, 58);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(121, 33);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Hepsini Bırak";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnHepsiniBirak.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnHepsiniBirak.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnHepsiniBirak.FlatAppearance.BorderSize = 0;
+            this.btnHepsiniBirak.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHepsiniBirak.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnHepsiniBirak.Location = new System.Drawing.Point(127, 58);
+            this.btnHepsiniBirak.Name = "btnHepsiniBirak";
+            this.btnHepsiniBirak.Size = new System.Drawing.Size(121, 33);
+            this.btnHepsiniBirak.TabIndex = 7;
+            this.btnHepsiniBirak.Text = "Hepsini Bırak";
+            this.btnHepsiniBirak.UseVisualStyleBackColor = false;
+            this.btnHepsiniBirak.Click += new System.EventHandler(this.btnHepsiniBirak_Click);
             // 
-            // button1
+            // btnTumunuSec
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.Color.Gainsboro;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.Location = new System.Drawing.Point(21, 58);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 33);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Tümünü Seç";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnTumunuSec.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnTumunuSec.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnTumunuSec.FlatAppearance.BorderSize = 0;
+            this.btnTumunuSec.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTumunuSec.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnTumunuSec.Location = new System.Drawing.Point(21, 58);
+            this.btnTumunuSec.Name = "btnTumunuSec";
+            this.btnTumunuSec.Size = new System.Drawing.Size(100, 33);
+            this.btnTumunuSec.TabIndex = 5;
+            this.btnTumunuSec.Text = "Tümünü Seç";
+            this.btnTumunuSec.UseVisualStyleBackColor = false;
+            this.btnTumunuSec.Click += new System.EventHandler(this.btnTumunuSec_Click);
             // 
-            // checkBox7
+            // cbxDiger
             // 
-            this.checkBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkBox7.AutoSize = true;
-            this.checkBox7.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.checkBox7.Location = new System.Drawing.Point(21, 370);
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(72, 27);
-            this.checkBox7.TabIndex = 6;
-            this.checkBox7.Text = "Diğer";
-            this.checkBox7.UseVisualStyleBackColor = true;
+            this.cbxDiger.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbxDiger.AutoSize = true;
+            this.cbxDiger.Checked = true;
+            this.cbxDiger.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbxDiger.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cbxDiger.Location = new System.Drawing.Point(21, 370);
+            this.cbxDiger.Name = "cbxDiger";
+            this.cbxDiger.Size = new System.Drawing.Size(72, 27);
+            this.cbxDiger.TabIndex = 6;
+            this.cbxDiger.Text = "Diğer";
+            this.cbxDiger.UseVisualStyleBackColor = true;
             // 
-            // checkBox6
+            // cbxSunnetDugunu
             // 
-            this.checkBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.checkBox6.Location = new System.Drawing.Point(21, 127);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(143, 27);
-            this.checkBox6.TabIndex = 5;
-            this.checkBox6.Text = "Sünnet Düğünü";
-            this.checkBox6.UseVisualStyleBackColor = true;
+            this.cbxSunnetDugunu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbxSunnetDugunu.AutoSize = true;
+            this.cbxSunnetDugunu.Checked = true;
+            this.cbxSunnetDugunu.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbxSunnetDugunu.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cbxSunnetDugunu.Location = new System.Drawing.Point(21, 127);
+            this.cbxSunnetDugunu.Name = "cbxSunnetDugunu";
+            this.cbxSunnetDugunu.Size = new System.Drawing.Size(143, 27);
+            this.cbxSunnetDugunu.TabIndex = 5;
+            this.cbxSunnetDugunu.Text = "Sünnet Düğünü";
+            this.cbxSunnetDugunu.UseVisualStyleBackColor = true;
             // 
-            // checkBox5
+            // cbxNisan
             // 
-            this.checkBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.checkBox5.Location = new System.Drawing.Point(21, 208);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(74, 27);
-            this.checkBox5.TabIndex = 4;
-            this.checkBox5.Text = "Nişan";
-            this.checkBox5.UseVisualStyleBackColor = true;
+            this.cbxNisan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbxNisan.AutoSize = true;
+            this.cbxNisan.Checked = true;
+            this.cbxNisan.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbxNisan.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cbxNisan.Location = new System.Drawing.Point(21, 208);
+            this.cbxNisan.Name = "cbxNisan";
+            this.cbxNisan.Size = new System.Drawing.Size(74, 27);
+            this.cbxNisan.TabIndex = 4;
+            this.cbxNisan.Text = "Nişan";
+            this.cbxNisan.UseVisualStyleBackColor = true;
             // 
-            // checkBox4
+            // cbxKina
             // 
-            this.checkBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.checkBox4.Location = new System.Drawing.Point(21, 181);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(65, 27);
-            this.checkBox4.TabIndex = 3;
-            this.checkBox4.Text = "Kına";
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.cbxKina.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbxKina.AutoSize = true;
+            this.cbxKina.Checked = true;
+            this.cbxKina.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbxKina.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cbxKina.Location = new System.Drawing.Point(21, 181);
+            this.cbxKina.Name = "cbxKina";
+            this.cbxKina.Size = new System.Drawing.Size(65, 27);
+            this.cbxKina.TabIndex = 3;
+            this.cbxKina.Text = "Kına";
+            this.cbxKina.UseVisualStyleBackColor = true;
             // 
-            // checkBox3
+            // cbxIftar
             // 
-            this.checkBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.checkBox3.Location = new System.Drawing.Point(21, 262);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(66, 27);
-            this.checkBox3.TabIndex = 2;
-            this.checkBox3.Text = "İftar";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.cbxIftar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbxIftar.AutoSize = true;
+            this.cbxIftar.Checked = true;
+            this.cbxIftar.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbxIftar.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cbxIftar.Location = new System.Drawing.Point(21, 262);
+            this.cbxIftar.Name = "cbxIftar";
+            this.cbxIftar.Size = new System.Drawing.Size(66, 27);
+            this.cbxIftar.TabIndex = 2;
+            this.cbxIftar.Text = "İftar";
+            this.cbxIftar.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // cbxMezuniyet
             // 
-            this.checkBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.checkBox2.Location = new System.Drawing.Point(21, 316);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(108, 27);
-            this.checkBox2.TabIndex = 1;
-            this.checkBox2.Text = "Mezuniyet";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.cbxMezuniyet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbxMezuniyet.AutoSize = true;
+            this.cbxMezuniyet.Checked = true;
+            this.cbxMezuniyet.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbxMezuniyet.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cbxMezuniyet.Location = new System.Drawing.Point(21, 316);
+            this.cbxMezuniyet.Name = "cbxMezuniyet";
+            this.cbxMezuniyet.Size = new System.Drawing.Size(108, 27);
+            this.cbxMezuniyet.TabIndex = 1;
+            this.cbxMezuniyet.Text = "Mezuniyet";
+            this.cbxMezuniyet.UseVisualStyleBackColor = true;
             // 
-            // checkBox1
+            // cbxDugun
             // 
-            this.checkBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.checkBox1.Location = new System.Drawing.Point(21, 100);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(78, 27);
-            this.checkBox1.TabIndex = 0;
-            this.checkBox1.Text = "Düğün";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.cbxDugun.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbxDugun.AutoSize = true;
+            this.cbxDugun.Checked = true;
+            this.cbxDugun.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbxDugun.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cbxDugun.Location = new System.Drawing.Point(21, 100);
+            this.cbxDugun.Name = "cbxDugun";
+            this.cbxDugun.Size = new System.Drawing.Size(78, 27);
+            this.cbxDugun.TabIndex = 0;
+            this.cbxDugun.Text = "Düğün";
+            this.cbxDugun.UseVisualStyleBackColor = true;
             // 
             // panelTakvimArkaplan
             // 
@@ -255,29 +294,13 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelTakvimArkaplan.BackColor = System.Drawing.Color.LightYellow;
-            this.panelTakvimArkaplan.Controls.Add(this.btn_EtkinlikEkle);
             this.panelTakvimArkaplan.Controls.Add(this.panelTakvim);
             this.panelTakvimArkaplan.Controls.Add(this.btnAylik);
             this.panelTakvimArkaplan.Controls.Add(this.btnHaftalik);
-            this.panelTakvimArkaplan.Controls.Add(this.btnGunluk);
             this.panelTakvimArkaplan.Location = new System.Drawing.Point(12, 12);
             this.panelTakvimArkaplan.Name = "panelTakvimArkaplan";
             this.panelTakvimArkaplan.Size = new System.Drawing.Size(827, 657);
             this.panelTakvimArkaplan.TabIndex = 2;
-            // 
-            // btn_EtkinlikEkle
-            // 
-            this.btn_EtkinlikEkle.BackColor = System.Drawing.Color.Gainsboro;
-            this.btn_EtkinlikEkle.FlatAppearance.BorderSize = 0;
-            this.btn_EtkinlikEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_EtkinlikEkle.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btn_EtkinlikEkle.Location = new System.Drawing.Point(750, 3);
-            this.btn_EtkinlikEkle.Name = "btn_EtkinlikEkle";
-            this.btn_EtkinlikEkle.Size = new System.Drawing.Size(74, 33);
-            this.btn_EtkinlikEkle.TabIndex = 5;
-            this.btn_EtkinlikEkle.Text = "Ekle";
-            this.btn_EtkinlikEkle.UseVisualStyleBackColor = false;
-            this.btn_EtkinlikEkle.Click += new System.EventHandler(this.btn_EtkinlikEkle_Click);
             // 
             // panelTakvim
             // 
@@ -296,7 +319,7 @@
             this.btnAylik.FlatAppearance.BorderSize = 0;
             this.btnAylik.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAylik.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnAylik.Location = new System.Drawing.Point(151, 3);
+            this.btnAylik.Location = new System.Drawing.Point(77, 3);
             this.btnAylik.Name = "btnAylik";
             this.btnAylik.Size = new System.Drawing.Size(74, 33);
             this.btnAylik.TabIndex = 2;
@@ -309,25 +332,12 @@
             this.btnHaftalik.FlatAppearance.BorderSize = 0;
             this.btnHaftalik.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHaftalik.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnHaftalik.Location = new System.Drawing.Point(77, 3);
+            this.btnHaftalik.Location = new System.Drawing.Point(3, 3);
             this.btnHaftalik.Name = "btnHaftalik";
             this.btnHaftalik.Size = new System.Drawing.Size(74, 33);
             this.btnHaftalik.TabIndex = 1;
             this.btnHaftalik.Text = "Haftalık";
             this.btnHaftalik.UseVisualStyleBackColor = false;
-            // 
-            // btnGunluk
-            // 
-            this.btnGunluk.BackColor = System.Drawing.Color.Gainsboro;
-            this.btnGunluk.FlatAppearance.BorderSize = 0;
-            this.btnGunluk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGunluk.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnGunluk.Location = new System.Drawing.Point(3, 3);
-            this.btnGunluk.Name = "btnGunluk";
-            this.btnGunluk.Size = new System.Drawing.Size(74, 33);
-            this.btnGunluk.TabIndex = 0;
-            this.btnGunluk.Text = "Günlük";
-            this.btnGunluk.UseVisualStyleBackColor = false;
             // 
             // mcalGunSecici
             // 
@@ -350,6 +360,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmRezervasyon";
             this.Text = "Rezervasyon";
+            this.Load += new System.EventHandler(this.frmRezervasyon_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panelTakvimArkaplan.ResumeLayout(false);
@@ -362,23 +373,22 @@
         private System.Windows.Forms.Panel panelTakvimArkaplan;
         private System.Windows.Forms.Button btnAylik;
         private System.Windows.Forms.Button btnHaftalik;
-        private System.Windows.Forms.Button btnGunluk;
         private System.Windows.Forms.Panel panelTakvim;
         private System.Windows.Forms.MonthCalendar mcalGunSecici;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.CheckBox checkBox7;
-        private System.Windows.Forms.CheckBox checkBox6;
+        private System.Windows.Forms.CheckBox cbxIftar;
+        private System.Windows.Forms.CheckBox cbxMezuniyet;
+        private System.Windows.Forms.CheckBox cbxDugun;
+        private System.Windows.Forms.CheckBox cbxNisan;
+        private System.Windows.Forms.CheckBox cbxKina;
+        private System.Windows.Forms.Button btnHepsiniBirak;
+        private System.Windows.Forms.Button btnTumunuSec;
+        private System.Windows.Forms.CheckBox cbxDiger;
+        private System.Windows.Forms.CheckBox cbxSunnetDugunu;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.CheckBox checkBox11;
-        private System.Windows.Forms.CheckBox checkBox10;
-        private System.Windows.Forms.CheckBox checkBox9;
-        private System.Windows.Forms.CheckBox checkBox8;
-        private System.Windows.Forms.Button btn_EtkinlikEkle;
+        private System.Windows.Forms.CheckBox cbxKonferans;
+        private System.Windows.Forms.CheckBox cbxNikah;
+        private System.Windows.Forms.CheckBox cbxToplanti;
+        private System.Windows.Forms.CheckBox cbxKokteyl;
+        private System.Windows.Forms.Button btnListele;
     }
 }

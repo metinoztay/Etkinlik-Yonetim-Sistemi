@@ -1,6 +1,6 @@
 ﻿namespace Etkinlik_Yonetim_Sistemi
 {
-    partial class frmEtkinlikDetay
+    partial class frmEtkinlikEkle
     {
         /// <summary>
         /// Required designer variable.
