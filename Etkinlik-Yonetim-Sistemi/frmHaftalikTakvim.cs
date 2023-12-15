@@ -115,7 +115,7 @@ namespace Etkinlik_Yonetim_Sistemi
                 seciliSaat = dgvHaftalik[0, satir].Value.ToString();
 
 
-                frmEtkinlikEkle etkinlikDetay = new frmEtkinlikEkle();
+                frmEtkinlikYönet etkinlikDetay = new frmEtkinlikYönet();
                 etkinlikDetay.SozlesmeFormuOlustur(secilenGun,minSaat,maxSaat,seciliSaat);
                 etkinlikDetay.ShowDialog();
                 EtkinlikGuncelle();

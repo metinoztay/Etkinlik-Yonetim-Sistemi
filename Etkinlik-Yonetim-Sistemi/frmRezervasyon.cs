@@ -59,12 +59,12 @@ namespace Etkinlik_Yonetim_Sistemi
         }
         private void btnEtkinlikEkle_Click(object sender, EventArgs e)
         {
-            frmEtkinlikEkle etkinlik = new frmEtkinlikEkle();
+            frmEtkinlikYönet etkinlik = new frmEtkinlikYönet();
             etkinlik.ShowDialog();
         }
         private void btn_EtkinlikEkle_Click(object sender, EventArgs e)
         {
-            frmEtkinlikEkle etkinlik = new frmEtkinlikEkle();
+            frmEtkinlikYönet etkinlik = new frmEtkinlikYönet();
             etkinlik.ShowDialog();
         }
 
