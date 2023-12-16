@@ -325,6 +325,7 @@
             this.btnAylik.TabIndex = 2;
             this.btnAylik.Text = "Aylık";
             this.btnAylik.UseVisualStyleBackColor = false;
+            this.btnAylik.Click += new System.EventHandler(this.btnAylik_Click);
             // 
             // btnHaftalik
             // 
@@ -338,6 +339,7 @@
             this.btnHaftalik.TabIndex = 1;
             this.btnHaftalik.Text = "Haftalık";
             this.btnHaftalik.UseVisualStyleBackColor = false;
+            this.btnHaftalik.Click += new System.EventHandler(this.btnHaftalik_Click);
             // 
             // mcalGunSecici
             // 

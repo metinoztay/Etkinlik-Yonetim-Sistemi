@@ -22,7 +22,8 @@ namespace Etkinlik_Yonetim_Sistemi
 
         private void mcalGunSecici_DateChanged(object sender, DateRangeEventArgs e)
         {
-            takvimGuncelle();
+            TakvimGuncelle();
+
         }
 
         private void FormuYukle(Form yeniForm)
@@ -37,7 +38,7 @@ namespace Etkinlik_Yonetim_Sistemi
             yeniForm.FormBorderStyle = FormBorderStyle.None;
             yeniForm.Dock = DockStyle.Fill;
             panelTakvim.Controls.Add(yeniForm);
-            panelTakvim.Tag = yeniForm;
+            panelTakvim.Tag = yeniForm.Text;
             yeniForm.BringToFront();
             yeniForm.Show();
         }
@@ -75,10 +76,39 @@ namespace Etkinlik_Yonetim_Sistemi
 
         private void btnListele_Click(object sender, EventArgs e)
         {
-            takvimGuncelle();
+            TakvimGuncelle();
         }
 
-        private void takvimGuncelle()
+        private void TakvimGuncelle()
+        {
+            if (panelTakvim.Tag == null)
+            {
+                aylikTakvimGuncelle();
+            }
+            else if (panelTakvim.Tag.ToString() == "frmHaftalikTakvim")
+            {
+                haftalikTakvimGuncelle();
+            }
+            else if (panelTakvim.Tag.ToString() == "frmAylikTakvim")
+            {
+                aylikTakvimGuncelle();
+            }
+        }
+
+        private void aylikTakvimGuncelle()
+        {
+            frmAylikTakvim takvim = new frmAylikTakvim();
+            takvim.tarih = mcalGunSecici.SelectionRange.Start;
+            foreach (var kategori in kategoriler)
+            {
+                if (kategori.Checked)
+                {
+                    takvim.kategoriListesi.Add(kategori.Text);
+                }
+            }
+            FormuYukle(takvim);
+        }
+        private void haftalikTakvimGuncelle()
         {
             frmHaftalikTakvim takvim = new frmHaftalikTakvim();
             takvim.tarih = mcalGunSecici.SelectionRange.Start;
@@ -98,7 +128,7 @@ namespace Etkinlik_Yonetim_Sistemi
             {
                 kategori.Checked = true;
             }
-            takvimGuncelle();
+            TakvimGuncelle();
         }
 
         private void btnHepsiniBirak_Click(object sender, EventArgs e)
@@ -107,7 +137,17 @@ namespace Etkinlik_Yonetim_Sistemi
             {
                 kategori.Checked = false;
             }
-            takvimGuncelle();
+            TakvimGuncelle();
+        }
+
+        private void btnHaftalik_Click(object sender, EventArgs e)
+        {
+            haftalikTakvimGuncelle();
+        }
+
+        private void btnAylik_Click(object sender, EventArgs e)
+        {
+            aylikTakvimGuncelle();
         }
     }
 }

@@ -66,10 +66,5 @@ namespace Etkinlik_Yonetim_Sistemi
             }
         }
        
-
-        private string SadeceRakamlar(string text)
-        {
-            return Regex.Replace(text, "[^0-9]", "");
-        }
     }
 }

@@ -237,6 +237,12 @@
     <Compile Include="frmAnaEkran.Designer.cs">
       <DependentUpon>frmAnaEkran.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAylikTakvim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAylikTakvim.Designer.cs">
+      <DependentUpon>frmAylikTakvim.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmEtkinlikGoruntule.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -315,6 +321,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmAnaEkran.resx">
       <DependentUpon>frmAnaEkran.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAylikTakvim.resx">
+      <DependentUpon>frmAylikTakvim.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmEtkinlikGoruntule.resx">
       <DependentUpon>frmEtkinlikGoruntule.cs</DependentUpon>

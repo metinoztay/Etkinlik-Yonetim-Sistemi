@@ -77,7 +77,6 @@ namespace Etkinlik_Yonetim_Sistemi
         {
             if (tbxSozlesmeNo.Text.Trim() == string.Empty)
             {
-
                 SozlesmeEkle();
             }
             else
@@ -156,17 +155,18 @@ namespace Etkinlik_Yonetim_Sistemi
                         komut.Parameters.AddWithValue("@DavetliSayisi", int.Parse(mtbxDavetliSayisi.Text));
                         komut.Parameters.AddWithValue("@ToplamUcret", int.Parse(mtbxToplamUcret.Text));
                         komut.Parameters.AddWithValue("@Aciklama", tbxAciklama.Text.Trim());
+                        komut.Parameters.AddWithValue("@SozlesmeID", tbxSozlesmeNo.Text.Trim());
 
                         int etkilenenSatirSayisi = komut.ExecuteNonQuery();
 
                         if (etkilenenSatirSayisi > 0)
                         {
-                            MessageBox.Show($"Sözleşme Eklendi!");
+                            MessageBox.Show($"Sözleşme güncellendi!");
                             this.Close();
                         }
                         else
                         {
-                            MessageBox.Show("Ekleme başarısız!");
+                            MessageBox.Show("Güncelleme başarısız!");
                         }
                     }
                 }
@@ -176,9 +176,61 @@ namespace Etkinlik_Yonetim_Sistemi
                 }
             }
         }
+
+        private void SozlesmeFormuYukle(int sozlesmeID)
+        {
+            using (SqlConnection baglanti = new SqlConnection(baglantiCumlesi))
+            {
+                baglanti.Open();
+                string sorgu = $"SELECT * FROM tblEtkinlikler WHERE SozlesmeID = @sozlesmeID";
+
+                using (SqlCommand komut = new SqlCommand(sorgu, baglanti))
+                {
+
+                    komut.Parameters.AddWithValue("@sozlesmeID", sozlesmeID);
+                    using (SqlDataReader dataOkuyucu = komut.ExecuteReader())
+                    {
+                        while (dataOkuyucu.Read())
+                        {
+                            cbxNitelik.SelectedItem = (string)dataOkuyucu["Niteligi"];
+                            tbxSozlesmeTarihi.Text = DateTime.Now.ToShortDateString();
+                            mtbxTCNo.Text = (string)dataOkuyucu["TCNo"];
+                            tbxAdiSoyadi.Text = (string)dataOkuyucu["AdiSoyadi"];
+                            mtbxTelNo.Text = (string)dataOkuyucu["TelefonNumarasi"];
+                            tbxAdres.Text = (string)dataOkuyucu["Adresi"];
+                            tbxDetay.Text = (string)dataOkuyucu["Detay"];
+                            mtbxDavetliSayisi.Text = dataOkuyucu["DavetliSayisi"].ToString();
+                            mtbxToplamUcret.Text = dataOkuyucu["ToplamUcret"].ToString();
+                            tbxAciklama.Text = (string)dataOkuyucu["Aciklama"];
+                        }
+                    }
+                }
+            }
+        }
         private string SadeceRakamlar(string text)
         {
             return Regex.Replace(text, "[^0-9]", "");
+        }
+
+        private void btnGetir_Click(object sender, EventArgs e)
+        {
+            if (!tbxSozlesmeNo.Enabled)
+            {
+                mtbxTCNo.Enabled = false;
+                tbxAdiSoyadi.Enabled = false;
+                mtbxTelNo.Enabled = false;
+                tbxAdres.Enabled = false;
+                cbxNitelik.Enabled = false;
+                tbxDetay.Enabled = false;
+                mtbxDavetliSayisi.Enabled = false;
+                mtbxToplamUcret.Enabled = false;
+                tbxAciklama.Enabled = false;
+                tbxSozlesmeNo.Enabled = true;
+            }
+            else
+            {
+                SozlesmeFormuYukle(int.Parse(tbxSozlesmeNo.Text.Trim()));
+            }
         }
     }
 }

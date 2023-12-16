@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnKapat = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -69,6 +69,7 @@
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
+            this.btnGetir = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -81,15 +82,15 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Rezervasyon Bilgileri";
             // 
-            // button1
+            // btnKapat
             // 
-            this.button1.Location = new System.Drawing.Point(501, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(62, 55);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Kapat";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnKapat.Location = new System.Drawing.Point(501, 12);
+            this.btnKapat.Name = "btnKapat";
+            this.btnKapat.Size = new System.Drawing.Size(62, 55);
+            this.btnKapat.TabIndex = 1;
+            this.btnKapat.Text = "Kapat";
+            this.btnKapat.UseVisualStyleBackColor = true;
+            this.btnKapat.Click += new System.EventHandler(this.button1_Click);
             // 
             // label2
             // 
@@ -484,12 +485,23 @@
             this.label22.TabIndex = 46;
             this.label22.Text = "TL";
             // 
-            // frmEtkinlikDetay
+            // btnGetir
+            // 
+            this.btnGetir.Location = new System.Drawing.Point(350, 174);
+            this.btnGetir.Name = "btnGetir";
+            this.btnGetir.Size = new System.Drawing.Size(77, 29);
+            this.btnGetir.TabIndex = 47;
+            this.btnGetir.Text = "Getir";
+            this.btnGetir.UseVisualStyleBackColor = true;
+            this.btnGetir.Click += new System.EventHandler(this.btnGetir_Click);
+            // 
+            // frmEtkinlikYönet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(196)))), ((int)(((byte)(170)))));
             this.ClientSize = new System.Drawing.Size(575, 872);
+            this.Controls.Add(this.btnGetir);
             this.Controls.Add(this.label22);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.label20);
@@ -529,10 +541,10 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnKapat);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmEtkinlikDetay";
+            this.Name = "frmEtkinlikYönet";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Etkinlik Detay";
             this.Load += new System.EventHandler(this.frmEtkinlikDetay_Load);
@@ -544,7 +556,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnKapat;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
@@ -584,5 +596,6 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Button btnGetir;
     }
 }
