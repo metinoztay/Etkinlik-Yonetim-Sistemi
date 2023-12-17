@@ -35,11 +35,12 @@ namespace Etkinlik_Yonetim_Sistemi
             for (int i = 0; i < 7; i++)
             {
                 DataGridViewTextBoxColumn baslik = new DataGridViewTextBoxColumn();
+                
                 baslik.HeaderText = gunler[(baslangic + i+4)%7];
                 baslik.Name = gunler[(baslangic + i+4) % 7];
                 baslik.ReadOnly = true;
                 baslik.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-                dgvHaftalik.Columns.Add(baslik);  
+                dgvHaftalik.Columns.Add(baslik);
             }
 
             for (int i = 9; i <= 23; i++)

@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
+using System.DirectoryServices.ActiveDirectory;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,6 +14,11 @@ namespace Etkinlik_Yonetim_Sistemi
 {
     public partial class frmAylikTakvim : Form
     {
+        string baglantiCumlesi = "Data Source=.;Initial Catalog=dbEtkinlikYonetimSistemi;Integrated Security=True";
+        int[] etkinlikSayiSaat = new int[2];
+        DateTime ilkGun;
+        public MonthCalendar takvim;
+        public Button haftalikButon;
         public DateTime tarih;
         public List<string> kategoriListesi = new List<string>();
         public frmAylikTakvim()
@@ -25,7 +32,7 @@ namespace Etkinlik_Yonetim_Sistemi
 
             int satir = 0;
             int sutun;
-            var ilkGun = new DateTime(tarih.Year, tarih.Month, 1);
+            ilkGun = new DateTime(tarih.Year, tarih.Month, 1);
             var geciciTarih = ilkGun;
             var sonGun = ilkGun.AddMonths(1).AddTicks(-1);            
             string gun = ilkGun.DayOfWeek.ToString();
@@ -33,9 +40,14 @@ namespace Etkinlik_Yonetim_Sistemi
             while (geciciTarih!=sonGun.AddTicks(1))
             {
                 sutun = (int)geciciTarih.DayOfWeek;
-                if(sutun==0)
+                if (sutun==0)
                     sutun = 7;
-                dgvAylik[sutun-1, satir].Value = geciciTarih.Day.ToString();
+                dgvAylik[sutun-1, satir].Value = "\r\n"+geciciTarih.Day.ToString();
+                
+                EtkinlikHesapla(geciciTarih);
+                dgvAylik[sutun - 1, satir].Value += "\r\n\r\n\r\n" + etkinlikSayiSaat[1].ToString() + " saat";
+                dgvAylik[sutun - 1, satir].Value += "\r\n" + etkinlikSayiSaat[0].ToString() + " etkinlik";
+                
                 if (sutun == 7 )
                 {
                     satir++;
@@ -47,7 +59,53 @@ namespace Etkinlik_Yonetim_Sistemi
 
                 geciciTarih = geciciTarih.AddDays(1);
             }
-
         }
+
+        private void EtkinlikHesapla(DateTime gun)
+        {
+            etkinlikSayiSaat = new int[2]{0,0};
+            using (SqlConnection baglanti = new SqlConnection(baglantiCumlesi))
+            {
+                baglanti.Open();
+                string sorgu = $"SELECT * FROM tblEtkinlikler WHERE EtkinlikTarihi=@etkinlikTarihi";
+                
+
+                using (SqlCommand komut = new SqlCommand(sorgu, baglanti))
+                {
+                    int baslangic=0;
+                    int bitis=0;
+                    string nitelik = "";
+                    komut.Parameters.AddWithValue("@etkinlikTarihi", gun.ToShortDateString());
+                    using (SqlDataReader dataOkuyucu = komut.ExecuteReader())
+                    {
+                        while (dataOkuyucu.Read())
+                        {
+                            nitelik = (string)dataOkuyucu["Niteligi"];
+                            if (!kategoriListesi.Contains(nitelik))
+                            {
+                                continue;
+                            }
+                            etkinlikSayiSaat[0]++;
+                            baslangic = int.Parse(dataOkuyucu["BaslamaSaati"].ToString().Substring(0, 2));
+                            bitis = int.Parse(dataOkuyucu["BitisSaati"].ToString().Substring(0, 2));
+                            etkinlikSayiSaat[1] += (bitis - baslangic);
+                        }
+                    }
+                }
+            }
+        }
+
+
+        private void dgvAylik_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var hucre = dgvAylik.SelectedCells[0];
+            int satir = hucre.RowIndex;
+            int sutun = hucre.ColumnIndex;
+            string[] dizi = dgvAylik[sutun - 1, satir].Value.ToString().Split('\n');
+            DateTime yeniTarih = ilkGun.AddDays(int.Parse(dizi[1]));
+            takvim.SetSelectionRange(yeniTarih, yeniTarih);
+            haftalikButon.PerformClick();
+        }
+        
     }
 }

@@ -23,7 +23,6 @@ namespace Etkinlik_Yonetim_Sistemi
         private void mcalGunSecici_DateChanged(object sender, DateRangeEventArgs e)
         {
             TakvimGuncelle();
-
         }
 
         private void FormuYukle(Form yeniForm)
@@ -83,7 +82,7 @@ namespace Etkinlik_Yonetim_Sistemi
         {
             if (panelTakvim.Tag == null)
             {
-                aylikTakvimGuncelle();
+                haftalikTakvimGuncelle();
             }
             else if (panelTakvim.Tag.ToString() == "frmHaftalikTakvim")
             {
@@ -99,6 +98,8 @@ namespace Etkinlik_Yonetim_Sistemi
         {
             frmAylikTakvim takvim = new frmAylikTakvim();
             takvim.tarih = mcalGunSecici.SelectionRange.Start;
+            takvim.takvim = mcalGunSecici;
+            takvim.haftalikButon = btnHaftalik;
             foreach (var kategori in kategoriler)
             {
                 if (kategori.Checked)
@@ -140,7 +141,7 @@ namespace Etkinlik_Yonetim_Sistemi
             TakvimGuncelle();
         }
 
-        private void btnHaftalik_Click(object sender, EventArgs e)
+        public void btnHaftalik_Click(object sender, EventArgs e)
         {
             haftalikTakvimGuncelle();
         }
@@ -148,6 +149,11 @@ namespace Etkinlik_Yonetim_Sistemi
         private void btnAylik_Click(object sender, EventArgs e)
         {
             aylikTakvimGuncelle();
+        }
+
+        private void mcalGunSecici_DateSelected(object sender, DateRangeEventArgs e)
+        {
+            haftalikTakvimGuncelle();
         }
     }
 }
