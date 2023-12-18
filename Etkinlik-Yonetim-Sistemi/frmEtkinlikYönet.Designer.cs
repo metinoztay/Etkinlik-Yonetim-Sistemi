@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.btnKapat = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -48,7 +47,7 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnOdemeAl = new System.Windows.Forms.Button();
             this.tbxSozlesmeNo = new System.Windows.Forms.TextBox();
             this.tbxSozlesmeTarihi = new System.Windows.Forms.TextBox();
             this.tbxAdiSoyadi = new System.Windows.Forms.TextBox();
@@ -70,6 +69,7 @@
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.btnGetir = new System.Windows.Forms.Button();
+            this.btnExit = new FontAwesome.Sharp.IconButton();
             this.SuspendLayout();
             // 
             // label1
@@ -81,16 +81,6 @@
             this.label1.Size = new System.Drawing.Size(167, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Rezervasyon Bilgileri";
-            // 
-            // btnKapat
-            // 
-            this.btnKapat.Location = new System.Drawing.Point(501, 12);
-            this.btnKapat.Name = "btnKapat";
-            this.btnKapat.Size = new System.Drawing.Size(62, 55);
-            this.btnKapat.TabIndex = 1;
-            this.btnKapat.Text = "Kapat";
-            this.btnKapat.UseVisualStyleBackColor = true;
-            this.btnKapat.Click += new System.EventHandler(this.button1_Click);
             // 
             // label2
             // 
@@ -274,14 +264,15 @@
             this.label17.TabIndex = 21;
             this.label17.Text = "Açıklama";
             // 
-            // button2
+            // btnOdemeAl
             // 
-            this.button2.Location = new System.Drawing.Point(329, 558);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(98, 34);
-            this.button2.TabIndex = 22;
-            this.button2.Text = "Tahislat Ekle";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnOdemeAl.Location = new System.Drawing.Point(329, 558);
+            this.btnOdemeAl.Name = "btnOdemeAl";
+            this.btnOdemeAl.Size = new System.Drawing.Size(98, 34);
+            this.btnOdemeAl.TabIndex = 22;
+            this.btnOdemeAl.Text = "Tahislat Ekle";
+            this.btnOdemeAl.UseVisualStyleBackColor = true;
+            this.btnOdemeAl.Click += new System.EventHandler(this.btnOdemeAl_Click);
             // 
             // tbxSozlesmeNo
             // 
@@ -495,12 +486,31 @@
             this.btnGetir.UseVisualStyleBackColor = true;
             this.btnGetir.Click += new System.EventHandler(this.btnGetir_Click);
             // 
+            // btnExit
+            // 
+            this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(196)))), ((int)(((byte)(170)))));
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnExit.IconChar = FontAwesome.Sharp.IconChar.Xmark;
+            this.btnExit.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(9)))), ((int)(((byte)(44)))));
+            this.btnExit.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnExit.IconSize = 22;
+            this.btnExit.Location = new System.Drawing.Point(548, 0);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(27, 28);
+            this.btnExit.TabIndex = 51;
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
             // frmEtkinlikYönet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(196)))), ((int)(((byte)(170)))));
             this.ClientSize = new System.Drawing.Size(575, 872);
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnGetir);
             this.Controls.Add(this.label22);
             this.Controls.Add(this.label21);
@@ -522,7 +532,7 @@
             this.Controls.Add(this.tbxAdiSoyadi);
             this.Controls.Add(this.tbxSozlesmeTarihi);
             this.Controls.Add(this.tbxSozlesmeNo);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnOdemeAl);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label15);
@@ -541,7 +551,6 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.btnKapat);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmEtkinlikYönet";
@@ -556,7 +565,6 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnKapat;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
@@ -575,7 +583,7 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnOdemeAl;
         private System.Windows.Forms.TextBox tbxSozlesmeNo;
         private System.Windows.Forms.TextBox tbxSozlesmeTarihi;
         private System.Windows.Forms.TextBox tbxAdiSoyadi;
@@ -597,5 +605,6 @@
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Button btnGetir;
+        private FontAwesome.Sharp.IconButton btnExit;
     }
 }

@@ -65,6 +65,16 @@ namespace Etkinlik_Yonetim_Sistemi
                 }
             }
         }
-       
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnTahsilatEkle_Click(object sender, EventArgs e)
+        {
+            frmOdemeAl odemeAl = new frmOdemeAl();
+            odemeAl.ShowDialog();
+        }
     }
 }

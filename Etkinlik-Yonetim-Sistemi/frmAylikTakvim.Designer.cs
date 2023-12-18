@@ -94,6 +94,7 @@
             this.dgvAylik.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvAylik.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
             this.dgvAylik.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.White;
+            this.dgvAylik.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.dgvAylik.RowTemplate.Height = 110;
             this.dgvAylik.Size = new System.Drawing.Size(1124, 681);
             this.dgvAylik.TabIndex = 1;

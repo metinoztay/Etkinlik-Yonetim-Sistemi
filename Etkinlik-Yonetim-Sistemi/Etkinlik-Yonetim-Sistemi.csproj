@@ -291,6 +291,12 @@
     <Compile Include="frmMusteriIslemleriOnay.Designer.cs">
       <DependentUpon>frmMusteriIslemleriOnay.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmOdemeAl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOdemeAl.Designer.cs">
+      <DependentUpon>frmOdemeAl.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPersonel.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -349,6 +355,9 @@
     <EmbeddedResource Include="frmMusteriIslemleriOnay.resx">
       <DependentUpon>frmMusteriIslemleriOnay.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmOdemeAl.resx">
+      <DependentUpon>frmOdemeAl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPersonel.resx">
       <DependentUpon>frmPersonel.cs</DependentUpon>
     </EmbeddedResource>
@@ -399,7 +408,19 @@
     <None Include="pic\Screenshot_1.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Resources\" />
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\event-planning-PhotoRoom.png-PhotoRoom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Adsız tasarım.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stars.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\event.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\Fody.4.0.2\build\Fody.targets" Condition="Exists('packages\Fody.4.0.2\build\Fody.targets')" />

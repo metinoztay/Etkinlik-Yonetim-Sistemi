@@ -232,5 +232,16 @@ namespace Etkinlik_Yonetim_Sistemi
                 SozlesmeFormuYukle(int.Parse(tbxSozlesmeNo.Text.Trim()));
             }
         }
+
+        private void btnOdemeAl_Click(object sender, EventArgs e)
+        {
+            frmOdemeAl odemeAl = new frmOdemeAl();
+            odemeAl.ShowDialog();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

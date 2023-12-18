@@ -41,6 +41,7 @@
             this.picKullaniciAdiGirisSol = new System.Windows.Forms.PictureBox();
             this.picKullanciAdiGiris = new System.Windows.Forms.PictureBox();
             this.picSolGiris = new System.Windows.Forms.PictureBox();
+            this.btnExit = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picKullaniciAdiGirisSol)).BeginInit();
@@ -126,16 +127,31 @@
             // 
             // picSolGiris
             // 
-            this.picSolGiris.Image = global::Etkinlik_Yonetim_Sistemi.Properties.Resources.orange_side;
+            this.picSolGiris.Image = global::Etkinlik_Yonetim_Sistemi.Properties.Resources.Adsız_tasarım;
             resources.ApplyResources(this.picSolGiris, "picSolGiris");
             this.picSolGiris.Name = "picSolGiris";
             this.picSolGiris.TabStop = false;
+            // 
+            // btnExit
+            // 
+            resources.ApplyResources(this.btnExit, "btnExit");
+            this.btnExit.BackColor = System.Drawing.Color.White;
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnExit.IconChar = FontAwesome.Sharp.IconChar.Xmark;
+            this.btnExit.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(9)))), ((int)(((byte)(44)))));
+            this.btnExit.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnExit.IconSize = 22;
+            this.btnExit.Name = "btnExit";
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // frmGiris
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -175,5 +191,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private FontAwesome.Sharp.IconButton btnExit;
     }
 }

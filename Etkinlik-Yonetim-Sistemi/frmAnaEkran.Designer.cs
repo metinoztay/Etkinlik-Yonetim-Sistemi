@@ -137,10 +137,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(335, 129);
+            this.pictureBox1.Image = global::Etkinlik_Yonetim_Sistemi.Properties.Resources.logo;
+            this.pictureBox1.Location = new System.Drawing.Point(336, 128);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(433, 399);
+            this.pictureBox1.Size = new System.Drawing.Size(436, 443);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -391,10 +391,10 @@
             // 
             // picLogo
             // 
-            this.picLogo.Image = ((System.Drawing.Image)(resources.GetObject("picLogo.Image")));
-            this.picLogo.Location = new System.Drawing.Point(21, 12);
+            this.picLogo.Image = global::Etkinlik_Yonetim_Sistemi.Properties.Resources.event1;
+            this.picLogo.Location = new System.Drawing.Point(37, 12);
             this.picLogo.Name = "picLogo";
-            this.picLogo.Size = new System.Drawing.Size(175, 146);
+            this.picLogo.Size = new System.Drawing.Size(142, 133);
             this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picLogo.TabIndex = 0;
             this.picLogo.TabStop = false;

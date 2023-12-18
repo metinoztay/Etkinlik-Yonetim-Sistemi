@@ -65,7 +65,7 @@ namespace Etkinlik_Yonetim_Sistemi
             renkAnahtari.Add("Toplantı", Color.Green);
             renkAnahtari.Add("Kına", Color.Red);
             renkAnahtari.Add("Nişan", Color.Yellow);
-            renkAnahtari.Add("Nikah", Color.Purple);
+            renkAnahtari.Add("Nikâh", Color.Purple);
             renkAnahtari.Add("İftar", Color.Brown);
             renkAnahtari.Add("Kokteyl", Color.Pink);
             renkAnahtari.Add("Mezuniyet", Color.Cyan);

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,6 +22,7 @@ namespace Etkinlik_Yonetim_Sistemi
         public Button haftalikButon;
         public DateTime tarih;
         public List<string> kategoriListesi = new List<string>();
+        Hashtable renkler = new Hashtable();
         public frmAylikTakvim()
         {
             InitializeComponent();
@@ -29,6 +31,7 @@ namespace Etkinlik_Yonetim_Sistemi
         private void frmAylikTakvim_Load(object sender, EventArgs e)
         {
             dgvAylik.Rows.Add();
+            RenkleriEkle();
 
             int satir = 0;
             int sutun;
@@ -45,9 +48,30 @@ namespace Etkinlik_Yonetim_Sistemi
                 dgvAylik[sutun-1, satir].Value = "\r\n"+geciciTarih.Day.ToString();
                 
                 EtkinlikHesapla(geciciTarih);
-                dgvAylik[sutun - 1, satir].Value += "\r\n\r\n\r\n" + etkinlikSayiSaat[1].ToString() + " saat";
+                dgvAylik[sutun - 1, satir].Value += "\r\n\r\n" + etkinlikSayiSaat[1].ToString() + " saat";
                 dgvAylik[sutun - 1, satir].Value += "\r\n" + etkinlikSayiSaat[0].ToString() + " etkinlik";
-                
+
+                if (etkinlikSayiSaat[1]<=3)
+                {
+                    dgvAylik[sutun - 1, satir].Style.BackColor = (Color)renkler["Boş"];
+                }
+                else if ( 3< etkinlikSayiSaat[1] && etkinlikSayiSaat[1] <= 6)
+                {
+                    dgvAylik[sutun - 1, satir].Style.BackColor = (Color)renkler["Az"];
+                }
+                else if (6 < etkinlikSayiSaat[1] && etkinlikSayiSaat[1] <= 9)
+                {
+                    dgvAylik[sutun - 1, satir].Style.BackColor = (Color)renkler["Orta"];
+                }
+                else if (9 < etkinlikSayiSaat[1] && etkinlikSayiSaat[1] <= 12)
+                {
+                    dgvAylik[sutun - 1, satir].Style.BackColor = (Color)renkler["Çok"];
+                }
+                else if (12 < etkinlikSayiSaat[1] && etkinlikSayiSaat[1] <= 15)
+                {
+                    dgvAylik[sutun - 1, satir].Style.BackColor = (Color)renkler["Dolu"];
+                }
+
                 if (sutun == 7 )
                 {
                     satir++;
@@ -59,6 +83,16 @@ namespace Etkinlik_Yonetim_Sistemi
 
                 geciciTarih = geciciTarih.AddDays(1);
             }
+            
+        }
+
+        private void RenkleriEkle()
+        {
+            renkler.Add("Boş", Color.Green);
+            renkler.Add("Az", Color.Yellow);
+            renkler.Add("Orta", Color.Blue);
+            renkler.Add("Çok", Color.Brown);
+            renkler.Add("Dolu", Color.Red);
         }
 
         private void EtkinlikHesapla(DateTime gun)
@@ -98,13 +132,14 @@ namespace Etkinlik_Yonetim_Sistemi
 
         private void dgvAylik_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            
             var hucre = dgvAylik.SelectedCells[0];
             int satir = hucre.RowIndex;
             int sutun = hucre.ColumnIndex;
-            string[] dizi = dgvAylik[sutun - 1, satir].Value.ToString().Split('\n');
-            DateTime yeniTarih = ilkGun.AddDays(int.Parse(dizi[1]));
+            string[] dizi = dgvAylik[sutun, satir].Value.ToString().Split('\n');
+            DateTime yeniTarih = ilkGun.AddDays(int.Parse(dizi[1])-1);
             takvim.SetSelectionRange(yeniTarih, yeniTarih);
-            haftalikButon.PerformClick();
+            haftalikButon.PerformClick();                       
         }
         
     }
