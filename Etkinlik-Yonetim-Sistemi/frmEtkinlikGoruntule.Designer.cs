@@ -513,7 +513,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmEtkinlikGoruntule";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Etkinlik Detay";
             this.Load += new System.EventHandler(this.frmEtkinlikDetay_Load);
             this.ResumeLayout(false);

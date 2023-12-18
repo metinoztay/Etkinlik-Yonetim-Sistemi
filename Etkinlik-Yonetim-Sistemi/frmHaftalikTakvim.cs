@@ -9,7 +9,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Globalization;
-using System.Windows.Controls;
 using System.Data.SqlClient;
 using System.Collections;
 
@@ -19,6 +18,7 @@ namespace Etkinlik_Yonetim_Sistemi
     {
         string baglantiCumlesi = "Data Source=.;Initial Catalog=dbEtkinlikYonetimSistemi;Integrated Security=True";
         string sorgu;
+        public Button haftalikButon;
         public List<string> kategoriListesi = new List<string>();
         Hashtable renkAnahtari = new Hashtable(); 
         public DateTime tarih;
@@ -73,15 +73,6 @@ namespace Etkinlik_Yonetim_Sistemi
             renkAnahtari.Add("Diğer", Color.Gray);
         }
 
-        private void button1_Click(object sender, EventArgs e) // birleştirme
-        {
-            /*dgvHaftalik[2, 2].Value = "Deneme"; 
-            var cell = (DataGridViewTextBoxCellEx)dgvHaftalik[0, 0];
-            cell.ColumnSpan = 3;
-            cell.RowSpan = 2;
-            dgvHaftalik.Rows[1].DividerHeight = 2;*/
-        }
-
         private void dgvHaftalik_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             var hucre = dgvHaftalik.SelectedCells[0];
@@ -120,11 +111,13 @@ namespace Etkinlik_Yonetim_Sistemi
                 etkinlikDetay.SozlesmeFormuOlustur(secilenGun,minSaat,maxSaat,seciliSaat);
                 etkinlikDetay.ShowDialog();
                 EtkinlikGuncelle();
+                haftalikButon.PerformClick();
             }
             else
             {
                 frmEtkinlikGoruntule etkinlikGoruntule = new frmEtkinlikGoruntule((int)dgvHaftalik[sutun, satir].Value);
-                etkinlikGoruntule.Show();
+                etkinlikGoruntule.ShowDialog();
+                EtkinlikGuncelle();
             }
             
         }
@@ -171,7 +164,7 @@ namespace Etkinlik_Yonetim_Sistemi
                         }
                     }
                 }
-            }
+            }            
         }
     }
 }

@@ -113,6 +113,7 @@ namespace Etkinlik_Yonetim_Sistemi
         {
             frmHaftalikTakvim takvim = new frmHaftalikTakvim();
             takvim.tarih = mcalGunSecici.SelectionRange.Start;
+            takvim.haftalikButon = btnHaftalik;
             foreach (var kategori in kategoriler)
             {
                 if (kategori.Checked)
