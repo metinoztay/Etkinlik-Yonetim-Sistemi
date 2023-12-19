@@ -14,6 +14,7 @@ namespace Etkinlik_Yonetim_Sistemi
     public partial class frmOdemeAl : Form
     {
         string baglantiCumlesi = "Data Source=.;Initial Catalog=dbEtkinlikYonetimSistemi;Integrated Security=True";
+        public string TCNo = "-1"; 
         public frmOdemeAl()
         {
             InitializeComponent();
@@ -65,6 +66,11 @@ namespace Etkinlik_Yonetim_Sistemi
         private void frmOdemeAl_Load(object sender, EventArgs e)
         {
             tbxTarih.Text = DateTime.Now.ToShortDateString();
+            if (TCNo != "-1")
+            {
+                tbxTCNo.Text = TCNo;
+                btnBul.PerformClick();
+            }
         }
 
         private void btnTahsilatEkle_Click(object sender, EventArgs e)
@@ -103,6 +109,7 @@ namespace Etkinlik_Yonetim_Sistemi
                     MessageBox.Show("Hata: " + ex.Message);
                 }
             }
+            this.Close();
         }
     }
 }

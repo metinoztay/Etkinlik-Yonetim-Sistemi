@@ -23,7 +23,12 @@ namespace Etkinlik_Yonetim_Sistemi
         private void btnTahsilatEkle_Click(object sender, EventArgs e)
         {
             frmOdemeAl odemeAl = new frmOdemeAl();
+            if (tbxTCNo.Text.Trim() != string.Empty )
+            {
+                odemeAl.TCNo = tbxTCNo.Text;
+            }
             odemeAl.ShowDialog();
+            btnBul.PerformClick();
         }
 
         private void btnListele_Click(object sender, EventArgs e)
@@ -35,6 +40,7 @@ namespace Etkinlik_Yonetim_Sistemi
             foreach (var musteri in musteriTClistesi)
             {
                 string adSoyad=" ";
+                string TcNo = " ";
                 int toplam = 0;
                 int odenen = 0;
                 int kalan = 0;
@@ -60,6 +66,7 @@ namespace Etkinlik_Yonetim_Sistemi
                                 int tutar = (int)dataOkuyucu["Tutar"];
                                 string tur = (string)dataOkuyucu["Tur"];
                                 adSoyad = (string)dataOkuyucu["AdSoyad"];
+                                TcNo = (string )dataOkuyucu["TCNo"];
                                 if (tur == "Sözleşme")
                                 {
                                     toplam += tutar;
@@ -86,22 +93,20 @@ namespace Etkinlik_Yonetim_Sistemi
                             {
                                 if (secim == "TAMAMLANAN" && durum == "TAMAMLANDI")
                                 {
-                                    musteriGecmis = new string[] { adSoyad, toplam.ToString(), odenen.ToString(), durum };
+                                    musteriGecmis = new string[] { TcNo, adSoyad, toplam.ToString(), odenen.ToString(), durum};
                                     listKasaGecmisi.Items.Add(new ListViewItem(musteriGecmis));
                                 }
                                 else if (secim == "TAMAMLANMAYAN" && durum == "TAMAMLANMADI")
                                 {
-                                    musteriGecmis = new string[] { adSoyad, toplam.ToString(), odenen.ToString(), durum };
+                                    musteriGecmis = new string[] {TcNo , adSoyad, toplam.ToString(), odenen.ToString(), durum};
                                     listKasaGecmisi.Items.Add(new ListViewItem(musteriGecmis));
                                 }
                                 else if (secim == "TÜMÜ")
                                 {
-                                    musteriGecmis = new string[] { adSoyad, toplam.ToString(), odenen.ToString(), durum };
+                                    musteriGecmis = new string[] { TcNo, adSoyad, toplam.ToString(), odenen.ToString(), durum , TcNo };
                                     listKasaGecmisi.Items.Add(new ListViewItem(musteriGecmis));
                                 }                                
                             }
-
-
                         }
                     }
                 }
@@ -222,6 +227,11 @@ namespace Etkinlik_Yonetim_Sistemi
 
         private void listKasaGecmisi_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (listKasaGecmisi.SelectedItems.Count != 0)
+            {
+                tbxTCNo.Text = listKasaGecmisi.SelectedItems[0].Text;
+                btnBul.PerformClick();
+            }           
         }
     }
 
