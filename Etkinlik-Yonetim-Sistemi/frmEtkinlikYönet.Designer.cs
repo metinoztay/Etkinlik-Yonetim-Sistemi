@@ -44,10 +44,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.btnOdemeAl = new System.Windows.Forms.Button();
             this.tbxSozlesmeNo = new System.Windows.Forms.TextBox();
             this.tbxSozlesmeTarihi = new System.Windows.Forms.TextBox();
             this.tbxAdiSoyadi = new System.Windows.Forms.TextBox();
@@ -61,13 +58,9 @@
             this.mtbxToplamUcret = new System.Windows.Forms.MaskedTextBox();
             this.tbxAciklama = new System.Windows.Forms.TextBox();
             this.tbxEtkinlikTarihi = new System.Windows.Forms.TextBox();
-            this.mtbxAlinanUcret = new System.Windows.Forms.MaskedTextBox();
-            this.mtbxKalanUcret = new System.Windows.Forms.MaskedTextBox();
             this.btnKaydet = new System.Windows.Forms.Button();
             this.mtbxTCNo = new System.Windows.Forms.MaskedTextBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
             this.btnGetir = new System.Windows.Forms.Button();
             this.btnExit = new FontAwesome.Sharp.IconButton();
             this.btnSil = new System.Windows.Forms.Button();
@@ -235,45 +228,15 @@
             this.label14.TabIndex = 18;
             this.label14.Text = "Toplam Ücret";
             // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label15.Location = new System.Drawing.Point(72, 600);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(101, 20);
-            this.label15.TabIndex = 19;
-            this.label15.Text = "Alınan Ücret";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label16.Location = new System.Drawing.Point(76, 635);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(97, 20);
-            this.label16.TabIndex = 20;
-            this.label16.Text = "Kalan Ücret";
-            // 
             // label17
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label17.Location = new System.Drawing.Point(96, 670);
+            this.label17.Location = new System.Drawing.Point(96, 603);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(77, 20);
             this.label17.TabIndex = 21;
             this.label17.Text = "Açıklama";
-            // 
-            // btnOdemeAl
-            // 
-            this.btnOdemeAl.Location = new System.Drawing.Point(329, 558);
-            this.btnOdemeAl.Name = "btnOdemeAl";
-            this.btnOdemeAl.Size = new System.Drawing.Size(98, 34);
-            this.btnOdemeAl.TabIndex = 22;
-            this.btnOdemeAl.Text = "Tahislat Ekle";
-            this.btnOdemeAl.UseVisualStyleBackColor = true;
-            this.btnOdemeAl.Click += new System.EventHandler(this.btnOdemeAl_Click);
             // 
             // tbxSozlesmeNo
             // 
@@ -381,7 +344,7 @@
             // mtbxToplamUcret
             // 
             this.mtbxToplamUcret.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.mtbxToplamUcret.Location = new System.Drawing.Point(179, 560);
+            this.mtbxToplamUcret.Location = new System.Drawing.Point(179, 565);
             this.mtbxToplamUcret.Mask = "0000000";
             this.mtbxToplamUcret.Name = "mtbxToplamUcret";
             this.mtbxToplamUcret.Size = new System.Drawing.Size(115, 27);
@@ -391,7 +354,7 @@
             // tbxAciklama
             // 
             this.tbxAciklama.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tbxAciklama.Location = new System.Drawing.Point(179, 670);
+            this.tbxAciklama.Location = new System.Drawing.Point(179, 603);
             this.tbxAciklama.Multiline = true;
             this.tbxAciklama.Name = "tbxAciklama";
             this.tbxAciklama.Size = new System.Drawing.Size(248, 131);
@@ -406,31 +369,9 @@
             this.tbxEtkinlikTarihi.Size = new System.Drawing.Size(165, 27);
             this.tbxEtkinlikTarihi.TabIndex = 39;
             // 
-            // mtbxAlinanUcret
-            // 
-            this.mtbxAlinanUcret.Enabled = false;
-            this.mtbxAlinanUcret.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.mtbxAlinanUcret.Location = new System.Drawing.Point(179, 596);
-            this.mtbxAlinanUcret.Mask = "0000000";
-            this.mtbxAlinanUcret.Name = "mtbxAlinanUcret";
-            this.mtbxAlinanUcret.Size = new System.Drawing.Size(115, 27);
-            this.mtbxAlinanUcret.TabIndex = 40;
-            this.mtbxAlinanUcret.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // mtbxKalanUcret
-            // 
-            this.mtbxKalanUcret.Enabled = false;
-            this.mtbxKalanUcret.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.mtbxKalanUcret.Location = new System.Drawing.Point(179, 631);
-            this.mtbxKalanUcret.Mask = "0000000";
-            this.mtbxKalanUcret.Name = "mtbxKalanUcret";
-            this.mtbxKalanUcret.Size = new System.Drawing.Size(115, 27);
-            this.mtbxKalanUcret.TabIndex = 41;
-            this.mtbxKalanUcret.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
             // btnKaydet
             // 
-            this.btnKaydet.Location = new System.Drawing.Point(456, 812);
+            this.btnKaydet.Location = new System.Drawing.Point(456, 750);
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.Size = new System.Drawing.Size(107, 48);
             this.btnKaydet.TabIndex = 42;
@@ -451,31 +392,11 @@
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label20.Location = new System.Drawing.Point(294, 564);
+            this.label20.Location = new System.Drawing.Point(300, 569);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(29, 20);
             this.label20.TabIndex = 44;
             this.label20.Text = "TL";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label21.Location = new System.Drawing.Point(294, 600);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(29, 20);
-            this.label21.TabIndex = 45;
-            this.label21.Text = "TL";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label22.Location = new System.Drawing.Point(294, 635);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(29, 20);
-            this.label22.TabIndex = 46;
-            this.label22.Text = "TL";
             // 
             // btnGetir
             // 
@@ -507,7 +428,7 @@
             // 
             // btnSil
             // 
-            this.btnSil.Location = new System.Drawing.Point(373, 812);
+            this.btnSil.Location = new System.Drawing.Point(373, 750);
             this.btnSil.Name = "btnSil";
             this.btnSil.Size = new System.Drawing.Size(77, 48);
             this.btnSil.TabIndex = 52;
@@ -520,17 +441,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(196)))), ((int)(((byte)(170)))));
-            this.ClientSize = new System.Drawing.Size(575, 872);
+            this.ClientSize = new System.Drawing.Size(575, 827);
             this.Controls.Add(this.btnSil);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnGetir);
-            this.Controls.Add(this.label22);
-            this.Controls.Add(this.label21);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.mtbxTCNo);
             this.Controls.Add(this.btnKaydet);
-            this.Controls.Add(this.mtbxKalanUcret);
-            this.Controls.Add(this.mtbxAlinanUcret);
             this.Controls.Add(this.tbxEtkinlikTarihi);
             this.Controls.Add(this.tbxAciklama);
             this.Controls.Add(this.mtbxToplamUcret);
@@ -544,10 +461,7 @@
             this.Controls.Add(this.tbxAdiSoyadi);
             this.Controls.Add(this.tbxSozlesmeTarihi);
             this.Controls.Add(this.tbxSozlesmeNo);
-            this.Controls.Add(this.btnOdemeAl);
             this.Controls.Add(this.label17);
-            this.Controls.Add(this.label16);
-            this.Controls.Add(this.label15);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
@@ -592,10 +506,7 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Button btnOdemeAl;
         private System.Windows.Forms.TextBox tbxSozlesmeNo;
         private System.Windows.Forms.TextBox tbxSozlesmeTarihi;
         private System.Windows.Forms.TextBox tbxAdiSoyadi;
@@ -609,13 +520,9 @@
         private System.Windows.Forms.MaskedTextBox mtbxToplamUcret;
         private System.Windows.Forms.TextBox tbxAciklama;
         private System.Windows.Forms.TextBox tbxEtkinlikTarihi;
-        private System.Windows.Forms.MaskedTextBox mtbxAlinanUcret;
-        private System.Windows.Forms.MaskedTextBox mtbxKalanUcret;
         private System.Windows.Forms.Button btnKaydet;
         private System.Windows.Forms.MaskedTextBox mtbxTCNo;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Button btnGetir;
         private FontAwesome.Sharp.IconButton btnExit;
         private System.Windows.Forms.Button btnSil;

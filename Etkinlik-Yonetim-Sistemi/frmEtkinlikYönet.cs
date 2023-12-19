@@ -22,11 +22,6 @@ namespace Etkinlik_Yonetim_Sistemi
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void frmEtkinlikDetay_Load(object sender, EventArgs e)
         {
             tbxSozlesmeTarihi.Text = DateTime.Today.ToShortDateString();
@@ -116,6 +111,7 @@ namespace Etkinlik_Yonetim_Sistemi
                         if (etkilenenSatirSayisi > 0)
                         {
                             MessageBox.Show($"Sözleşme Eklendi!");
+                            KasaSozlesmeBilgisiEkle();
                             this.Close();
                         }
                         else
@@ -129,8 +125,37 @@ namespace Etkinlik_Yonetim_Sistemi
                     MessageBox.Show("Hata: " + ex.Message);
                 }
             }
+            
         }
 
+        private void KasaSozlesmeBilgisiEkle()
+        {
+            using (SqlConnection baglanti = new SqlConnection(baglantiCumlesi))
+            {
+                try
+                {
+                    baglanti.Open();
+
+                    string sorgu = "INSERT INTO tblKasa (TCNo,AdSoyad,Tutar,Tarih,Tur,Aciklama) VALUES (@TCNo,@AdSoyad,@Tutar,@Tarih,@Tur,@Aciklama)";
+
+                    using (SqlCommand komut = new SqlCommand(sorgu, baglanti))
+                    {
+                        komut.Parameters.AddWithValue("@TCNo", mtbxTCNo.Text);
+                        komut.Parameters.AddWithValue("@AdSoyad", tbxAdiSoyadi.Text);
+                        komut.Parameters.AddWithValue("@Tutar", int.Parse(mtbxToplamUcret.Text));
+                        komut.Parameters.AddWithValue("@Tarih", tbxSozlesmeTarihi.Text);
+                        komut.Parameters.AddWithValue("@Tur", "Sözleşme");
+                        komut.Parameters.AddWithValue("@Aciklama", tbxEtkinlikTarihi.Text + " " + cbxNitelik.SelectedItem.ToString());
+
+                        komut.ExecuteNonQuery();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Hata: " + ex.Message);
+                }
+            }
+        }
         private void SozlesmeGuncelle()
         {
             using (SqlConnection baglanti = new SqlConnection(baglantiCumlesi))
@@ -243,8 +268,6 @@ namespace Etkinlik_Yonetim_Sistemi
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        
+        }        
     }
 }

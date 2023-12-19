@@ -40,72 +40,22 @@ namespace Etkinlik_Yonetim_Sistemi
 
                 using (SqlCommand komut = new SqlCommand(sorgu, baglanti))
                 {
-                    
+
                     komut.Parameters.AddWithValue("@tcNo", tbxTCNo.Text.Trim());
-                    
+
 
                     using (SqlDataReader dataOkuyucu = komut.ExecuteReader())
                     {
                         if (dataOkuyucu.Read())
                         {
                             tbxAdSoyad.Text = (string)dataOkuyucu["AdiSoyadi"];
-
-                            MusteriGecmisListele(tbxTCNo.Text.Trim());
                         }
                     }
                 }
             }
         }
 
-        private void MusteriGecmisListele(string TCNo)
-        {
-            int toplam = 0;
-            int odenen = 0;
-            listOdemeGecmisi.Items.Clear();
-            string sorgu;
-
-            using (SqlConnection baglanti = new SqlConnection(baglantiCumlesi))
-            {
-                baglanti.Open();
-                sorgu = $"SELECT * FROM tblKasa WHERE TCNo = @tcNo";
-                
-
-                using (SqlCommand komut = new SqlCommand(sorgu, baglanti))
-                {
-                    
-                    komut.Parameters.AddWithValue("@tcNo", TCNo);
-                    
-
-                    using (SqlDataReader dataOkuyucu = komut.ExecuteReader())
-                    {
-                        while (dataOkuyucu.Read())
-                        { 
-                            string tarih = (string)dataOkuyucu["Tarih"];
-                            int tutar = (int)dataOkuyucu["Tutar"];
-                            string aciklama = (string)dataOkuyucu["Aciklama"];
-                            
-                            
-                            string tur = (string)dataOkuyucu["Tur"];
-                            string[] musteriBilgileri = new string[] {tarih,aciklama,tur,tutar.ToString()};
-                            listOdemeGecmisi.Items.Add(new ListViewItem(musteriBilgileri));
-                            if (tur == "Sözleşme")
-                            {
-                                toplam += tutar;
-                            }
-                            else if(tur == "Ödeme")
-                            {
-                                odenen += tutar; 
-                            }
-
-                            lblToplam.Text = toplam.ToString();
-                            lblOdenen.Text = odenen.ToString();
-                            lblKalan.Text = (toplam - odenen).ToString();
-                        }        
-                    }
-                }
-            }
-
-        }
+        
 
         private void btnExit_Click(object sender, EventArgs e)
         {
@@ -153,7 +103,6 @@ namespace Etkinlik_Yonetim_Sistemi
                     MessageBox.Show("Hata: " + ex.Message);
                 }
             }
-            MusteriGecmisListele(tbxTCNo.Text);
         }
     }
 }

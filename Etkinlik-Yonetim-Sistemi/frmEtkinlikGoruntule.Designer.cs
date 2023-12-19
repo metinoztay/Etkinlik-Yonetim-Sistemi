@@ -42,10 +42,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.btnTahsilatEkle = new System.Windows.Forms.Button();
             this.tbxSozlesmeNo = new System.Windows.Forms.TextBox();
             this.tbxSozlesmeTarihi = new System.Windows.Forms.TextBox();
             this.tbxAdiSoyadi = new System.Windows.Forms.TextBox();
@@ -58,12 +55,8 @@
             this.mtbxToplamUcret = new System.Windows.Forms.MaskedTextBox();
             this.tbxAciklama = new System.Windows.Forms.TextBox();
             this.tbxEtkinlikTarihi = new System.Windows.Forms.TextBox();
-            this.mtbxAlinanUcret = new System.Windows.Forms.MaskedTextBox();
-            this.mtbxKalanUcret = new System.Windows.Forms.MaskedTextBox();
             this.mtbxTCNo = new System.Windows.Forms.MaskedTextBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
             this.tbxBaslangicSaati = new System.Windows.Forms.TextBox();
             this.tbxBitisSaati = new System.Windows.Forms.TextBox();
             this.tbxNiteligi = new System.Windows.Forms.TextBox();
@@ -211,45 +204,15 @@
             this.label14.TabIndex = 18;
             this.label14.Text = "Toplam Ücret";
             // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label15.Location = new System.Drawing.Point(71, 637);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(101, 20);
-            this.label15.TabIndex = 19;
-            this.label15.Text = "Alınan Ücret";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label16.Location = new System.Drawing.Point(75, 672);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(97, 20);
-            this.label16.TabIndex = 20;
-            this.label16.Text = "Kalan Ücret";
-            // 
             // label17
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label17.Location = new System.Drawing.Point(95, 707);
+            this.label17.Location = new System.Drawing.Point(95, 635);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(77, 20);
             this.label17.TabIndex = 21;
             this.label17.Text = "Açıklama";
-            // 
-            // btnTahsilatEkle
-            // 
-            this.btnTahsilatEkle.Location = new System.Drawing.Point(328, 595);
-            this.btnTahsilatEkle.Name = "btnTahsilatEkle";
-            this.btnTahsilatEkle.Size = new System.Drawing.Size(98, 34);
-            this.btnTahsilatEkle.TabIndex = 22;
-            this.btnTahsilatEkle.Text = "Tahislat Ekle";
-            this.btnTahsilatEkle.UseVisualStyleBackColor = true;
-            this.btnTahsilatEkle.Click += new System.EventHandler(this.btnTahsilatEkle_Click);
             // 
             // tbxSozlesmeNo
             // 
@@ -353,7 +316,7 @@
             // 
             this.tbxAciklama.Enabled = false;
             this.tbxAciklama.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tbxAciklama.Location = new System.Drawing.Point(178, 707);
+            this.tbxAciklama.Location = new System.Drawing.Point(178, 635);
             this.tbxAciklama.Multiline = true;
             this.tbxAciklama.Name = "tbxAciklama";
             this.tbxAciklama.Size = new System.Drawing.Size(248, 131);
@@ -367,28 +330,6 @@
             this.tbxEtkinlikTarihi.Name = "tbxEtkinlikTarihi";
             this.tbxEtkinlikTarihi.Size = new System.Drawing.Size(165, 27);
             this.tbxEtkinlikTarihi.TabIndex = 39;
-            // 
-            // mtbxAlinanUcret
-            // 
-            this.mtbxAlinanUcret.Enabled = false;
-            this.mtbxAlinanUcret.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.mtbxAlinanUcret.Location = new System.Drawing.Point(178, 633);
-            this.mtbxAlinanUcret.Mask = "0000000";
-            this.mtbxAlinanUcret.Name = "mtbxAlinanUcret";
-            this.mtbxAlinanUcret.Size = new System.Drawing.Size(115, 27);
-            this.mtbxAlinanUcret.TabIndex = 40;
-            this.mtbxAlinanUcret.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // mtbxKalanUcret
-            // 
-            this.mtbxKalanUcret.Enabled = false;
-            this.mtbxKalanUcret.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.mtbxKalanUcret.Location = new System.Drawing.Point(178, 668);
-            this.mtbxKalanUcret.Mask = "0000000";
-            this.mtbxKalanUcret.Name = "mtbxKalanUcret";
-            this.mtbxKalanUcret.Size = new System.Drawing.Size(115, 27);
-            this.mtbxKalanUcret.TabIndex = 41;
-            this.mtbxKalanUcret.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // mtbxTCNo
             // 
@@ -409,26 +350,6 @@
             this.label20.Size = new System.Drawing.Size(29, 20);
             this.label20.TabIndex = 44;
             this.label20.Text = "TL";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label21.Location = new System.Drawing.Point(293, 637);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(29, 20);
-            this.label21.TabIndex = 45;
-            this.label21.Text = "TL";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label22.Location = new System.Drawing.Point(293, 672);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(29, 20);
-            this.label22.TabIndex = 46;
-            this.label22.Text = "TL";
             // 
             // tbxBaslangicSaati
             // 
@@ -497,12 +418,8 @@
             this.Controls.Add(this.tbxNiteligi);
             this.Controls.Add(this.tbxBitisSaati);
             this.Controls.Add(this.tbxBaslangicSaati);
-            this.Controls.Add(this.label22);
-            this.Controls.Add(this.label21);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.mtbxTCNo);
-            this.Controls.Add(this.mtbxKalanUcret);
-            this.Controls.Add(this.mtbxAlinanUcret);
             this.Controls.Add(this.tbxEtkinlikTarihi);
             this.Controls.Add(this.tbxAciklama);
             this.Controls.Add(this.mtbxToplamUcret);
@@ -515,10 +432,7 @@
             this.Controls.Add(this.tbxAdiSoyadi);
             this.Controls.Add(this.tbxSozlesmeTarihi);
             this.Controls.Add(this.tbxSozlesmeNo);
-            this.Controls.Add(this.btnTahsilatEkle);
             this.Controls.Add(this.label17);
-            this.Controls.Add(this.label16);
-            this.Controls.Add(this.label15);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
@@ -559,10 +473,7 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Button btnTahsilatEkle;
         private System.Windows.Forms.TextBox tbxSozlesmeNo;
         private System.Windows.Forms.TextBox tbxSozlesmeTarihi;
         private System.Windows.Forms.TextBox tbxAdiSoyadi;
@@ -575,12 +486,8 @@
         private System.Windows.Forms.MaskedTextBox mtbxToplamUcret;
         private System.Windows.Forms.TextBox tbxAciklama;
         private System.Windows.Forms.TextBox tbxEtkinlikTarihi;
-        private System.Windows.Forms.MaskedTextBox mtbxAlinanUcret;
-        private System.Windows.Forms.MaskedTextBox mtbxKalanUcret;
         private System.Windows.Forms.MaskedTextBox mtbxTCNo;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label22;
         private System.Windows.Forms.TextBox tbxBaslangicSaati;
         private System.Windows.Forms.TextBox tbxBitisSaati;
         private System.Windows.Forms.TextBox tbxNiteligi;

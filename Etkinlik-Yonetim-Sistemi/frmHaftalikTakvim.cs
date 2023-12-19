@@ -119,8 +119,7 @@ namespace Etkinlik_Yonetim_Sistemi
                 etkinlikGoruntule.ShowDialog();
                 EtkinlikGuncelle();
                 haftalikButon.PerformClick();
-            }
-            
+            }            
         }
 
 
