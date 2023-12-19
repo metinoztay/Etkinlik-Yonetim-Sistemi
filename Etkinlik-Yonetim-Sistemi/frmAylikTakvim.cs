@@ -136,10 +136,13 @@ namespace Etkinlik_Yonetim_Sistemi
             var hucre = dgvAylik.SelectedCells[0];
             int satir = hucre.RowIndex;
             int sutun = hucre.ColumnIndex;
-            string[] dizi = dgvAylik[sutun, satir].Value.ToString().Split('\n');
-            DateTime yeniTarih = ilkGun.AddDays(int.Parse(dizi[1])-1);
-            takvim.SetSelectionRange(yeniTarih, yeniTarih);
-            haftalikButon.PerformClick();                       
+            if (dgvAylik[sutun, satir].Value != null)
+            {
+                string[] dizi = dgvAylik[sutun, satir].Value.ToString().Split('\n');
+                DateTime yeniTarih = ilkGun.AddDays(int.Parse(dizi[1]) - 1);
+                takvim.SetSelectionRange(yeniTarih, yeniTarih);
+                haftalikButon.PerformClick();
+            }                                
         }
         
     }

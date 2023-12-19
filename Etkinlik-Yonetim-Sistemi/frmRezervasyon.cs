@@ -71,6 +71,7 @@ namespace Etkinlik_Yonetim_Sistemi
         private void frmRezervasyon_Load(object sender, EventArgs e)
         {
             KategorileriEkle();
+            btnAylik.PerformClick();
         }
 
         private void btnListele_Click(object sender, EventArgs e)

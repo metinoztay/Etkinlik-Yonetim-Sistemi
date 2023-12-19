@@ -68,6 +68,7 @@
             this.tbxBitisSaati = new System.Windows.Forms.TextBox();
             this.tbxNiteligi = new System.Windows.Forms.TextBox();
             this.btnExit = new FontAwesome.Sharp.IconButton();
+            this.btnSil = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -474,12 +475,24 @@
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // btnSil
+            // 
+            this.btnSil.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSil.Location = new System.Drawing.Point(486, 812);
+            this.btnSil.Name = "btnSil";
+            this.btnSil.Size = new System.Drawing.Size(77, 48);
+            this.btnSil.TabIndex = 53;
+            this.btnSil.Text = "SİL";
+            this.btnSil.UseVisualStyleBackColor = true;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
+            // 
             // frmEtkinlikGoruntule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CadetBlue;
             this.ClientSize = new System.Drawing.Size(575, 872);
+            this.Controls.Add(this.btnSil);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.tbxNiteligi);
             this.Controls.Add(this.tbxBitisSaati);
@@ -572,5 +585,6 @@
         private System.Windows.Forms.TextBox tbxBitisSaati;
         private System.Windows.Forms.TextBox tbxNiteligi;
         private FontAwesome.Sharp.IconButton btnExit;
+        private System.Windows.Forms.Button btnSil;
     }
 }

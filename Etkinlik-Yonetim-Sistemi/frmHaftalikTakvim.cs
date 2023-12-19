@@ -118,6 +118,7 @@ namespace Etkinlik_Yonetim_Sistemi
                 frmEtkinlikGoruntule etkinlikGoruntule = new frmEtkinlikGoruntule((int)dgvHaftalik[sutun, satir].Value);
                 etkinlikGoruntule.ShowDialog();
                 EtkinlikGuncelle();
+                haftalikButon.PerformClick();
             }
             
         }

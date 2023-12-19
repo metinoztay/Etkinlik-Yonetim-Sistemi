@@ -230,6 +230,7 @@ namespace Etkinlik_Yonetim_Sistemi
             else
             {
                 SozlesmeFormuYukle(int.Parse(tbxSozlesmeNo.Text.Trim()));
+                btnSil.Visible = true;
             }
         }
 
@@ -243,5 +244,7 @@ namespace Etkinlik_Yonetim_Sistemi
         {
             this.Close();
         }
+
+        
     }
 }

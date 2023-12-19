@@ -76,5 +76,48 @@ namespace Etkinlik_Yonetim_Sistemi
             frmOdemeAl odemeAl = new frmOdemeAl();
             odemeAl.ShowDialog();
         }
+
+        private void btnSil_Click(object sender, EventArgs e)
+        {
+            DialogResult onay = MessageBox.Show("Seçili etkinlik silinecek, onaylıyor musunuz?", "Etkinlik Sil", MessageBoxButtons.YesNo);
+            if (onay.Equals(DialogResult.Yes))
+            {
+                using (SqlConnection baglanti = new SqlConnection(baglantiCumlesi))
+                {
+                    try
+                    {
+                        baglanti.Open();
+
+                        string sorgu = "DELETE FROM tblEtkinlikler WHERE SozlesmeID = @etkinlikID";
+
+                        using (SqlCommand komut = new SqlCommand(sorgu, baglanti))
+                        {
+                            komut.Parameters.AddWithValue("@etkinlikID", tbxSozlesmeNo.Text.Trim());
+
+                            int etkilenenSatirSayisi = komut.ExecuteNonQuery();
+
+                            if (etkilenenSatirSayisi > 0)
+                            {
+                                MessageBox.Show("Etkinlik silindi!");
+                                this.Close();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Silme başarısız! Belirtilen etkinlik bulunamadı.");
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Hata: " + ex.Message);
+                    }
+                }
+            }
+            else
+            {
+
+            }
+
+        }
     }
 }

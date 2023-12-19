@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnSil = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
             this.listMusteriler = new System.Windows.Forms.ListView();
             this.MusteriID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.AdiSoyadi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.TelefonNO = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.label8 = new System.Windows.Forms.Label();
+            this.btnSil = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,15 +52,16 @@
             this.panel1.Size = new System.Drawing.Size(1100, 657);
             this.panel1.TabIndex = 0;
             // 
-            // btnSil
+            // label8
             // 
-            this.btnSil.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSil.Location = new System.Drawing.Point(932, 531);
-            this.btnSil.Name = "btnSil";
-            this.btnSil.Size = new System.Drawing.Size(140, 35);
-            this.btnSil.TabIndex = 56;
-            this.btnSil.Text = "ALACAK LİSTELE";
-            this.btnSil.UseVisualStyleBackColor = true;
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label8.Location = new System.Drawing.Point(20, 15);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(128, 23);
+            this.label8.TabIndex = 64;
+            this.label8.Text = "Ödeme Geçmişi";
             // 
             // listMusteriler
             // 
@@ -74,7 +75,7 @@
             this.listMusteriler.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.listMusteriler.FullRowSelect = true;
             this.listMusteriler.HideSelection = false;
-            this.listMusteriler.Location = new System.Drawing.Point(544, 177);
+            this.listMusteriler.Location = new System.Drawing.Point(24, 53);
             this.listMusteriler.Name = "listMusteriler";
             this.listMusteriler.Scrollable = false;
             this.listMusteriler.Size = new System.Drawing.Size(528, 348);
@@ -100,16 +101,15 @@
             this.TelefonNO.Text = "Telefon NO";
             this.TelefonNO.Width = 167;
             // 
-            // label8
+            // btnSil
             // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label8.Location = new System.Drawing.Point(540, 137);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(128, 23);
-            this.label8.TabIndex = 64;
-            this.label8.Text = "Ödeme Geçmişi";
+            this.btnSil.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSil.Location = new System.Drawing.Point(412, 15);
+            this.btnSil.Name = "btnSil";
+            this.btnSil.Size = new System.Drawing.Size(140, 35);
+            this.btnSil.TabIndex = 56;
+            this.btnSil.Text = "LİSTELE";
+            this.btnSil.UseVisualStyleBackColor = true;
             // 
             // frmKasa
             // 

@@ -70,6 +70,7 @@
             this.label22 = new System.Windows.Forms.Label();
             this.btnGetir = new System.Windows.Forms.Button();
             this.btnExit = new FontAwesome.Sharp.IconButton();
+            this.btnSil = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -478,7 +479,7 @@
             // 
             // btnGetir
             // 
-            this.btnGetir.Location = new System.Drawing.Point(350, 174);
+            this.btnGetir.Location = new System.Drawing.Point(350, 175);
             this.btnGetir.Name = "btnGetir";
             this.btnGetir.Size = new System.Drawing.Size(77, 29);
             this.btnGetir.TabIndex = 47;
@@ -504,12 +505,23 @@
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // btnSil
+            // 
+            this.btnSil.Location = new System.Drawing.Point(373, 812);
+            this.btnSil.Name = "btnSil";
+            this.btnSil.Size = new System.Drawing.Size(77, 48);
+            this.btnSil.TabIndex = 52;
+            this.btnSil.Text = "SİL";
+            this.btnSil.UseVisualStyleBackColor = true;
+            this.btnSil.Visible = false;
+            // 
             // frmEtkinlikYönet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(196)))), ((int)(((byte)(170)))));
             this.ClientSize = new System.Drawing.Size(575, 872);
+            this.Controls.Add(this.btnSil);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnGetir);
             this.Controls.Add(this.label22);
@@ -606,5 +618,6 @@
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Button btnGetir;
         private FontAwesome.Sharp.IconButton btnExit;
+        private System.Windows.Forms.Button btnSil;
     }
 }
