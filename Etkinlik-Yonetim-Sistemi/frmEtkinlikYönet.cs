@@ -112,6 +112,7 @@ namespace Etkinlik_Yonetim_Sistemi
                         {
                             MessageBox.Show($"Sözleşme Eklendi!");
                             KasaSozlesmeBilgisiEkle();
+                            MusteriBilgisiEkle();
                             this.Close();
                         }
                         else
@@ -125,7 +126,38 @@ namespace Etkinlik_Yonetim_Sistemi
                     MessageBox.Show("Hata: " + ex.Message);
                 }
             }
-            
+
+
+        }
+
+        private void MusteriBilgisiEkle()
+        {
+
+            using (SqlConnection baglanti = new SqlConnection(baglantiCumlesi))
+            {
+                try
+                {
+                    baglanti.Open();
+
+                    string sorgu = "INSERT INTO tblMusteriler (TCNo,AdiSoyadi,TelefonNumarasi,Email,Adres) VALUES (@TCNo,@AdiSoyadi,@TelefonNumarasi,@Email,@Adres)";
+
+                    using (SqlCommand komut = new SqlCommand(sorgu, baglanti))
+                    {
+
+                        komut.Parameters.AddWithValue("@TCNo", mtbxTCNo.Text);
+                        komut.Parameters.AddWithValue("@AdiSoyadi", tbxAdiSoyadi.Text);
+                        komut.Parameters.AddWithValue("@TelefonNumarasi", SadeceRakamlar(mtbxTelNo.Text));
+                        komut.Parameters.AddWithValue("@Adres", tbxAdres.Text);
+                        komut.Parameters.AddWithValue("@Email", " ");
+
+                        komut.ExecuteNonQuery();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Hata: " + ex.Message);
+                }
+            }
         }
 
         private void KasaSozlesmeBilgisiEkle()

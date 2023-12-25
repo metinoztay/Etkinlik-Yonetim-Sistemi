@@ -55,13 +55,14 @@
             this.mtbxToplamUcret = new System.Windows.Forms.MaskedTextBox();
             this.tbxAciklama = new System.Windows.Forms.TextBox();
             this.tbxEtkinlikTarihi = new System.Windows.Forms.TextBox();
-            this.mtbxTCNo = new System.Windows.Forms.MaskedTextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.tbxBaslangicSaati = new System.Windows.Forms.TextBox();
             this.tbxBitisSaati = new System.Windows.Forms.TextBox();
             this.tbxNiteligi = new System.Windows.Forms.TextBox();
             this.btnExit = new FontAwesome.Sharp.IconButton();
             this.btnSil = new System.Windows.Forms.Button();
+            this.btnTahsilatEke = new System.Windows.Forms.Button();
+            this.tbxTCNo = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -331,16 +332,6 @@
             this.tbxEtkinlikTarihi.Size = new System.Drawing.Size(165, 27);
             this.tbxEtkinlikTarihi.TabIndex = 39;
             // 
-            // mtbxTCNo
-            // 
-            this.mtbxTCNo.Enabled = false;
-            this.mtbxTCNo.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.mtbxTCNo.Location = new System.Drawing.Point(178, 248);
-            this.mtbxTCNo.Mask = "00000000000";
-            this.mtbxTCNo.Name = "mtbxTCNo";
-            this.mtbxTCNo.Size = new System.Drawing.Size(165, 27);
-            this.mtbxTCNo.TabIndex = 43;
-            // 
             // label20
             // 
             this.label20.AutoSize = true;
@@ -407,19 +398,40 @@
             this.btnSil.UseVisualStyleBackColor = true;
             this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
+            // btnTahsilatEke
+            // 
+            this.btnTahsilatEke.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnTahsilatEke.Location = new System.Drawing.Point(327, 596);
+            this.btnTahsilatEke.Name = "btnTahsilatEke";
+            this.btnTahsilatEke.Size = new System.Drawing.Size(99, 32);
+            this.btnTahsilatEke.TabIndex = 54;
+            this.btnTahsilatEke.Text = "Tahsilat Ekle";
+            this.btnTahsilatEke.UseVisualStyleBackColor = true;
+            this.btnTahsilatEke.Click += new System.EventHandler(this.btnTahsilatEke_Click);
+            // 
+            // tbxTCNo
+            // 
+            this.tbxTCNo.Enabled = false;
+            this.tbxTCNo.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tbxTCNo.Location = new System.Drawing.Point(178, 248);
+            this.tbxTCNo.Name = "tbxTCNo";
+            this.tbxTCNo.Size = new System.Drawing.Size(165, 27);
+            this.tbxTCNo.TabIndex = 55;
+            // 
             // frmEtkinlikGoruntule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CadetBlue;
             this.ClientSize = new System.Drawing.Size(575, 872);
+            this.Controls.Add(this.tbxTCNo);
+            this.Controls.Add(this.btnTahsilatEke);
             this.Controls.Add(this.btnSil);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.tbxNiteligi);
             this.Controls.Add(this.tbxBitisSaati);
             this.Controls.Add(this.tbxBaslangicSaati);
             this.Controls.Add(this.label20);
-            this.Controls.Add(this.mtbxTCNo);
             this.Controls.Add(this.tbxEtkinlikTarihi);
             this.Controls.Add(this.tbxAciklama);
             this.Controls.Add(this.mtbxToplamUcret);
@@ -486,12 +498,13 @@
         private System.Windows.Forms.MaskedTextBox mtbxToplamUcret;
         private System.Windows.Forms.TextBox tbxAciklama;
         private System.Windows.Forms.TextBox tbxEtkinlikTarihi;
-        private System.Windows.Forms.MaskedTextBox mtbxTCNo;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.TextBox tbxBaslangicSaati;
         private System.Windows.Forms.TextBox tbxBitisSaati;
         private System.Windows.Forms.TextBox tbxNiteligi;
         private FontAwesome.Sharp.IconButton btnExit;
         private System.Windows.Forms.Button btnSil;
+        private System.Windows.Forms.Button btnTahsilatEke;
+        private System.Windows.Forms.TextBox tbxTCNo;
     }
 }

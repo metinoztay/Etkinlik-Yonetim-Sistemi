@@ -141,6 +141,7 @@ namespace Etkinlik_Yonetim_Sistemi
         }
         private void btnBul_Click(object sender, EventArgs e)
         {
+            listOdemeGecmisi.Items.Clear();
             string sorgu;
             lblKalan.Text = string.Empty;
             lblOdenen.Text = string.Empty;

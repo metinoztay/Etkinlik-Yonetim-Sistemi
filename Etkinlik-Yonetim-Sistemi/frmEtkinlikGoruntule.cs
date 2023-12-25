@@ -52,7 +52,7 @@ namespace Etkinlik_Yonetim_Sistemi
                             tbxBitisSaati.Text = (string)dataOkuyucu["BitisSaati"];
                             tbxSozlesmeNo.Text = dataOkuyucu["SozlesmeID"].ToString();
                             tbxSozlesmeTarihi.Text = (string)dataOkuyucu["SozlesmeTarihi"];
-                            mtbxTCNo.Text = (string)dataOkuyucu["TCNo"];
+                            tbxTCNo.Text = (string)dataOkuyucu["TCNo"];
                             tbxAdiSoyadi.Text = (string)dataOkuyucu["AdiSoyadi"];
                             mtbxTelNo.Text = (string)dataOkuyucu["TelefonNumarasi"];
                             tbxAdres.Text = (string)dataOkuyucu["Adresi"];
@@ -69,12 +69,6 @@ namespace Etkinlik_Yonetim_Sistemi
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void btnTahsilatEkle_Click(object sender, EventArgs e)
-        {
-            frmOdemeAl odemeAl = new frmOdemeAl();
-            odemeAl.ShowDialog();
         }
 
         private void btnSil_Click(object sender, EventArgs e)
@@ -118,6 +112,16 @@ namespace Etkinlik_Yonetim_Sistemi
 
             }
 
+        }
+
+        private void btnTahsilatEke_Click(object sender, EventArgs e)
+        {
+            frmOdemeAl odemeAl = new frmOdemeAl();
+            if (tbxTCNo.Text.Trim() != string.Empty)
+            {
+                odemeAl.TCNo = tbxTCNo.Text;
+            }
+            odemeAl.ShowDialog();
         }
     }
 }
