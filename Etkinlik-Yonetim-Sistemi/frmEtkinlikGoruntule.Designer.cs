@@ -63,6 +63,8 @@
             this.btnSil = new System.Windows.Forms.Button();
             this.btnTahsilatEke = new System.Windows.Forms.Button();
             this.tbxTCNo = new System.Windows.Forms.TextBox();
+            this.btnGüncelle = new System.Windows.Forms.Button();
+            this.btnKaydet = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -418,12 +420,36 @@
             this.tbxTCNo.Size = new System.Drawing.Size(165, 27);
             this.tbxTCNo.TabIndex = 55;
             // 
+            // btnGüncelle
+            // 
+            this.btnGüncelle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGüncelle.Location = new System.Drawing.Point(385, 812);
+            this.btnGüncelle.Name = "btnGüncelle";
+            this.btnGüncelle.Size = new System.Drawing.Size(95, 48);
+            this.btnGüncelle.TabIndex = 56;
+            this.btnGüncelle.Text = "GÜNCELLE";
+            this.btnGüncelle.UseVisualStyleBackColor = true;
+            this.btnGüncelle.Click += new System.EventHandler(this.btnGüncelle_Click);
+            // 
+            // btnKaydet
+            // 
+            this.btnKaydet.Location = new System.Drawing.Point(284, 812);
+            this.btnKaydet.Name = "btnKaydet";
+            this.btnKaydet.Size = new System.Drawing.Size(95, 48);
+            this.btnKaydet.TabIndex = 57;
+            this.btnKaydet.Text = "KAYDET";
+            this.btnKaydet.UseVisualStyleBackColor = true;
+            this.btnKaydet.Visible = false;
+            this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
+            // 
             // frmEtkinlikGoruntule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CadetBlue;
             this.ClientSize = new System.Drawing.Size(575, 872);
+            this.Controls.Add(this.btnKaydet);
+            this.Controls.Add(this.btnGüncelle);
             this.Controls.Add(this.tbxTCNo);
             this.Controls.Add(this.btnTahsilatEke);
             this.Controls.Add(this.btnSil);
@@ -506,5 +532,7 @@
         private System.Windows.Forms.Button btnSil;
         private System.Windows.Forms.Button btnTahsilatEke;
         private System.Windows.Forms.TextBox tbxTCNo;
+        private System.Windows.Forms.Button btnGüncelle;
+        private System.Windows.Forms.Button btnKaydet;
     }
 }
