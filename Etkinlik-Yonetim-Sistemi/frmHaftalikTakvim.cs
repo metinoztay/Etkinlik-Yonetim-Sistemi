@@ -166,5 +166,6 @@ namespace Etkinlik_Yonetim_Sistemi
                 }
             }            
         }
+
     }
 }
