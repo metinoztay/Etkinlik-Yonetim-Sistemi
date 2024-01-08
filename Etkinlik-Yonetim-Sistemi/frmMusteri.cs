@@ -180,6 +180,7 @@ namespace Etkinlik_Yonetim_Sistemi
             onay.ShowDialog();
 
             TextBoxSifirla();
+            btnMusteriListele.PerformClick();
         }
 
         private void TextBoxSifirla()

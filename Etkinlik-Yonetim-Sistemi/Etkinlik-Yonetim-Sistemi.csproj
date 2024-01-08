@@ -280,6 +280,12 @@
     <Compile Include="frmKullanıcıIslemleriOnay.Designer.cs">
       <DependentUpon>frmKullanıcıIslemleriOnay.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmKurumBilgileri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKurumBilgileri.Designer.cs">
+      <DependentUpon>frmKurumBilgileri.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMusteri.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -349,6 +355,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmKullanıcıIslemleriOnay.resx">
       <DependentUpon>frmKullanıcıIslemleriOnay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmKurumBilgileri.resx">
+      <DependentUpon>frmKurumBilgileri.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMusteri.resx">
       <DependentUpon>frmMusteri.cs</DependentUpon>

@@ -47,9 +47,16 @@ namespace Etkinlik_Yonetim_Sistemi
                             aktifKullanici.yetki = (string)dataOkuyucu["Yetki"];
 
                             if (aktifKullanici.yetki == "Yönetici")
+                            {
                                 btnGuvenlik.Visible = true;
+                                btnKurumBilgileri.Visible = true;
+                            }                                
                             else
+                            {
                                 btnGuvenlik.Visible = false;
+                                btnKurumBilgileri.Visible = false;
+                            }
+                                
 
                             btnKullaniciAdiSoyadi.Text = (string)dataOkuyucu["AdiSoyadi"];
                         }
@@ -263,6 +270,12 @@ namespace Etkinlik_Yonetim_Sistemi
         private void btnKullaniciBilgilerim_Click(object sender, EventArgs e)
         {
             FormuYukle(new frmKullaniciBilgilerim(kullaniciID));
+        }
+
+        private void btnKurumBilgileri_Click(object sender, EventArgs e)
+        {
+            ButonuAktifYap(sender);
+            FormuYukle(new frmKurumBilgileri());
         }
     }
 }
