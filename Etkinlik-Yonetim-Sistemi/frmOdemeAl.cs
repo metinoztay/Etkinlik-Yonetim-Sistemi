@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -125,7 +126,7 @@ namespace Etkinlik_Yonetim_Sistemi
             string mevcutKonum = Directory.GetCurrentDirectory();
             string dosyaYolu = Path.Combine(mevcutKonum, "TahsilatMakbuzu.xlsx");
             Excel.Application excel = new Excel.Application();
-            excel.Visible = true;
+            //excel.Visible = true;
             Workbook calismaKitabi;
             Worksheet calismaSayfasi;
 
@@ -153,17 +154,19 @@ namespace Etkinlik_Yonetim_Sistemi
 
         private void MakbuzYazdir()
         {
-            string mevcutKonum = Directory.GetCurrentDirectory();
+            string mevcutKonum = Directory.GetCurrentDirectory();  
             string dosyaYolu = Path.Combine(mevcutKonum, "makbuz.xlsx");
             Excel.Application excel = new Excel.Application();
-            excel.Visible = true;
+            //excel.Visible = true;
             Workbook calismaKitabi;
             Worksheet calismaSayfasi;
 
             calismaKitabi = excel.Workbooks.Open(dosyaYolu, Editable: true);
             calismaSayfasi = calismaKitabi.Worksheets[1];
-
-            calismaSayfasi.PrintPreview();
+            
+            string pdfYolu = Path.Combine(mevcutKonum, "makbuz.pdf");
+            calismaSayfasi.ExportAsFixedFormat(Excel.XlFixedFormatType.xlTypePDF, pdfYolu);
+            Process.Start(pdfYolu);
         }
 
         private void KurumBilgileriAl()
