@@ -1,20 +1,24 @@
-﻿using System;
+﻿using Microsoft.Office.Interop.Excel;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Excel = Microsoft.Office.Interop.Excel;
 
 namespace Etkinlik_Yonetim_Sistemi
 {
     public partial class frmOdemeAl : Form
     {
         string baglantiCumlesi = "Data Source=.;Initial Catalog=dbEtkinlikYonetimSistemi;Integrated Security=True";
-        public string TCNo = "-1"; 
+        public string TCNo = "-1";
+        string kurumAdi, kurumAdresi, kurumTelefonNo, kurumWebSitesi, kurumEmail, makbuzKisiAdiSoyadi, makbuzSiraNo,makbuzTarih,makbuzTutar;
         public frmOdemeAl()
         {
             InitializeComponent();
@@ -97,6 +101,8 @@ namespace Etkinlik_Yonetim_Sistemi
                         if (etkilenenSatirSayisi > 0)
                         {
                             MessageBox.Show("Tahsilat başarı ile eklendi");
+                            TahsilatMakbuzuOlustur();
+                            MakbuzYazdir();
                         }
                         else
                         {
@@ -111,5 +117,105 @@ namespace Etkinlik_Yonetim_Sistemi
             }
             this.Close();
         }
+
+        private void TahsilatMakbuzuOlustur()
+        {
+            KurumBilgileriAl();
+            MakbuzBilgileriAl();
+            string mevcutKonum = Directory.GetCurrentDirectory();
+            string dosyaYolu = Path.Combine(mevcutKonum, "TahsilatMakbuzu.xlsx");
+            Excel.Application excel = new Excel.Application();
+            excel.Visible = true;
+            Workbook calismaKitabi;
+            Worksheet calismaSayfasi;
+
+            calismaKitabi = excel.Workbooks.Open(dosyaYolu, Editable: true);
+            calismaSayfasi = calismaKitabi.Worksheets[2];
+
+            calismaSayfasi.Cells[1, 2] = kurumAdi;
+            calismaSayfasi.Cells[2, 2] = kurumAdresi;
+            calismaSayfasi.Cells[3, 2] = kurumTelefonNo;
+            calismaSayfasi.Cells[4, 2] = kurumWebSitesi;
+            calismaSayfasi.Cells[5, 2] = kurumEmail;
+            calismaSayfasi.Cells[6, 2] = makbuzSiraNo;
+            calismaSayfasi.Cells[7, 2] = makbuzTarih;
+            calismaSayfasi.Cells[8, 2] = makbuzKisiAdiSoyadi;
+            calismaSayfasi.Cells[9, 2] = makbuzTutar;
+
+            calismaSayfasi = calismaKitabi.Worksheets[1];
+
+            if(File.Exists(Path.Combine(mevcutKonum, "makbuz.xlsx"))){
+                File.Delete(Path.Combine(mevcutKonum, "makbuz.xlsx"));
+            }
+            
+            calismaSayfasi.SaveAs(Path.Combine(mevcutKonum, "makbuz.xlsx"));
+        }
+
+        private void MakbuzYazdir()
+        {
+            string mevcutKonum = Directory.GetCurrentDirectory();
+            string dosyaYolu = Path.Combine(mevcutKonum, "makbuz.xlsx");
+            Excel.Application excel = new Excel.Application();
+            excel.Visible = true;
+            Workbook calismaKitabi;
+            Worksheet calismaSayfasi;
+
+            calismaKitabi = excel.Workbooks.Open(dosyaYolu, Editable: true);
+            calismaSayfasi = calismaKitabi.Worksheets[1];
+
+            calismaSayfasi.PrintPreview();
+        }
+
+        private void KurumBilgileriAl()
+        {
+            using (SqlConnection baglanti = new SqlConnection(baglantiCumlesi))
+            {
+                string sorgu;
+                sorgu = $"SELECT * FROM tblKurumBilgileri WHERE ID = @ID";
+                baglanti.Open();
+
+                using (SqlCommand komut = new SqlCommand(sorgu, baglanti))
+                {
+                    komut.Parameters.AddWithValue("@ID", 1);
+                    using (SqlDataReader dataOkuyucu = komut.ExecuteReader())
+                    {
+                        if (dataOkuyucu.Read())
+                        {
+                            kurumAdi = dataOkuyucu["KurumAdi"].ToString();
+                            kurumAdresi = dataOkuyucu["Adres"].ToString();
+                            kurumTelefonNo = dataOkuyucu["TelefonNo"].ToString();
+                            kurumWebSitesi = dataOkuyucu["WebSitesi"].ToString();
+                            kurumEmail = dataOkuyucu["Email"].ToString();
+                        }
+                    }
+                }
+            }
+        }
+
+        private void MakbuzBilgileriAl()
+        {
+            using (SqlConnection baglanti = new SqlConnection(baglantiCumlesi))
+            {
+                string sorgu;
+                sorgu = $"SELECT TOP 1 *FROM tblKasa ORDER BY ID DESC;";
+                baglanti.Open();
+
+                using (SqlCommand komut = new SqlCommand(sorgu, baglanti))
+                {
+                    using (SqlDataReader dataOkuyucu = komut.ExecuteReader())
+                    {
+                        if (dataOkuyucu.Read())
+                        {
+                            makbuzSiraNo = dataOkuyucu["ID"].ToString();
+                            makbuzKisiAdiSoyadi = dataOkuyucu["AdSoyad"].ToString();
+                            makbuzTarih = dataOkuyucu["Tarih"].ToString();
+                            makbuzTutar = dataOkuyucu["Tutar"].ToString();
+                        }
+                    }
+                }
+            }
+        }
+
+
     }
 }
