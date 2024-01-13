@@ -8,6 +8,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -101,7 +102,7 @@ namespace Etkinlik_Yonetim_Sistemi
 
                         if (etkilenenSatirSayisi > 0)
                         {
-                            MessageBox.Show("Tahsilat başarı ile eklendi");
+                            MessageBox.Show("Tahsilat başarı ile eklendi.");
                             TahsilatMakbuzuOlustur();
                             MakbuzYazdir();
                         }
@@ -150,10 +151,17 @@ namespace Etkinlik_Yonetim_Sistemi
             }
             
             calismaSayfasi.SaveAs(Path.Combine(mevcutKonum, "makbuz.xlsx"));
+
+            Marshal.ReleaseComObject(calismaSayfasi);
+            calismaKitabi.Close();
+            Marshal.ReleaseComObject(calismaKitabi);
+            excel.Quit();
+            Marshal.ReleaseComObject(excel);
         }
 
         private void MakbuzYazdir()
         {
+            
             string mevcutKonum = Directory.GetCurrentDirectory();  
             string dosyaYolu = Path.Combine(mevcutKonum, "makbuz.xlsx");
             Excel.Application excel = new Excel.Application();
@@ -166,7 +174,14 @@ namespace Etkinlik_Yonetim_Sistemi
             
             string pdfYolu = Path.Combine(mevcutKonum, "makbuz.pdf");
             calismaSayfasi.ExportAsFixedFormat(Excel.XlFixedFormatType.xlTypePDF, pdfYolu);
+
             Process.Start(pdfYolu);
+
+            Marshal.ReleaseComObject(calismaSayfasi);
+            calismaKitabi.Close();
+            Marshal.ReleaseComObject(calismaKitabi);
+            excel.Quit();
+            Marshal.ReleaseComObject(excel);
         }
 
         private void KurumBilgileriAl()
