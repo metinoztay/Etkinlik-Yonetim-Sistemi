@@ -1,22 +1,29 @@
-﻿using System;
+﻿using Microsoft.Office.Interop.Excel;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Diagnostics.Eventing.Reader;
 using System.DirectoryServices.ActiveDirectory;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Excel = Microsoft.Office.Interop.Excel;
 
 namespace Etkinlik_Yonetim_Sistemi
 {
     public partial class frmEtkinlikYönet : Form
     {
         string baglantiCumlesi = "Data Source=.;Initial Catalog=dbEtkinlikYonetimSistemi;Integrated Security=True";
+        string kurumAdi, kurumAdresi, kurumTelefonNo, kurumWebSitesi, kurumEmail, makbuzKisiAdiSoyadi, makbuzSiraNo, makbuzTarih, makbuzTutar;
+        string sozlesmeNo, etkinlikTarihi, etkinlikToplamUcret, baslamaSaati, bitisSaati, sozlesmeTarihi, musteriTCNo, musteriAdSoyad, musteriTel, musteriAdres, etkinlikNitelik, etkinlikDetay, etkinlikDavetliSayisi, etkinlikAciklama;
         public frmEtkinlikYönet()
         {
             InitializeComponent();
@@ -113,6 +120,7 @@ namespace Etkinlik_Yonetim_Sistemi
                             MessageBox.Show($"Sözleşme Eklendi!");
                             KasaSozlesmeBilgisiEkle();
                             MusteriBilgisiEkle();
+                            SozlesmeOlustur();
                             this.Close();
                         }
                         else
@@ -126,8 +134,6 @@ namespace Etkinlik_Yonetim_Sistemi
                     MessageBox.Show("Hata: " + ex.Message);
                 }
             }
-
-
         }
 
         private void MusteriBilgisiEkle()
@@ -185,6 +191,114 @@ namespace Etkinlik_Yonetim_Sistemi
                 catch (Exception ex)
                 {
                     MessageBox.Show("Hata: " + ex.Message);
+                }
+            }
+        }
+
+        private void SozlesmeOlustur()
+        {
+            KurumBilgileriAl();
+            SozlesmeBilgileriAl();
+            string mevcutKonum = Directory.GetCurrentDirectory();
+            string dosyaYolu = Path.Combine(mevcutKonum, "sozlesme.xls");
+            Excel.Application excel = new Excel.Application();
+            //excel.Visible = true;
+            Workbook calismaKitabi;
+            Worksheet calismaSayfasi;
+
+            calismaKitabi = excel.Workbooks.Open(dosyaYolu, Editable: true);
+            calismaSayfasi = calismaKitabi.Worksheets[2];
+
+            calismaSayfasi.Cells[1, 2] = etkinlikTarihi;
+            calismaSayfasi.Cells[2, 2] = baslamaSaati;
+            calismaSayfasi.Cells[3, 2] = bitisSaati;
+            calismaSayfasi.Cells[4, 2] = sozlesmeTarihi;
+            calismaSayfasi.Cells[5, 2] = sozlesmeNo;
+            calismaSayfasi.Cells[6, 2] = musteriTCNo;
+            calismaSayfasi.Cells[7, 2] = musteriAdSoyad;
+            calismaSayfasi.Cells[9, 2] = musteriTel;
+            calismaSayfasi.Cells[10, 2] = etkinlikNitelik;
+            calismaSayfasi.Cells[11, 2] = etkinlikDetay;
+            calismaSayfasi.Cells[13, 2] = musteriAdres;
+            calismaSayfasi.Cells[14, 2] = etkinlikDavetliSayisi;
+            calismaSayfasi.Cells[15, 2] = etkinlikToplamUcret;
+            calismaSayfasi.Cells[18, 2] = etkinlikAciklama;
+            calismaSayfasi.Cells[20, 2] = kurumAdi;
+            calismaSayfasi.Cells[23, 2] = kurumAdresi;
+            calismaSayfasi.Cells[24, 2] = kurumTelefonNo;
+            calismaSayfasi.Cells[25, 2] = kurumWebSitesi;
+            calismaSayfasi.Cells[24, 2] = kurumEmail;
+
+            calismaSayfasi = calismaKitabi.Worksheets[1];
+
+            string pdfYolu = Path.Combine(mevcutKonum, "sozlesme.pdf");
+            calismaSayfasi.ExportAsFixedFormat(Excel.XlFixedFormatType.xlTypePDF, pdfYolu);
+
+            Marshal.ReleaseComObject(calismaSayfasi);
+            calismaKitabi.Close(false);
+            Marshal.ReleaseComObject(calismaKitabi);
+            excel.Quit();
+            Marshal.ReleaseComObject(excel);
+
+            Process.Start(pdfYolu);
+        }
+
+        private void KurumBilgileriAl()
+        {
+            using (SqlConnection baglanti = new SqlConnection(baglantiCumlesi))
+            {
+                string sorgu;
+                sorgu = $"SELECT * FROM tblKurumBilgileri WHERE ID = @ID";
+                baglanti.Open();
+
+                using (SqlCommand komut = new SqlCommand(sorgu, baglanti))
+                {
+                    komut.Parameters.AddWithValue("@ID", 1);
+                    using (SqlDataReader dataOkuyucu = komut.ExecuteReader())
+                    {
+                        if (dataOkuyucu.Read())
+                        {
+                            kurumAdi = dataOkuyucu["KurumAdi"].ToString();
+                            kurumAdresi = dataOkuyucu["Adres"].ToString();
+                            kurumTelefonNo = dataOkuyucu["TelefonNo"].ToString();
+                            kurumWebSitesi = dataOkuyucu["WebSitesi"].ToString();
+                            kurumEmail = dataOkuyucu["Email"].ToString();
+                        }
+                    }
+                }
+            }
+        }
+
+        private void SozlesmeBilgileriAl()
+        {
+            using (SqlConnection baglanti = new SqlConnection(baglantiCumlesi))
+            {
+                string sorgu;
+                sorgu = $"SELECT TOP 1 *FROM tblEtkinlikler ORDER BY SozlesmeID DESC;";
+                baglanti.Open();
+
+                using (SqlCommand komut = new SqlCommand(sorgu, baglanti))
+                {
+                    using (SqlDataReader dataOkuyucu = komut.ExecuteReader())
+                    {
+                        if (dataOkuyucu.Read())
+                        {
+                            sozlesmeNo = dataOkuyucu["SozlesmeID"].ToString();
+                            etkinlikTarihi = dataOkuyucu["EtkinlikTarihi"].ToString();
+                            baslamaSaati = dataOkuyucu["BaslamaSaati"].ToString();
+                            bitisSaati = dataOkuyucu["BitisSaati"].ToString();
+                            sozlesmeTarihi = dataOkuyucu["SozlesmeTarihi"].ToString();
+                            musteriTCNo = dataOkuyucu["TCNo"].ToString();
+                            musteriAdSoyad = dataOkuyucu["AdiSoyadi"].ToString();
+                            musteriTel = dataOkuyucu["TelefonNumarasi"].ToString();
+                            musteriAdres = dataOkuyucu["Adresi"].ToString();
+                            etkinlikNitelik = dataOkuyucu["Niteligi"].ToString();
+                            etkinlikDetay = dataOkuyucu["Detay"].ToString();
+                            etkinlikDavetliSayisi = dataOkuyucu["DavetliSayisi"].ToString();
+                            etkinlikToplamUcret = dataOkuyucu["ToplamUcret"].ToString();
+                            etkinlikAciklama = dataOkuyucu["Aciklama"].ToString();
+                        }
+                    }
                 }
             }
         }

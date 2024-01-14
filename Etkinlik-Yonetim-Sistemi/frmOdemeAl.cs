@@ -146,42 +146,21 @@ namespace Etkinlik_Yonetim_Sistemi
 
             calismaSayfasi = calismaKitabi.Worksheets[1];
 
-            if(File.Exists(Path.Combine(mevcutKonum, "makbuz.xlsx"))){
-                File.Delete(Path.Combine(mevcutKonum, "makbuz.xlsx"));
-            }
-            
-            calismaSayfasi.SaveAs(Path.Combine(mevcutKonum, "makbuz.xlsx"));
+            string pdfYolu = Path.Combine(mevcutKonum, "makbuz.pdf");
+            calismaSayfasi.ExportAsFixedFormat(Excel.XlFixedFormatType.xlTypePDF, pdfYolu);
 
             Marshal.ReleaseComObject(calismaSayfasi);
-            calismaKitabi.Close();
+            calismaKitabi.Close(false);
             Marshal.ReleaseComObject(calismaKitabi);
             excel.Quit();
             Marshal.ReleaseComObject(excel);
         }
 
         private void MakbuzYazdir()
-        {
-            
+        {            
             string mevcutKonum = Directory.GetCurrentDirectory();  
-            string dosyaYolu = Path.Combine(mevcutKonum, "makbuz.xlsx");
-            Excel.Application excel = new Excel.Application();
-            //excel.Visible = true;
-            Workbook calismaKitabi;
-            Worksheet calismaSayfasi;
-
-            calismaKitabi = excel.Workbooks.Open(dosyaYolu, Editable: true);
-            calismaSayfasi = calismaKitabi.Worksheets[1];
-            
             string pdfYolu = Path.Combine(mevcutKonum, "makbuz.pdf");
-            calismaSayfasi.ExportAsFixedFormat(Excel.XlFixedFormatType.xlTypePDF, pdfYolu);
-
             Process.Start(pdfYolu);
-
-            Marshal.ReleaseComObject(calismaSayfasi);
-            calismaKitabi.Close();
-            Marshal.ReleaseComObject(calismaKitabi);
-            excel.Quit();
-            Marshal.ReleaseComObject(excel);
         }
 
         private void KurumBilgileriAl()
