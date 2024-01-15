@@ -125,6 +125,11 @@ namespace Etkinlik_Yonetim_Sistemi
 
         private void frmRapor_Load(object sender, EventArgs e)
         {
+            int yil = DateTime.Now.Year;
+            for(int i = yil; i>= 2020; i--)
+            {
+                cbxYillar.Items.Add(i.ToString());
+            }
             cbxYillar.SelectedIndex = 0;
             btnGetir.PerformClick();
         }

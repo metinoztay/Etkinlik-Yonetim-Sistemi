@@ -100,9 +100,6 @@
             // 
             this.cbxYillar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cbxYillar.FormattingEnabled = true;
-            this.cbxYillar.Items.AddRange(new object[] {
-            "2024",
-            "2023"});
             this.cbxYillar.Location = new System.Drawing.Point(18, 58);
             this.cbxYillar.Name = "cbxYillar";
             this.cbxYillar.Size = new System.Drawing.Size(121, 28);
