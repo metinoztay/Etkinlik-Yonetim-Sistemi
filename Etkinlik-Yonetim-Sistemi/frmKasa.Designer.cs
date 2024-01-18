@@ -48,12 +48,12 @@
             this.btnListele = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.listKasaGecmisi = new System.Windows.Forms.ListView();
+            this.TC = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.AdiSoyadi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnTahsilatEkle = new System.Windows.Forms.Button();
-            this.TC = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -290,6 +290,11 @@
             this.listKasaGecmisi.View = System.Windows.Forms.View.Details;
             this.listKasaGecmisi.SelectedIndexChanged += new System.EventHandler(this.listKasaGecmisi_SelectedIndexChanged);
             // 
+            // TC
+            // 
+            this.TC.Text = "TC";
+            this.TC.Width = 0;
+            // 
             // AdiSoyadi
             // 
             this.AdiSoyadi.Text = "Ad Soyad";
@@ -320,11 +325,6 @@
             this.btnTahsilatEkle.Text = "TAHSİLAT";
             this.btnTahsilatEkle.UseVisualStyleBackColor = true;
             this.btnTahsilatEkle.Click += new System.EventHandler(this.btnTahsilatEkle_Click);
-            // 
-            // TC
-            // 
-            this.TC.Text = "TC";
-            this.TC.Width = 0;
             // 
             // frmKasa
             // 

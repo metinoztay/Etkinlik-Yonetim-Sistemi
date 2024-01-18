@@ -17,8 +17,7 @@ namespace Etkinlik_Yonetim_Sistemi
         string baglantiCumlesi = "Data Source=.;Initial Catalog=dbEtkinlikYonetimSistemi;Integrated Security=True";
 
         string[] aylar = new string[] {"Ocak","Şubat","Mart","Nisan","Mayıs","Haziran","Temmuz","Ağustos","Eylül","Ekim","Kasım","Aralık"};
-
-
+        
 
         string[] etkinlikTurleri = new string[] { 
             "Düğün","Sünnet Düğünü","Toplantı","Kına","Nişan","Nikâh","İftar","Kokteyl","Mezuniyet","Konferans","Diğer" };
@@ -34,6 +33,7 @@ namespace Etkinlik_Yonetim_Sistemi
             yil = int.Parse(cbxYillar.SelectedItem.ToString());
             EtkinlikSayilariGrafigiOlustur();
             EtkinlikDagilimiGrafigiOlustur();
+            KasaRaporHesapla();
         }
 
         private void EtkinlikDagilimiGrafigiOlustur()
@@ -132,6 +132,100 @@ namespace Etkinlik_Yonetim_Sistemi
             }
             cbxYillar.SelectedIndex = 0;
             btnGetir.PerformClick();
+        }
+
+        private void KasaRaporHesapla()
+        {
+            int toplamTutar = 0;
+            int toplamOdenen = 0;
+            int toplamKalan = 0;
+
+            List<string> musteriTClistesi = MusteriIDListesiOlustur();
+
+            foreach (var musteri in musteriTClistesi)
+            {
+                string TcNo = " ";
+                int toplam = 0;
+                int odenen = 0;
+                int kalan = 0;
+                string sorgu;
+
+                using (SqlConnection baglanti = new SqlConnection(baglantiCumlesi))
+                {
+                    baglanti.Open();
+                    sorgu = $"SELECT * FROM tblKasa WHERE TCNo = @tcNo AND YEAR(CONVERT(DATETIME, Tarih, 104)) = @yil";
+
+
+                    using (SqlCommand komut = new SqlCommand(sorgu, baglanti))
+                    {
+
+                        komut.Parameters.AddWithValue("@tcNo", musteri);
+                        komut.Parameters.AddWithValue("@yil", yil);
+
+                        using (SqlDataReader dataOkuyucu = komut.ExecuteReader())
+                        {
+                            string[] musteriGecmis;
+                            while (dataOkuyucu.Read())
+                            {
+                                int tutar = (int)dataOkuyucu["Tutar"];
+                                string tur = (string)dataOkuyucu["Tur"];                                
+                                TcNo = (string)dataOkuyucu["TCNo"];
+                                if (tur == "Sözleşme")
+                                {
+                                    toplam += tutar;
+                                    toplamTutar += tutar;
+                                }
+                                else if (tur == "Ödeme")
+                                {
+                                    odenen += tutar;
+                                    toplamOdenen += tutar;
+                                }
+
+                                kalan = toplam - odenen;                                
+                            }
+
+                            string durum;
+                            if (kalan <= 0)
+                            {
+                                durum = "TAMAMLANDI";
+                            }
+                            else
+                            {
+                                durum = "TAMAMLANMADI";
+                            }
+                        }
+                    }
+                }
+            }
+
+            lblToplamTutar.Text = toplamTutar.ToString() + "TL";
+            lblToplamOdenen.Text = toplamOdenen.ToString() + "TL";
+            lblKalan.Text = (toplamTutar - toplamOdenen).ToString() + "TL";
+        }
+
+        private List<string> MusteriIDListesiOlustur()
+        {
+            List<string> musteriTC = new List<string>();
+            string sorgu;
+
+            using (SqlConnection baglanti = new SqlConnection(baglantiCumlesi))
+            {
+                baglanti.Open();
+                sorgu = $"SELECT * FROM tblMusteriler";
+
+                using (SqlCommand komut = new SqlCommand(sorgu, baglanti))
+                {
+                    using (SqlDataReader dataOkuyucu = komut.ExecuteReader())
+                    {
+                        while (dataOkuyucu.Read())
+                        {
+                            musteriTC.Add((string)dataOkuyucu["TCNo"]);
+                        }
+                    }
+                }
+            }
+
+            return musteriTC;
         }
     }
 }

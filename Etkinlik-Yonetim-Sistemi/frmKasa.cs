@@ -111,8 +111,6 @@ namespace Etkinlik_Yonetim_Sistemi
                     }
                 }
             }
-
-
         }
 
         private List<string> MusteriIDListesiOlustur()
