@@ -9,6 +9,7 @@ namespace Etkinlik_Yonetim_Sistemi
     internal static class Program
     {
         
+        
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -17,9 +18,7 @@ namespace Etkinlik_Yonetim_Sistemi
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmAnaEkran());
+            Application.Run(new frmGiris());
         }
-        
-
     }
 }

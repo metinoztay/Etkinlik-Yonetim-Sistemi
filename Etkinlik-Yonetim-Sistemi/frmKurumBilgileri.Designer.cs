@@ -29,7 +29,10 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.tbxAdres = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.tbxTelNo = new System.Windows.Forms.MaskedTextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.btnGuncelle = new System.Windows.Forms.Button();
             this.tbxEmail = new System.Windows.Forms.TextBox();
@@ -39,9 +42,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tbxKurumAdi = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.tbxAdres = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -70,6 +70,25 @@
             this.panel1.Size = new System.Drawing.Size(1100, 657);
             this.panel1.TabIndex = 0;
             // 
+            // tbxAdres
+            // 
+            this.tbxAdres.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tbxAdres.Location = new System.Drawing.Point(426, 201);
+            this.tbxAdres.Multiline = true;
+            this.tbxAdres.Name = "tbxAdres";
+            this.tbxAdres.Size = new System.Drawing.Size(285, 106);
+            this.tbxAdres.TabIndex = 83;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label6.Location = new System.Drawing.Point(346, 201);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(54, 23);
+            this.label6.TabIndex = 82;
+            this.label6.Text = "Adres";
+            // 
             // tbxTelNo
             // 
             this.tbxTelNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -79,6 +98,16 @@
             this.tbxTelNo.Name = "tbxTelNo";
             this.tbxTelNo.Size = new System.Drawing.Size(250, 20);
             this.tbxTelNo.TabIndex = 80;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Location = new System.Drawing.Point(426, 325);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(285, 35);
+            this.pictureBox1.TabIndex = 81;
+            this.pictureBox1.TabStop = false;
             // 
             // label9
             // 
@@ -167,35 +196,6 @@
             this.tbxKurumAdi.Size = new System.Drawing.Size(285, 35);
             this.tbxKurumAdi.TabIndex = 67;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(426, 325);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(285, 35);
-            this.pictureBox1.TabIndex = 81;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.Location = new System.Drawing.Point(346, 201);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(54, 23);
-            this.label6.TabIndex = 82;
-            this.label6.Text = "Adres";
-            // 
-            // tbxAdres
-            // 
-            this.tbxAdres.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tbxAdres.Location = new System.Drawing.Point(426, 201);
-            this.tbxAdres.Multiline = true;
-            this.tbxAdres.Name = "tbxAdres";
-            this.tbxAdres.Size = new System.Drawing.Size(285, 106);
-            this.tbxAdres.TabIndex = 83;
-            // 
             // frmKurumBilgileri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -205,7 +205,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmKurumBilgileri";
-            this.Text = "frmKurumBilgileri";
+            this.Text = "Kurum Bilgileri";
             this.Load += new System.EventHandler(this.frmKurumBilgileri_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

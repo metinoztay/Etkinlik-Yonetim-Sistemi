@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAnaEkran));
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.btnKurumBilgileri = new FontAwesome.Sharp.IconButton();
             this.btnGuvenlik = new FontAwesome.Sharp.IconButton();
             this.btnRapor = new FontAwesome.Sharp.IconButton();
             this.btnOdeme = new FontAwesome.Sharp.IconButton();
@@ -49,7 +50,6 @@
             this.panelKullanici = new System.Windows.Forms.Panel();
             this.btnKullaniciCikis = new FontAwesome.Sharp.IconButton();
             this.btnKullaniciBilgilerim = new FontAwesome.Sharp.IconButton();
-            this.btnKurumBilgileri = new FontAwesome.Sharp.IconButton();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
@@ -75,6 +75,29 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(220, 756);
             this.panelMenu.TabIndex = 0;
+            // 
+            // btnKurumBilgileri
+            // 
+            this.btnKurumBilgileri.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnKurumBilgileri.FlatAppearance.BorderSize = 0;
+            this.btnKurumBilgileri.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKurumBilgileri.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnKurumBilgileri.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(9)))), ((int)(((byte)(44)))));
+            this.btnKurumBilgileri.IconChar = FontAwesome.Sharp.IconChar.Landmark;
+            this.btnKurumBilgileri.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(9)))), ((int)(((byte)(44)))));
+            this.btnKurumBilgileri.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnKurumBilgileri.IconSize = 36;
+            this.btnKurumBilgileri.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnKurumBilgileri.Location = new System.Drawing.Point(0, 471);
+            this.btnKurumBilgileri.Name = "btnKurumBilgileri";
+            this.btnKurumBilgileri.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnKurumBilgileri.Size = new System.Drawing.Size(220, 60);
+            this.btnKurumBilgileri.TabIndex = 7;
+            this.btnKurumBilgileri.Text = "Kurum Bilgileri";
+            this.btnKurumBilgileri.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnKurumBilgileri.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnKurumBilgileri.UseVisualStyleBackColor = true;
+            this.btnKurumBilgileri.Click += new System.EventHandler(this.btnKurumBilgileri_Click);
             // 
             // btnGuvenlik
             // 
@@ -401,29 +424,6 @@
             this.btnKullaniciBilgilerim.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnKullaniciBilgilerim.UseVisualStyleBackColor = true;
             this.btnKullaniciBilgilerim.Click += new System.EventHandler(this.btnKullaniciBilgilerim_Click);
-            // 
-            // btnKurumBilgileri
-            // 
-            this.btnKurumBilgileri.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnKurumBilgileri.FlatAppearance.BorderSize = 0;
-            this.btnKurumBilgileri.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnKurumBilgileri.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnKurumBilgileri.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(9)))), ((int)(((byte)(44)))));
-            this.btnKurumBilgileri.IconChar = FontAwesome.Sharp.IconChar.Landmark;
-            this.btnKurumBilgileri.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(9)))), ((int)(((byte)(44)))));
-            this.btnKurumBilgileri.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnKurumBilgileri.IconSize = 36;
-            this.btnKurumBilgileri.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnKurumBilgileri.Location = new System.Drawing.Point(0, 471);
-            this.btnKurumBilgileri.Name = "btnKurumBilgileri";
-            this.btnKurumBilgileri.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnKurumBilgileri.Size = new System.Drawing.Size(220, 60);
-            this.btnKurumBilgileri.TabIndex = 7;
-            this.btnKurumBilgileri.Text = "Kurum Bilgileri";
-            this.btnKurumBilgileri.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnKurumBilgileri.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnKurumBilgileri.UseVisualStyleBackColor = true;
-            this.btnKurumBilgileri.Click += new System.EventHandler(this.btnKurumBilgileri_Click);
             // 
             // frmAnaEkran
             // 

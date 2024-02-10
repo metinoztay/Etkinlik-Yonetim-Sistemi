@@ -43,7 +43,7 @@
             // 
             this.lblYetki.AutoSize = true;
             this.lblYetki.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblYetki.Location = new System.Drawing.Point(151, 44);
+            this.lblYetki.Location = new System.Drawing.Point(133, 45);
             this.lblYetki.Name = "lblYetki";
             this.lblYetki.Size = new System.Drawing.Size(69, 23);
             this.lblYetki.TabIndex = 24;
@@ -53,7 +53,7 @@
             // 
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblEmail.Location = new System.Drawing.Point(143, 240);
+            this.lblEmail.Location = new System.Drawing.Point(125, 241);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(82, 23);
             this.lblEmail.TabIndex = 19;
@@ -63,7 +63,7 @@
             // 
             this.lblŞifre.AutoSize = true;
             this.lblŞifre.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblŞifre.Location = new System.Drawing.Point(154, 289);
+            this.lblŞifre.Location = new System.Drawing.Point(136, 290);
             this.lblŞifre.Name = "lblŞifre";
             this.lblŞifre.Size = new System.Drawing.Size(71, 23);
             this.lblŞifre.TabIndex = 18;
@@ -73,7 +73,7 @@
             // 
             this.lblKullaniciAdi.AutoSize = true;
             this.lblKullaniciAdi.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblKullaniciAdi.Location = new System.Drawing.Point(96, 191);
+            this.lblKullaniciAdi.Location = new System.Drawing.Point(78, 192);
             this.lblKullaniciAdi.Name = "lblKullaniciAdi";
             this.lblKullaniciAdi.Size = new System.Drawing.Size(129, 23);
             this.lblKullaniciAdi.TabIndex = 17;
@@ -83,7 +83,7 @@
             // 
             this.lblTelefonNo.AutoSize = true;
             this.lblTelefonNo.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblTelefonNo.Location = new System.Drawing.Point(107, 142);
+            this.lblTelefonNo.Location = new System.Drawing.Point(89, 143);
             this.lblTelefonNo.Name = "lblTelefonNo";
             this.lblTelefonNo.Size = new System.Drawing.Size(118, 23);
             this.lblTelefonNo.TabIndex = 16;
@@ -93,7 +93,7 @@
             // 
             this.lblAdSoyad.AutoSize = true;
             this.lblAdSoyad.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblAdSoyad.Location = new System.Drawing.Point(121, 93);
+            this.lblAdSoyad.Location = new System.Drawing.Point(103, 94);
             this.lblAdSoyad.Name = "lblAdSoyad";
             this.lblAdSoyad.Size = new System.Drawing.Size(104, 23);
             this.lblAdSoyad.TabIndex = 15;
@@ -103,7 +103,7 @@
             // 
             this.lblOnaySorusu.AutoSize = true;
             this.lblOnaySorusu.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblOnaySorusu.Location = new System.Drawing.Point(76, 354);
+            this.lblOnaySorusu.Location = new System.Drawing.Point(58, 355);
             this.lblOnaySorusu.Name = "lblOnaySorusu";
             this.lblOnaySorusu.Size = new System.Drawing.Size(389, 20);
             this.lblOnaySorusu.TabIndex = 27;
@@ -116,7 +116,7 @@
             this.btnIptal.IconColor = System.Drawing.Color.Red;
             this.btnIptal.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnIptal.IconSize = 28;
-            this.btnIptal.Location = new System.Drawing.Point(125, 411);
+            this.btnIptal.Location = new System.Drawing.Point(107, 412);
             this.btnIptal.Name = "btnIptal";
             this.btnIptal.Size = new System.Drawing.Size(115, 55);
             this.btnIptal.TabIndex = 26;
@@ -132,7 +132,7 @@
             this.btnOnay.IconColor = System.Drawing.Color.Green;
             this.btnOnay.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnOnay.IconSize = 32;
-            this.btnOnay.Location = new System.Drawing.Point(282, 411);
+            this.btnOnay.Location = new System.Drawing.Point(264, 412);
             this.btnOnay.Name = "btnOnay";
             this.btnOnay.Size = new System.Drawing.Size(115, 55);
             this.btnOnay.TabIndex = 25;
@@ -146,7 +146,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(196)))), ((int)(((byte)(170)))));
-            this.ClientSize = new System.Drawing.Size(515, 497);
+            this.ClientSize = new System.Drawing.Size(490, 497);
             this.ControlBox = false;
             this.Controls.Add(this.lblOnaySorusu);
             this.Controls.Add(this.btnIptal);

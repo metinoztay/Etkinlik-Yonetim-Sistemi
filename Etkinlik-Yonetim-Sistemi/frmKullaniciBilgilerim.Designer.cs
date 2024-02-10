@@ -246,7 +246,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmKullaniciBilgilerim";
-            this.Text = "frmKullaniciBilgilerim";
+            this.Text = "Kullanici Bilgilerim";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

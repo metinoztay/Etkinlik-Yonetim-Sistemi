@@ -41,7 +41,7 @@
             // 
             this.lblOnaySorusu.AutoSize = true;
             this.lblOnaySorusu.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblOnaySorusu.Location = new System.Drawing.Point(67, 346);
+            this.lblOnaySorusu.Location = new System.Drawing.Point(30, 330);
             this.lblOnaySorusu.Name = "lblOnaySorusu";
             this.lblOnaySorusu.Size = new System.Drawing.Size(387, 20);
             this.lblOnaySorusu.TabIndex = 36;
@@ -51,7 +51,7 @@
             // 
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblEmail.Location = new System.Drawing.Point(130, 182);
+            this.lblEmail.Location = new System.Drawing.Point(93, 166);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(82, 23);
             this.lblEmail.TabIndex = 32;
@@ -61,7 +61,7 @@
             // 
             this.lblAdres.AutoSize = true;
             this.lblAdres.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblAdres.Location = new System.Drawing.Point(130, 224);
+            this.lblAdres.Location = new System.Drawing.Point(93, 208);
             this.lblAdres.Name = "lblAdres";
             this.lblAdres.Size = new System.Drawing.Size(80, 23);
             this.lblAdres.TabIndex = 31;
@@ -71,7 +71,7 @@
             // 
             this.lblTelefonNo.AutoSize = true;
             this.lblTelefonNo.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblTelefonNo.Location = new System.Drawing.Point(94, 135);
+            this.lblTelefonNo.Location = new System.Drawing.Point(57, 119);
             this.lblTelefonNo.Name = "lblTelefonNo";
             this.lblTelefonNo.Size = new System.Drawing.Size(118, 23);
             this.lblTelefonNo.TabIndex = 29;
@@ -81,7 +81,7 @@
             // 
             this.lblAdSoyad.AutoSize = true;
             this.lblAdSoyad.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblAdSoyad.Location = new System.Drawing.Point(108, 86);
+            this.lblAdSoyad.Location = new System.Drawing.Point(71, 70);
             this.lblAdSoyad.Name = "lblAdSoyad";
             this.lblAdSoyad.Size = new System.Drawing.Size(104, 23);
             this.lblAdSoyad.TabIndex = 28;
@@ -94,7 +94,7 @@
             this.btnIptal.IconColor = System.Drawing.Color.Red;
             this.btnIptal.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnIptal.IconSize = 28;
-            this.btnIptal.Location = new System.Drawing.Point(125, 405);
+            this.btnIptal.Location = new System.Drawing.Point(88, 389);
             this.btnIptal.Name = "btnIptal";
             this.btnIptal.Size = new System.Drawing.Size(115, 55);
             this.btnIptal.TabIndex = 35;
@@ -110,7 +110,7 @@
             this.btnOnay.IconColor = System.Drawing.Color.Green;
             this.btnOnay.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnOnay.IconSize = 32;
-            this.btnOnay.Location = new System.Drawing.Point(282, 405);
+            this.btnOnay.Location = new System.Drawing.Point(245, 389);
             this.btnOnay.Name = "btnOnay";
             this.btnOnay.Size = new System.Drawing.Size(115, 55);
             this.btnOnay.TabIndex = 34;
@@ -124,7 +124,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(196)))), ((int)(((byte)(170)))));
-            this.ClientSize = new System.Drawing.Size(515, 497);
+            this.ClientSize = new System.Drawing.Size(448, 497);
             this.Controls.Add(this.lblOnaySorusu);
             this.Controls.Add(this.btnIptal);
             this.Controls.Add(this.btnOnay);

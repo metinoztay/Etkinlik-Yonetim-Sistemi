@@ -123,6 +123,7 @@ namespace Etkinlik_Yonetim_Sistemi
             frmKullanıcıIslemleriOnay onay = new frmKullanıcıIslemleriOnay(guncelKullaniciBilgileri,"GUNCELLE");
             onay.ShowDialog();
             TextBoxSifirla();
+            btnGetir.PerformClick();
         }
 
         private void btnEkle_Click(object sender, EventArgs e)
@@ -178,6 +179,7 @@ namespace Etkinlik_Yonetim_Sistemi
             frmKullanıcıIslemleriOnay onay = new frmKullanıcıIslemleriOnay(guncelKullaniciBilgileri, "EKLE");
             onay.ShowDialog();
             TextBoxSifirla();
+            btnGetir.PerformClick();
         }
 
         private void btnSil_Click(object sender, EventArgs e)
@@ -204,6 +206,7 @@ namespace Etkinlik_Yonetim_Sistemi
             frmKullanıcıIslemleriOnay onay = new frmKullanıcıIslemleriOnay(guncelKullaniciBilgileri, "SIL");
             onay.ShowDialog();
             TextBoxSifirla();
+            btnGetir.PerformClick();
         }
 
         private void btnDuzenle_Click(object sender, EventArgs e)
