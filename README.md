@@ -48,6 +48,7 @@ C# Windows Forms &amp; MSSQL* Kullanılarak Geliştirilen Bir Etkinlik Planlama 
 - Bilgisayarınızın "Hizmetler" penceresinden SQL Server hizmetlerini sağ tıklayıp durdurun.
 - Rar dan çıkan dosyaları "C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\DATA" adresine taşıyın.
 - "Hizmetler" penceresinden SQL Server hizmetlerini tekrar çalıştırın.
+- İlk kullanımda kullanıcı adı:"admin" şifre:"şifre" ile giriş yapabilirisiniz.
 
 
 
