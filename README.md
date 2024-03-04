@@ -53,10 +53,5 @@ C# Windows Forms &amp; MSSQL* Kullanılarak Geliştirilen Bir Etkinlik Planlama 
 
 
 
-*Basic seviye MSSQL kullanılmıştır.
-
-
-
-
 
 
