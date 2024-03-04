@@ -1,5 +1,5 @@
 # Etkinlik-Yonetim-Sistemi
-C# Windows Forms &amp; MSSQL* Kullanılarak Geliştirilen Bir Etkinlik Planlama ve Yönetme Otomasyonu
+C# Windows Forms &amp; MSSQL Kullanılarak Geliştirilen Bir Etkinlik Planlama ve Yönetme Otomasyonu
 
 **Rezervasyon ve Takip Sistemi:** Müşterilerin etkinliklerini rezerve etmelerini, rezervasyonlarını yönetmelerini ve takip etmelerini sağlayacak bir rezervasyon sistemi geliştirilmiştir. İşlevler;
 -	Rezervasyon Oluşturma
